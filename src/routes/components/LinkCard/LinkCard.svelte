@@ -24,11 +24,9 @@
 
     <div class="flex flex-row flex-wrap gap-1">
       {#each link.tags as tag}
-        <button type="button" title={tag} class="tag" on:click={() => links.filter(tag)}>{tag}</button>
+        <button type="button" title={tag} class="tag" on:click={() => links.set(tag)}>{tag}</button>
       {/each}
     </div>
-
-    <button type="button" class="text-sm w-fit text-blue-600 underline">查看简介...</button>
   </div>
 </li>
 
@@ -37,10 +35,6 @@
     --shadow-color: #8181815f;
     box-shadow: 0 0 10px var(--shadow-color);
     @apply flex flex-row gap-5 rounded-xl p-7 duration-300;
-  }
-  .wraper:hover {
-    box-shadow: 0 0 30px var(--shadow-color);
-    @apply md:translate-y-1;
   }
   .tag {
     @apply text-sm px-1 rounded-sm bg-blue-600/10 text-blue-600;

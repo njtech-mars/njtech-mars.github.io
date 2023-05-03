@@ -1,16 +1,18 @@
 import data from './config';
-import { writable } from 'svelte/store';
-
-const tags = [...new Set(data.flatMap((link) => link.tags))];
+import { writable, derived } from 'svelte/store';
 
 function createStore() {
-  const { set, subscribe } = writable(data);
+  const activeTag = writable('');
+
+  const derivedStore = derived(activeTag, ($activeTag) => ({
+    activeTag: $activeTag,
+    tags: [...new Set(data.flatMap((link) => link.tags))],
+    links: data.filter((item) => ($activeTag ? item.tags.includes($activeTag) : true))
+  }));
 
   return {
-    tags,
-    subscribe,
-    reset: () => set(data),
-    filter: (tag: string) => set(data.filter((item) => item.tags.includes(tag)))
+    set: activeTag.set,
+    subscribe: derivedStore.subscribe
   };
 }
 
