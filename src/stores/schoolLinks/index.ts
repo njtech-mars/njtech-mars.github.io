@@ -16,4 +16,4 @@ function createStore() {
   };
 }
 
-export const links = createStore();
+export const schoolLinks = createStore();

@@ -3,7 +3,7 @@
   import MdBrightness2 from 'svelte-icons/md/MdBrightness2.svelte';
   import MdBrightness4 from 'svelte-icons/md/MdBrightness4.svelte';
 
-  let darkMode = true;
+  let darkMode = false;
 
   if (browser) {
     const localThemeMode = localStorage.getItem('theme');
@@ -19,8 +19,8 @@
 </script>
 
 <button title="toggle theme" type="button" class="relative w-6 h-6" on:click={handleClick}>
-  <div class="theme-icon" class:active={!darkMode}><MdBrightness2 /></div>
-  <div class="theme-icon" class:active={darkMode}><MdBrightness4 /></div>
+  <div class="theme-icon" class:active={!darkMode}><MdBrightness4 /></div>
+  <div class="theme-icon" class:active={darkMode}><MdBrightness2 /></div>
 </button>
 
 <style lang="postcss">

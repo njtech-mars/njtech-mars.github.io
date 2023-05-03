@@ -1,7 +1,7 @@
 <script lang="ts">
   import FaShare from 'svelte-icons/fa/FaShare.svelte';
 
-  import { links } from '$stores/links';
+  import { schoolLinks } from '$stores/schoolLinks';
   import type { LinkType } from '$types/link';
 
   export let link: LinkType;
@@ -13,7 +13,7 @@
   </div>
 
   <div class="flex flex-col gap-2">
-    <a href={link.link} target="_blank" class="flex flex-row items-center gap-2 hover:text-blue-600 duration-200">
+    <a href={link.link} target="_blank" class="flex flex-row items-center gap-2 hover:text-blue-600">
       <h1 class="text-xl font-semibold">{link.name}</h1>
       <div class="h-3">
         <FaShare />
@@ -22,9 +22,9 @@
 
     <p>{link.subtitle}</p>
 
-    <div class="flex flex-row flex-wrap gap-1">
-      {#each link.tags as tag}
-        <button type="button" title={tag} class="tag" on:click={() => links.set(tag)}>{tag}</button>
+    <div class="flex flex-row flex-wrap gap-1.5">
+      {#each link.tags as tag (tag)}
+        <button type="button" title={tag} class="tag" on:click={() => schoolLinks.set(tag)}>{tag}</button>
       {/each}
     </div>
   </div>
@@ -37,6 +37,6 @@
     @apply flex flex-row gap-5 rounded-xl p-7 duration-300;
   }
   .tag {
-    @apply text-sm px-1 rounded-sm bg-blue-600/10 text-blue-600;
+    @apply text-sm px-1 rounded-sm bg-blue-600/20 text-blue-600;
   }
 </style>

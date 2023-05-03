@@ -7,7 +7,7 @@
   min-height: 100svh;
   font-family: sans-serif;
 
-  @apply flex flex-col items-center justify-center dark:bg-dark bg-gray-100 dark:text-white text-gray-700;
+  @apply flex flex-col items-center justify-center dark:bg-dark bg-gray-100 dark:text-gray-300 text-gray-700;
 }
 
 .frame {
