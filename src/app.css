@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+  min-height: 100vh;
+  min-height: 100svh;
+  font-family: sans-serif;
+
+  @apply flex flex-col items-center justify-center dark:bg-dark bg-gray-100 dark:text-white text-gray-700;
+}
+
+.frame {
+  @apply px-4 md:px-48;
+}
