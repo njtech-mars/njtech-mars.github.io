@@ -1,6 +1,4 @@
 <script lang="ts">
-  import FaShare from 'svelte-icons/fa/FaShare.svelte';
-
   import { links } from '$stores/links';
   import type { LinkType } from '$types/link';
 
@@ -13,11 +11,8 @@
   </div>
 
   <div class="w-full flex flex-col gap-2">
-    <a href={link.link} target="_blank" class="flex flex-row items-center flex-wrap gap-2 hover:text-blue-600">
-      <h1 class="text-xl font-semibold">{link.name}</h1>
-      <div class="h-3">
-        <FaShare />
-      </div>
+    <a href={link.link} target="_blank" class="text-xl font-semibold hover:text-blue-600">
+      {link.name}
     </a>
 
     <p>{link.subtitle}</p>
@@ -35,7 +30,7 @@
 <style lang="postcss">
   .wraper {
     box-shadow: 0 0 10px #8181815f;
-    @apply flex flex-row gap-3 md:gap-5 rounded-xl p-4 md:p-7 duration-300;
+    @apply flex flex-row gap-5 rounded-xl p-5 md:p-7 duration-300;
   }
   .tag {
     @apply text-sm px-1 rounded-sm bg-blue-600/20 text-blue-600;

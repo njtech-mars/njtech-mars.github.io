@@ -2,7 +2,13 @@ import z from 'zod';
 import type { ComponentType } from 'svelte';
 import type { Readable } from 'svelte/store';
 
-const Link = z.object({
+interface LinksReadableType {
+  activeTag: string;
+  tags: string[];
+  links: LinkType[];
+}
+
+export const Link = z.object({
   color: z.string(),
   name: z.string(),
   icon: z.custom<ComponentType>(),
@@ -11,12 +17,6 @@ const Link = z.object({
   tags: z.array(z.string()),
   heat: z.number()
 });
-
-interface LinksReadableType {
-  activeTag: string;
-  tags: string[];
-  links: LinkType[];
-}
 
 export type LinkType = z.TypeOf<typeof Link>;
 

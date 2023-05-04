@@ -1,7 +1,7 @@
 <script lang="ts">
   import { links } from '$stores/links';
-  import Tags from '$components/Tags/Tags.svelte';
-  import LinkCard from '$components/LinkCard/LinkCard.svelte';
+  import Tags from './components/Tags/Tags.svelte';
+  import LinkCard from './components/LinkCard/LinkCard.svelte';
 </script>
 
 <main class="w-full flex-1 frame py-5 md:py-10 flex flex-col gap-5">

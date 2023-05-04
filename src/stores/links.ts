@@ -1,8 +1,12 @@
-import data from '../data';
+import z from 'zod';
+
+import rawData from '../data';
+import { Link } from '$types/link';
 import { writable, derived } from 'svelte/store';
 
 function createStore() {
   const activeTag = writable('');
+  const data = z.array(Link).parse(rawData);
 
   const sortedTags = data.map((item) => item.tags).flatMap((item) => item);
   const tagsWithReq = sortedTags.map((val) => ({ val, freq: sortedTags.filter((v) => v === val).length }));
