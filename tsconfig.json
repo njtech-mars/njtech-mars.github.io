@@ -11,8 +11,13 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
+      "$lib": ["./src/lib"],
+      "$lib/*": ["src/lib/*"],
+      "$types": ["src/types"],
       "$types/*": ["src/types/*"],
+      "$stores": ["src/stores"],
       "$stores/*": ["src/stores/*"],
+      "$components": ["src/components"],
       "$components/*": ["src/components/*"]
     }
   }

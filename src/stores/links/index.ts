@@ -1,6 +1,6 @@
 import z from 'zod';
 
-import rawData from '../data';
+import rawData from './data';
 import { Link } from '$types/link';
 import { writable, derived } from 'svelte/store';
 

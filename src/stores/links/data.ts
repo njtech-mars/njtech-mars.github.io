@@ -4,6 +4,7 @@ import FaMicrosoft from 'svelte-icons/fa/FaMicrosoft.svelte';
 import FaLaptopCode from 'svelte-icons/fa/FaLaptopCode.svelte';
 import MdOndemandVideo from 'svelte-icons/md/MdOndemandVideo.svelte';
 
+// 图标前往这个网址查找：https://svelte-icons.vercel.app/
 const data = [
   {
     color: '#2563eb',

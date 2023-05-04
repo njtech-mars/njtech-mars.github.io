@@ -7,12 +7,12 @@
 <div class="w-full flex flex-row gap-2 animate-slideFromTop overflow-x-auto p-1">
   <button
     type="button"
-    title="所有"
+    title="全部"
     class="tag"
     class:active={!$linksStore.activeTag}
     on:click={() => linksStore.set('')}
   >
-    所有
+    全部
   </button>
   {#each $linksStore.tags as tag (tag)}
     <button
