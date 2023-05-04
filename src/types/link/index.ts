@@ -15,7 +15,8 @@ export const Link = z.object({
   link: z.string(),
   subtitle: z.string(),
   tags: z.array(z.string()),
-  heat: z.number()
+  heat: z.number(),
+  pinned: z.boolean()
 });
 
 export type LinkType = z.TypeOf<typeof Link>;

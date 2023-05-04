@@ -1,26 +1,20 @@
 <script lang="ts">
   import type { LinksStoreType } from '$types/link';
 
-  export let linksStore: LinksStoreType;
+  export let links: LinksStoreType;
 </script>
 
 <div class="w-full flex flex-row gap-2 animate-slideFromTop overflow-x-auto p-1">
-  <button
-    type="button"
-    title="全部"
-    class="tag"
-    class:active={!$linksStore.activeTag}
-    on:click={() => linksStore.set('')}
-  >
+  <button type="button" title="全部" class="tag" class:active={!$links.activeTag} on:click={() => links.set('')}>
     全部
   </button>
-  {#each $linksStore.tags as tag (tag)}
+  {#each $links.tags as tag (tag)}
     <button
       title={tag}
       class="tag"
       type="button"
-      on:click={() => linksStore.set(tag)}
-      class:active={$linksStore.activeTag === tag}
+      on:click={() => links.set(tag)}
+      class:active={$links.activeTag === tag}
     >
       {tag}
     </button>

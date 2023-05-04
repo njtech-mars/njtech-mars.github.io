@@ -3,6 +3,7 @@
   import type { LinkType } from '$types/link';
 
   export let link: LinkType;
+  export let disabled: boolean = false;
 </script>
 
 <li class="wraper" style={`--color:${link.color};--heat:${link.heat}`}>
@@ -24,7 +25,7 @@
 
     <div class="flex flex-row flex-wrap gap-1.5">
       {#each link.tags as tag (tag)}
-        <button type="button" title={tag} class="tag" on:click={() => links.set(tag)}>{tag}</button>
+        <button {disabled} type="button" title={tag} class="tag" on:click={() => links.set(tag)}>{tag}</button>
       {/each}
     </div>
 

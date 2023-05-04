@@ -15,6 +15,7 @@ function createStore() {
   const derivedStore = derived(activeTag, ($activeTag) => ({
     tags: uniqueTags,
     activeTag: $activeTag,
+    pinned: data.filter((item) => item.pinned).sort((a, b) => b.heat - a.heat),
     links: data.filter((item) => ($activeTag ? item.tags.includes($activeTag) : true)).sort((a, b) => b.heat - a.heat)
   }));
 

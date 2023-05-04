@@ -1,3 +1,4 @@
+import MdStars from 'svelte-icons/md/MdStars.svelte';
 import MdSchool from 'svelte-icons/md/MdSchool.svelte';
 import FaServer from 'svelte-icons/fa/FaServer.svelte';
 import FaMicrosoft from 'svelte-icons/fa/FaMicrosoft.svelte';
@@ -13,7 +14,8 @@ const data = [
     link: 'https://online.njtech.edu.cn',
     subtitle: '南工在线视频播放平台',
     tags: ['校内', '视频', '学习'],
-    heat: 0.9
+    heat: 0.9,
+    pinned: true
   },
   {
     color: '#4f46e5',
@@ -22,7 +24,8 @@ const data = [
     link: 'https://soft.njtech.edu.cn',
     subtitle: '南工正版化平台',
     tags: ['校内', '软件', '正版化'],
-    heat: 0.7
+    heat: 0.8,
+    pinned: true
   },
   {
     color: '#0d9488',
@@ -31,7 +34,8 @@ const data = [
     link: 'https://mirrors.njtech.edu.cn',
     subtitle: '南工镜像站',
     tags: ['校内', '镜像站'],
-    heat: 0.7
+    heat: 0.8,
+    pinned: true
   },
   {
     color: '#65a30d',
@@ -40,7 +44,8 @@ const data = [
     link: 'https://acm.online.njtech.edu.cn',
     subtitle: '南工在线评测系统',
     tags: ['校内', '学习'],
-    heat: 0.9
+    heat: 0.9,
+    pinned: true
   },
   {
     color: '#0ea5e9',
@@ -48,8 +53,19 @@ const data = [
     icon: MdSchool,
     link: 'https://tuna.moe',
     subtitle: '清华大学tuna协会',
-    tags: ['校外', '清华', '学习', '镜像站'],
-    heat: 0.9
+    tags: ['校外', '清华', '镜像站'],
+    heat: 0.9,
+    pinned: true
+  },
+  {
+    color: '#16a34a',
+    name: '远景实验室',
+    icon: MdStars,
+    link: 'https://www.vistalab.top/',
+    subtitle: '南工远景实验室',
+    tags: ['校内', '组织', '实验室'],
+    heat: 0.8,
+    pinned: true
   }
 ];
 
