@@ -1,0 +1,54 @@
+.markdown :is(blockquote, table, img, p, pre, ul.h1, h2, h3, h4, h5, h6) {
+  @apply my-4;
+}
+
+/* blockquote */
+.markdown blockquote {
+  @apply border-l-4 border-l-gray-500 bg-slate-200 dark:bg-light pl-5 py-4;
+}
+
+/* table */
+.markdown table :is(td, th) {
+  @apply py-2 px-4 border border-gray-300 dark:border-light;
+}
+
+.markdown table tbody tr:nth-of-type(odd) {
+  @apply bg-gray-200 dark:bg-light;
+}
+
+/* code */
+.markdown code :not(.token) {
+  @apply px-1 bg-slate-200 dark:bg-light rounded-sm text-sm;
+}
+
+/* img */
+.markdown img {
+  @apply rounded-md;
+}
+
+/* ul */
+.markdown ul:not(.contains-task-list) {
+  @apply list-disc pl-5;
+}
+
+/* heading */
+.markdown h1 {
+  @apply text-2xl font-bold;
+}
+
+.markdown h2 {
+  @apply text-xl font-bold;
+}
+
+.markdown h3 {
+  @apply text-lg font-semibold;
+}
+
+.markdown :is(h4, h5, h6) {
+  @apply font-semibold;
+}
+
+/* a */
+.markdown a[rel='nofollow'] {
+  @apply text-blue-600 underline;
+}

@@ -3,15 +3,14 @@
   import FaClock from 'svelte-icons/fa/FaRegClock.svelte';
 
   import type { PageData } from './$types';
-  import Markdown from '$components/Markdown/Markdown.svelte';
   import { formatDate, timeAgo } from '$lib/utils';
 
   export let data: PageData;
 </script>
 
-<main class="w-full flex-1 frame py-5 md:py-10 flex flex-col gap-5">
+<main class="w-full flex-1 frame py-5 md:py-10 flex flex-col gap-5 animate-slideFromBottom">
   <header class="flex flex-col gap-3">
-    <h1 class="text-xl font-semibold">{data.title}</h1>
+    <h1 class="text-2xl font-semibold">{data.title}</h1>
 
     <div class="flex flex-row flex-wrap gap-2 text-sm">
       {#each data.tags as tag}
@@ -33,7 +32,9 @@
     </div>
   </header>
 
-  <Markdown content={data.content} />
+  <article class="markdown">
+    <svelte:component this={data.content} />
+  </article>
 
-  <a href="/blog" class="text-blue-600">← 返回</a>
+  <a href="/blog" class="text-blue-600 w-fit">← 返回</a>
 </main>
