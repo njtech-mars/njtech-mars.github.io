@@ -1,4 +1,4 @@
-import data from './data';
+import data from '../data';
 import { writable, derived } from 'svelte/store';
 
 function createStore() {
@@ -19,4 +19,4 @@ function createStore() {
   };
 }
 
-export const schoolLinks = createStore();
+export const links = createStore();

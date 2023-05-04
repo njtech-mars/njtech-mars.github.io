@@ -1,8 +1,8 @@
 <script lang="ts">
   import FaShare from 'svelte-icons/fa/FaShare.svelte';
 
+  import { links } from '$stores/links';
   import type { LinkType } from '$types/link';
-  import { schoolLinks } from '$stores/schoolLinks';
 
   export let link: LinkType;
 </script>
@@ -24,7 +24,7 @@
 
     <div class="flex flex-row flex-wrap gap-1.5">
       {#each link.tags as tag (tag)}
-        <button type="button" title={tag} class="tag" on:click={() => schoolLinks.set(tag)}>{tag}</button>
+        <button type="button" title={tag} class="tag" on:click={() => links.set(tag)}>{tag}</button>
       {/each}
     </div>
 
