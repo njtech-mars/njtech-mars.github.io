@@ -8,7 +8,7 @@
 </script>
 
 <li class="wraper" style={`--color:${link.color};--heat:${link.heat}`}>
-  <div class="w-24" style={`color:${link.color}`}>
+  <div class="w-20" style={`color:${link.color}`}>
     <svelte:component this={link.icon} />
   </div>
 
@@ -35,7 +35,7 @@
 <style lang="postcss">
   .wraper {
     box-shadow: 0 0 10px #8181815f;
-    @apply flex flex-row gap-5 rounded-xl p-7 duration-300;
+    @apply flex flex-row gap-3 md:gap-5 rounded-xl p-4 md:p-7 duration-300;
   }
   .tag {
     @apply text-sm px-1 rounded-sm bg-blue-600/20 text-blue-600;
