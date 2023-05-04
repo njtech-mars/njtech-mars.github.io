@@ -16,7 +16,7 @@
     <svelte:component this={link.icon} />
   </div>
 
-  <div class="w-full flex flex-col gap-2">
+  <div class="w-full flex flex-col justify-between gap-2">
     <a href={link.link} target="_blank" class="text-xl font-semibold hover:text-blue-600">
       {link.name}
     </a>

@@ -1,6 +1,8 @@
+import FaLinux from 'svelte-icons/fa/FaLinux.svelte';
 import MdStars from 'svelte-icons/md/MdStars.svelte';
 import MdSchool from 'svelte-icons/md/MdSchool.svelte';
 import FaServer from 'svelte-icons/fa/FaServer.svelte';
+import MdComputer from 'svelte-icons/md/MdComputer.svelte';
 import FaMicrosoft from 'svelte-icons/fa/FaMicrosoft.svelte';
 import FaLaptopCode from 'svelte-icons/fa/FaLaptopCode.svelte';
 import MdOndemandVideo from 'svelte-icons/md/MdOndemandVideo.svelte';
@@ -34,11 +36,11 @@ const data = [
     link: 'https://mirrors.njtech.edu.cn',
     subtitle: '南工镜像站',
     tags: ['校内', '镜像站'],
-    heat: 0.8,
+    heat: 0.75,
     pinned: true
   },
   {
-    color: '#65a30d',
+    color: '#0284c7',
     name: '南工在线评测系统',
     icon: FaLaptopCode,
     link: 'https://acm.online.njtech.edu.cn',
@@ -63,9 +65,39 @@ const data = [
     icon: MdStars,
     link: 'https://www.vistalab.top/',
     subtitle: '南工远景实验室',
-    tags: ['校内', '组织', '实验室'],
+    tags: ['校内', '组织'],
     heat: 0.8,
     pinned: true
+  },
+  {
+    color: '#5b21b6',
+    name: '北京大学学生Linux俱乐部',
+    icon: FaLinux,
+    link: 'http://lcpu.club',
+    subtitle: '北京大学学生Linux俱乐部',
+    tags: ['校外', '组织', 'Linux'],
+    heat: 0.8,
+    pinned: false
+  },
+  {
+    color: '#3730a3',
+    name: '中国科学技术大学Linux用户协会',
+    icon: FaLinux,
+    link: 'https://lug.ustc.edu.cn',
+    subtitle: '中国科学技术大学Linux用户协会',
+    tags: ['校外', '组织', 'Linux'],
+    heat: 0.8,
+    pinned: false
+  },
+  {
+    color: '#65a30d',
+    name: '南方科技大学计算机研究协会',
+    icon: MdComputer,
+    link: 'https://www.cra.moe',
+    subtitle: '南方科技大学计算机研究协会',
+    tags: ['校外', '组织'],
+    heat: 0.8,
+    pinned: false
   }
 ];
 
