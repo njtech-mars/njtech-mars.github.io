@@ -18,7 +18,7 @@
   }
 </script>
 
-<button title="toggle theme" type="button" class="relative w-6 h-6" on:click={handleClick}>
+<button title="toggle theme" type="button" class="z-20 relative w-6 h-6" on:click={handleClick}>
   <div class="theme-icon" class:active={!darkMode}><MdBrightness4 /></div>
   <div class="theme-icon" class:active={darkMode}><MdBrightness2 /></div>
 </button>

@@ -7,11 +7,6 @@
 </script>
 
 <li class="wraper" style={`--color:${link.color};--heat:${link.heat}`}>
-  <svg width="110" height="110" class="text-gray-300/20 dark:text-gray-700/20 absolute top-3 right-3 -z-10">
-    <rect y="60" width="50" height="50" style="fill:currentcolor" />
-    <rect x="60" width="50" height="50" style="fill:currentcolor" />
-  </svg>
-
   <div class="w-20" style={`color:${link.color}`}>
     <svelte:component this={link.icon} />
   </div>
@@ -36,7 +31,7 @@
 <style lang="postcss">
   .wraper {
     box-shadow: 0 0 10px #8181815f;
-    @apply flex flex-row gap-5 rounded-xl p-5 md:p-7 duration-300 relative isolate;
+    @apply flex flex-row gap-5 rounded-xl p-5 md:p-7 duration-300;
   }
   .tag {
     @apply text-sm px-1 rounded-sm bg-blue-600/20 text-blue-600;
