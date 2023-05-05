@@ -8,15 +8,15 @@
   <button type="button" title="全部" class="tag" class:active={!$links.activeTag} on:click={() => links.set('')}>
     全部
   </button>
-  {#each $links.tags as tag (tag)}
+  {#each $links.tags as tag (tag.name)}
     <button
-      title={tag}
+      title={tag.name}
       class="tag"
       type="button"
-      on:click={() => links.set(tag)}
-      class:active={$links.activeTag === tag}
+      on:click={() => links.set(tag.name)}
+      class:active={$links.activeTag === tag.name}
     >
-      {tag}
+      {tag.name}
     </button>
   {/each}
 </div>
@@ -27,6 +27,6 @@
     @apply whitespace-nowrap py-0.5 px-1.5 rounded-md border border-gray-300 dark:border-gray-300/0;
   }
   .tag.active {
-    @apply text-blue-600;
+    @apply text-orange-600;
   }
 </style>

@@ -25,11 +25,6 @@
   @apply text-orange-600;
 }
 
-/* img */
-.markdown img {
-  @apply rounded-sm;
-}
-
 /* ul */
 .markdown ul:not(.contains-task-list) {
   @apply list-disc pl-5;

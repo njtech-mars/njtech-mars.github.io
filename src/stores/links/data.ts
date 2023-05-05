@@ -10,7 +10,6 @@ import MdOndemandVideo from 'svelte-icons/md/MdOndemandVideo.svelte';
 // 图标前往这个网址查找：https://svelte-icons.vercel.app/
 const data = [
   {
-    color: '#2563eb',
     name: '南工在线',
     icon: MdOndemandVideo,
     link: 'https://online.njtech.edu.cn',
@@ -20,7 +19,6 @@ const data = [
     pinned: true
   },
   {
-    color: '#4f46e5',
     name: '正版化平台',
     icon: FaMicrosoft,
     link: 'https://soft.njtech.edu.cn',
@@ -30,7 +28,6 @@ const data = [
     pinned: true
   },
   {
-    color: '#0d9488',
     name: '南工镜像站',
     icon: FaServer,
     link: 'https://mirrors.njtech.edu.cn',
@@ -40,7 +37,6 @@ const data = [
     pinned: true
   },
   {
-    color: '#0284c7',
     name: '南工在线评测系统',
     icon: FaLaptopCode,
     link: 'https://acm.online.njtech.edu.cn',
@@ -50,7 +46,6 @@ const data = [
     pinned: true
   },
   {
-    color: '#0ea5e9',
     name: '清华大学tuna协会',
     icon: MdSchool,
     link: 'https://tuna.moe',
@@ -60,7 +55,6 @@ const data = [
     pinned: true
   },
   {
-    color: '#16a34a',
     name: '远景实验室',
     icon: MdStars,
     link: 'https://www.vistalab.top/',
@@ -70,7 +64,6 @@ const data = [
     pinned: true
   },
   {
-    color: '#3730a3',
     name: '中国科学技术大学Linux用户协会',
     icon: FaLinux,
     link: 'https://lug.ustc.edu.cn',
@@ -80,7 +73,6 @@ const data = [
     pinned: false
   },
   {
-    color: '#65a30d',
     name: '南方科技大学计算机研究协会',
     icon: MdComputer,
     link: 'https://www.cra.moe',

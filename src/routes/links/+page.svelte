@@ -1,6 +1,6 @@
 <script lang="ts">
   import { links } from '$stores/links';
-  import Tags from '$components/Tags/Tags.svelte';
+  import Tags from './components/Tags/Tags.svelte';
   import LinkCard from '$components/LinkCard/LinkCard.svelte';
 </script>
 

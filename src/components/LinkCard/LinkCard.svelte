@@ -6,8 +6,8 @@
   export let disabled: boolean = false;
 </script>
 
-<li class="wraper" style={`--color:${link.color};--heat:${link.heat}`}>
-  <div class="w-20" style={`color:${link.color}`}>
+<li class="wraper" style={`--heat:${link.heat}`}>
+  <div class="w-20 text-orange-600">
     <svelte:component this={link.icon} />
   </div>
 
@@ -34,18 +34,16 @@
     @apply flex flex-row gap-5 rounded-xl p-5 md:p-7 duration-300;
   }
   .tag {
-    @apply text-sm px-1 rounded-sm bg-blue-600/20 text-blue-600;
+    @apply text-sm px-1 rounded-sm bg-orange-600/20 text-orange-600;
   }
   .bar {
-    border-color: var(--color);
-    @apply w-full h-2 rounded-md border relative mt-1;
+    @apply w-full h-2 rounded-md border relative mt-1 border-orange-600;
   }
   .bar::before {
     content: '';
-    background: var(--color);
     animation: grow 700ms ease;
     width: calc(var(--heat) * 100%);
-    @apply absolute top-0 left-0 h-full rounded-md opacity-70;
+    @apply absolute top-0 left-0 h-full rounded-md opacity-60 bg-orange-600;
   }
   @keyframes grow {
     from {

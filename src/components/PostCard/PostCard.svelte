@@ -1,31 +1,26 @@
 <script lang="ts">
   import FaLink from 'svelte-icons/fa/FaLink.svelte';
-  import FaRegUser from 'svelte-icons/fa/FaRegUser.svelte';
-  import FaClock from 'svelte-icons/fa/FaRegClock.svelte';
-  import { formatDate, timeAgo } from '$lib/utils';
+
   import type { PostMetadatType } from '$types/postMetadata';
+  import Metadata from '$components/Metadata/Metadata.svelte';
 
   export let post: PostMetadatType;
 </script>
 
-<li class="space-y-1">
+<li>
   <a href={`/blog/${post.slug}`} class="text-lg text-orange-600 hover:underline flex flex-row items-center w-fit">
     <div class="w-3 h-3"><FaLink /></div>
     <span>{post.title}</span>
   </a>
 
-  <div class="flex flex-row items-center gap-1 text-gray-500 text-sm">
-    <div class="flex flex-row items-center gap-0.5">
-      <div class="w-3 h-3"><FaClock /></div>
-      <div>{formatDate(post.date)}</div>
-      <div>(更新于{timeAgo(post.update)})</div>
-    </div>
-
-    <div class="flex flex-row items-center gap-0.5">
-      <div class="w-3 h-3 ml-1"><FaRegUser /></div>
-      <div>{post.author}撰写</div>
-    </div>
-  </div>
+  <Metadata {post} />
 
   <p>{post.intro}</p>
 </li>
+
+<style lang="postcss">
+  li {
+    box-shadow: 0 0 10px #8181815f;
+    @apply w-full space-y-1 p-5 rounded-xl;
+  }
+</style>

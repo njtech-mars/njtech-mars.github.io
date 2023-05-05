@@ -12,7 +12,7 @@
     <h1 class="text-2xl text-orange-600 font-semibold">资源推荐</h1>
 
     <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 animate-slideFromRight">
-      {#each $links.pinned as link (link.name)}
+      {#each $links.pinned.slice(0, 6) as link (link.name)}
         {#key link}
           <LinkCard {link} disabled={true} />
         {/key}
@@ -23,7 +23,7 @@
   <div class="flex flex-col gap-5">
     <h1 class="text-2xl text-orange-600 font-semibold">最新文章</h1>
 
-    <ul class="flex flex-col gap-3 animate-slideFromRight">
+    <ul class="flex flex-col gap-7 animate-slideFromRight">
       {#each posts as post (post.slug)}
         <PostCard {post} />
       {/each}

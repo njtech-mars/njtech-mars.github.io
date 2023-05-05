@@ -4,12 +4,11 @@ import type { Readable } from 'svelte/store';
 
 interface LinksReadableType {
   activeTag: string;
-  tags: string[];
+  tags: { name: string; count: number }[];
   links: LinkType[];
 }
 
 export const Link = z.object({
-  color: z.string(),
   name: z.string(),
   icon: z.custom<ComponentType>(),
   link: z.string(),

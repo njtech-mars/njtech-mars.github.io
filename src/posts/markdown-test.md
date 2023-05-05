@@ -3,7 +3,7 @@ title: 'Markdown测试书写示例'
 date: '2023-05-04T15:47:32.068Z'
 update: '2023-05-04T15:47:32.068Z'
 author: 'Cael'
-tags: ['Markdown', 'rehype', 'remark', '示例']
+tags: ['Test', 'rehype', 'remark', '测试']
 intro: '测试markdown书写blog，其中包含一些常用的简单示例'
 ---
 

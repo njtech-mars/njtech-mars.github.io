@@ -1,12 +1,9 @@
-import z from 'zod';
-
-import rawData from './data';
-import { Link } from '$types/link';
+import { getPosts } from '$lib/blog';
 import { writable, derived } from 'svelte/store';
 
 function createStore() {
+  const data = getPosts();
   const activeTag = writable('');
-  const data = z.array(Link).parse(rawData);
 
   const sortedTags = data.map((item) => item.tags).flatMap((item) => item);
   const rawTags = sortedTags.map((name) => ({ name, count: sortedTags.filter((v) => v === name).length }));
@@ -15,8 +12,7 @@ function createStore() {
   const derivedStore = derived(activeTag, ($activeTag) => ({
     activeTag: $activeTag,
     tags: uniqueTags.sort((a, b) => b.count - a.count),
-    pinned: data.filter((item) => item.pinned).sort((a, b) => b.heat - a.heat),
-    links: data.filter((item) => ($activeTag ? item.tags.includes($activeTag) : true)).sort((a, b) => b.heat - a.heat)
+    posts: data.filter((item) => ($activeTag ? item.tags.includes($activeTag) : true))
   }));
 
   return {
@@ -25,4 +21,4 @@ function createStore() {
   };
 }
 
-export const links = createStore();
+export const posts = createStore();
