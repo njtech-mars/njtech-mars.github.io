@@ -1,27 +1,26 @@
-<div class="wrapper">
-  <h1 class="title">Mars工作室</h1>
-  <p class="intro">MarsStudio 是南京工业大学信息中心学生开发团队，成立于2001年4月。</p>
+<div class="flex flex-col gap-3 py-20">
+  <h1 class="text-3xl font-bold border-b-4 border-b-blue-600 w-fit">Mars工作室</h1>
+
+  <p class="max-w-md text-lg">
+    MarsStudio 是南京工业大学信息中心学生开发团队，成立于2001年4月。我们的理念是维持校园互联网团队的运作和传承。
+  </p>
+
+  <div class="flex flex-row gap-5">
+    <a href="/blog" title="关于我们" class="link about">关于我们</a>
+    <a href="/blog" title="联系我们" class="link">联系我们</a>
+  </div>
 </div>
 
 <style lang="postcss">
-  .wrapper {
-    height: 40vh;
-    @apply flex flex-col items-center justify-center gap-3 animate-scaleUp;
+  .link {
+    box-shadow: 0 0 10px #8181815f;
+    border-radius: 1.3rem 0.5rem 1.3rem 0.5rem;
+    @apply py-2 px-4 border-2 border-blue-600 w-fit text-lg duration-300;
   }
-  .title {
-    @apply px-5 py-3 italic text-3xl text-white font-bold relative isolate;
+  .link:hover {
+    box-shadow: 0 0 15px #818181;
   }
-  .title::before {
-    content: "";
-    border-radius: 2rem 0.7rem 2rem 0.7rem;
-    @apply -z-10 absolute top-0 right-0 w-full h-full bg-blue-600 duration-100;
-  }
-  .title::after {
-    content: "";
-    border-radius: 2rem 0.7rem 2rem 0.7rem;
-    @apply -z-20 absolute -top-1 -right-1 w-full h-full bg-blue-400 duration-100;
-  }
-  .intro {
-    @apply text-center max-w-sm text-lg;
+  .about {
+    @apply bg-blue-600 text-white;
   }
 </style>

@@ -9,17 +9,11 @@
   .title::before {
     content: "";
     border-radius: 0.8rem 0.3rem 0.8rem 0.2rem;
-    @apply -z-10 absolute top-0 right-0 w-full h-full bg-blue-600 duration-100;
+    @apply -z-10 absolute top-0 right-0 w-full h-full bg-blue-600;
   }
   .title::after {
     content: "";
     border-radius: 0.8rem 0.3rem 0.8rem 0.2rem;
-    @apply -z-20 absolute -top-0.5 -right-0.5 w-full h-full bg-blue-400 duration-100;
-  }
-  .title:hover::before {
-    @apply md:-translate-x-0.5 md:translate-y-0.5;
-  }
-  .title:hover::after {
-    @apply md:translate-x-0.5 md:-translate-y-0.5;
+    @apply -z-20 absolute -top-0.5 -right-0.5 w-full h-full bg-blue-400;
   }
 </style>
