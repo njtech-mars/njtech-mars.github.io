@@ -50,6 +50,6 @@
     @apply text-xl font-bold;
   }
   .link.active {
-    @apply text-orange-600;
+    @apply text-blue-600;
   }
 </style>

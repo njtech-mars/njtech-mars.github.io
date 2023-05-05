@@ -14,18 +14,18 @@
   .icon::before {
     content: '';
     border-radius: 30% 15% 30% 15%;
-    @apply -z-10 absolute top-0 right-0 w-full h-full bg-orange-500;
+    @apply -z-10 absolute top-0 right-0 w-full h-full bg-blue-500;
   }
   .icon::after {
     content: '';
     border-radius: 30% 15% 30% 15%;
-    @apply -z-20 absolute -top-0.5 -right-0.5 w-full h-full bg-orange-300;
+    @apply -z-20 absolute -top-0.5 -right-0.5 w-full h-full bg-blue-300;
   }
   .title {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-image: linear-gradient(to top right, #ea580c, #f97316);
+    background-image: linear-gradient(to right, #2563eb, #3b82f6);
 
     @apply text-2xl font-semibold;
   }

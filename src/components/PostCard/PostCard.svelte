@@ -10,7 +10,7 @@
 </script>
 
 <li>
-  <a href={`/blog/${post.slug}`} class="text-lg text-orange-600 hover:underline flex flex-row items-center w-fit">
+  <a href={`/blog/${post.slug}`} class="text-lg text-blue-600 hover:underline flex flex-row items-center w-fit">
     <div class="w-3 h-3"><FaLink /></div>
     <span>{post.title}</span>
   </a>
@@ -33,7 +33,7 @@
 
     <div class="flex flex-row flex-wrap gap-2 text-sm">
       {#each post.tags as tag (tag)}
-        <span class="py-1 px-2 rounded-2xl text-orange-600 bg-orange-600/20">&num;{tag}</span>
+        <span class="py-1 px-2 rounded-2xl text-blue-600 bg-blue-600/20">&num;{tag}</span>
       {/each}
     </div>
   </div>

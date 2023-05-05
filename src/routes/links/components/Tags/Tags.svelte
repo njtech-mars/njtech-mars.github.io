@@ -27,6 +27,6 @@
     @apply whitespace-nowrap py-0.5 px-1.5 rounded-md border border-gray-300 dark:border-gray-300/0;
   }
   .tag.active {
-    @apply text-orange-600;
+    @apply text-blue-600;
   }
 </style>

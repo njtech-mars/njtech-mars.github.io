@@ -3,7 +3,7 @@
 </script>
 
 <div class="wrapper">
-  <h1 class="text-xl text-orange-600 font-semibold">标签</h1>
+  <h1 class="text-xl text-blue-600 font-semibold">标签</h1>
   <ul class="flex flex-row flex-wrap gap-2">
     <li>
       <button
@@ -38,10 +38,10 @@
     @apply flex flex-col gap-3 p-5 h-fit rounded-xl animate-slideFromBottom w-full;
   }
   .tag {
-    @apply text-sm py-1 px-2 rounded-2xl text-orange-600 border border-orange-600;
+    @apply text-sm py-1 px-2 rounded-2xl text-blue-600 border border-blue-600;
   }
   .tag.active {
-    @apply bg-orange-600 text-white;
+    @apply bg-blue-600 text-white;
   }
   @media (min-width: 768px) {
     .wrapper {

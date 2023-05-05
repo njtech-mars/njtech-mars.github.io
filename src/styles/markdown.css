@@ -9,7 +9,7 @@
 
 /* blockquote */
 .markdown blockquote {
-  @apply border-l-4 border-l-orange-500 bg-orange-600/20 text-orange-600 pl-5 py-4;
+  @apply border-l-4 border-l-blue-500 bg-blue-600/20 text-blue-600 pl-5 py-4;
 }
 
 /* table */
@@ -23,11 +23,11 @@
 
 /* code */
 .markdown code:not([class]) {
-  @apply px-1 bg-orange-600/20 rounded-sm text-sm text-orange-600;
+  @apply px-1 bg-blue-600/20 rounded-sm text-sm text-blue-600;
 }
 
 .markdown :is(strong, em) {
-  @apply text-orange-600;
+  @apply text-blue-600;
 }
 
 /* ul */
@@ -54,10 +54,10 @@
 
 /* a */
 .markdown a[rel='nofollow'] {
-  @apply text-orange-600 underline;
+  @apply text-blue-600 underline;
 }
 
 /* hr */
 .markdown hr {
-  @apply border-2 border-orange-500;
+  @apply border-2 border-blue-500;
 }
