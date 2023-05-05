@@ -2,7 +2,7 @@
   import MdLocationOn from "svelte-icons/md/MdLocationOn.svelte";
 </script>
 
-<a href="/" title="首页" class="animate-slideFromLeft z-20 flex flex-row items-center gap-1.5">
+<a href="/" title="首页" class="animate-scaleUp z-20 flex flex-row items-center gap-1.5">
   <div class="icon"><MdLocationOn /></div>
   <div class="title">南工向导</div>
 </a>

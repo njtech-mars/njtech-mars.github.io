@@ -1,20 +1,20 @@
 .markdown {
-  @apply w-full;
+  @apply w-full relative flex flex-row justify-between gap-10;
 }
 
 /* general */
-.markdown :is(blockquote, table, img, p, pre, ul.h1, h2, h3, h4, h5, h6, hr) {
+.markdown :is(blockquote, table, img, p, pre, ul, h1, h2, h3, h4, h5, h6, hr) {
   @apply my-4;
 }
 
 /* blockquote */
 .markdown blockquote {
-  @apply border-l-4 border-l-blue-500 bg-blue-600/20 text-blue-600 pl-5 py-4;
+  @apply border-l-4 border-l-blue-500 bg-gray-200 dark:bg-light pl-5 py-4;
 }
 
 /* table */
 .markdown table :is(td, th) {
-  @apply py-2 px-4 border border-gray-300 dark:border-light;
+  @apply py-2 px-4 border border-gray-300 dark:border-gray-500;
 }
 
 .markdown table tbody tr:nth-of-type(odd) {
@@ -23,11 +23,7 @@
 
 /* code */
 .markdown code:not([class]) {
-  @apply px-1 bg-blue-600/20 rounded-sm text-sm text-blue-600;
-}
-
-.markdown :is(strong, em) {
-  @apply text-blue-600;
+  @apply px-1 py-0.5 bg-light rounded-sm text-sm text-white;
 }
 
 /* ul */
@@ -36,8 +32,8 @@
 }
 
 /* heading */
-.markdown h1 {
-  @apply text-2xl font-bold;
+.markdown h1:not([class]) {
+  @apply text-2xl font-bold py-4 border-b border-b-gray-300 dark:border-b-gray-500;
 }
 
 .markdown h2 {
@@ -59,5 +55,5 @@
 
 /* hr */
 .markdown hr {
-  @apply border-gray-400;
+  @apply border-gray-300 dark:border-gray-500;
 }

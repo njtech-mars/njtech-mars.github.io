@@ -24,7 +24,7 @@
 <style lang="postcss">
   .tag {
     box-shadow: 0 0 5px #80808060;
-    @apply whitespace-nowrap py-0.5 px-1.5 rounded-md border border-gray-300 dark:border-gray-300/0;
+    @apply whitespace-nowrap py-0.5 px-1.5 rounded-md border border-gray-300 dark:border-gray-500;
   }
   .tag.active {
     @apply text-blue-600;

@@ -8,7 +8,7 @@
 </script>
 
 <div class="md:hidden flex items-center justify-center">
-  <button type="button" title="菜单" aria-label="menu button" class="menu-btn" on:click={() => (openMenu = !openMenu)}>
+  <button type="button" title="菜单" aria-label="菜单" class="menu-btn" on:click={() => (openMenu = !openMenu)}>
     <div class="menu-icon" class:active={openMenu}><MdClose /></div>
     <div class="menu-icon" class:active={!openMenu}><MdMenu /></div>
   </button>

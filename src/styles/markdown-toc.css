@@ -1,0 +1,19 @@
+.markdown .toc {
+  @apply text-base;
+}
+
+.markdown .toc .toc-link:hover {
+  @apply text-blue-600;
+}
+
+.markdown .toc .toc-level-1 {
+  @apply flex flex-col gap-1;
+}
+
+.markdown .toc :is(.toc-level-2, .toc-level-3) {
+  @apply pl-3;
+}
+
+.markdown .toc .toc-link-h1 {
+  @apply font-semibold;
+}

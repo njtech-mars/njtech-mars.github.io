@@ -40,18 +40,12 @@
 <style lang="postcss">
   .wrapper {
     box-shadow: 0 0 10px #8181815f;
-    @apply flex flex-col gap-3 p-5 h-fit rounded-xl animate-slideFromBottom w-full;
+    @apply w-full flex flex-col gap-3 p-5 h-fit rounded-xl;
   }
   .tag {
     @apply text-sm py-1 px-2 rounded-2xl text-blue-600 border border-blue-600;
   }
   .tag.active {
     @apply bg-blue-600 text-white;
-  }
-  @media (min-width: 768px) {
-    .wrapper {
-      width: 20rem;
-      @apply sticky top-5 animate-slideFromRight;
-    }
   }
 </style>
