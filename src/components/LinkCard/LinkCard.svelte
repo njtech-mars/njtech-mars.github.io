@@ -7,7 +7,7 @@
 </script>
 
 <li class="wraper" style={`--heat:${link.heat}`}>
-  <div class="w-20 text-blue-600">
+  <div class="w-20 text-blue-500">
     <svelte:component this={link.icon} />
   </div>
 

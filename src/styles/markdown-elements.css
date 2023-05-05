@@ -3,7 +3,10 @@
 }
 
 /* general */
-.markdown :is(blockquote, table, img, p, pre, ul, h1, h2, h3, h4, h5, h6, hr) {
+.markdown :is(h1, h2, h3, h4, h5, h6, ) {
+  @apply my-4;
+}
+.markdown :is(blockquote, table, img, p, pre, ul, hr) {
   @apply my-2;
 }
 
@@ -33,7 +36,7 @@
 
 /* heading */
 .markdown h1:not([class]) {
-  @apply text-2xl font-bold py-4 border-b border-b-gray-300 dark:border-b-gray-500;
+  @apply text-2xl font-bold py-2 border-b border-b-gray-300 dark:border-b-gray-500;
 }
 
 .markdown h2 {

@@ -6,7 +6,7 @@
 </script>
 
 <svelte:head>
-  <title>南工向导</title>
+  <title>Mars工作室</title>
 </svelte:head>
 
 <Navbar />

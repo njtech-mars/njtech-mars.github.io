@@ -2,6 +2,10 @@
   @apply text-base;
 }
 
+.markdown .toc .toc-link {
+  @apply whitespace-nowrap;
+}
+
 .markdown .toc .toc-link:hover {
   @apply text-blue-600;
 }

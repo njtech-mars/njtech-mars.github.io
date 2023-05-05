@@ -1,9 +1,9 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import FaTag from "svelte-icons/fa/FaTag.svelte";
-  import FaClock from "svelte-icons/fa/FaRegClock.svelte";
   import FaRegUser from "svelte-icons/fa/FaRegUser.svelte";
   import FaAlignLeft from "svelte-icons/fa/FaAlignLeft.svelte";
+  import FaRegCalendarAlt from "svelte-icons/fa/FaRegCalendarAlt.svelte";
 
   import type { PageData } from "./$types";
   import { formatDate, timeAgo } from "$lib/utils";
@@ -17,15 +17,15 @@
   });
 </script>
 
-<main class="w-full flex-1 frame py-10 flex flex-col gap-10 animate-slideFromBottom">
+<main class="w-full flex-1 frame py-10 flex flex-col gap-5 animate-slideFromBottom">
   <header class="flex flex-col gap-0.5 md:gap-3">
     <h1 class="text-2xl md:text-3xl font-semibold">{data.title}</h1>
 
     <div class="flex flex-row items-center gap-1 text-gray-500 text-sm">
       <div class="flex flex-row items-center gap-0.5">
-        <div class="w-3 h-3"><FaClock /></div>
+        <div class="w-3 h-3"><FaRegCalendarAlt /></div>
         <div>{formatDate(data.date)}</div>
-        <div>(更新于{timeAgo(data.update)})</div>
+        <div>(上次更新{timeAgo(data.update)})</div>
       </div>
 
       <p>•</p>
@@ -74,8 +74,11 @@
   .toc-container {
     @apply border border-gray-300 dark:border-gray-500 rounded-xl p-5;
   }
+  .toc-container {
+    @apply overflow-x-auto;
+  }
   .sidebar {
     width: 20rem;
-    @apply hidden md:flex flex-col gap-5 h-fit overflow-x-auto sticky top-5;
+    @apply hidden md:flex flex-col gap-5 h-fit sticky top-5;
   }
 </style>

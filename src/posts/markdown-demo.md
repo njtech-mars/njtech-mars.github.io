@@ -1,10 +1,10 @@
 ---
-title: "Markdown文章测试"
+title: "Markdown测试文章"
 date: "2023-05-04T15:47:32.068Z"
 update: "2023-05-05T13:02:03.409Z"
 author: "Cael"
 tags: ["Markdown", "测试"]
-intro: "测试markdown书写blog，其中包含一些常用的简单示例以及TOC等功能测试"
+intro: "Markdown测试文章，其中包含一些常用的简单示例以及TOC等功能测试"
 ---
 
 # 一、常用
@@ -43,7 +43,7 @@ intro: "测试markdown书写blog，其中包含一些常用的简单示例以及
 
 我们可以引用一段文字：
 
-> 注意：
+> **注意：**
 >
 > 请联系管理员
 
@@ -53,7 +53,7 @@ intro: "测试markdown书写blog，其中包含一些常用的简单示例以及
 
 - [x] 添加 Blog
 - [x] Blog 添加 TOC
-- [x] Blog 添加评论
+- [ ] Blog 添加评论
 
 ## 3. 代码
 

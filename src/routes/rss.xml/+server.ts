@@ -5,7 +5,7 @@ export const prerender = true;
 export async function GET() {
   const posts = getPosts();
 
-  const title = "南工向导";
+  const title = "Mars工作室";
   const url = "https://navigation.mraddict.vercel.app";
   const headers = { "Content-Type": "application/xml" };
 
