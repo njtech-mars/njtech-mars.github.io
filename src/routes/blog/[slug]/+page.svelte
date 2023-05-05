@@ -14,7 +14,7 @@
 
     <div class="flex flex-row flex-wrap gap-2 text-sm">
       {#each data.tags as tag}
-        <span class="py-1 px-2 rounded-2xl text-blue-600 bg-blue-600/20">&num;{tag}</span>
+        <span class="py-1 px-2 rounded-2xl text-orange-600 bg-orange-600/20">&num;{tag}</span>
       {/each}
     </div>
 
@@ -22,7 +22,7 @@
       <div class="flex flex-row items-center gap-0.5">
         <div class="w-3 h-3"><FaClock /></div>
         <div>{formatDate(data.date)}</div>
-        <div>({timeAgo(data.date)})</div>
+        <div>(更新于{timeAgo(data.update)})</div>
       </div>
 
       <div class="flex flex-row items-center gap-0.5">
@@ -35,6 +35,4 @@
   <article class="markdown">
     <svelte:component this={data.content} />
   </article>
-
-  <a href="/blog" class="text-blue-600 w-fit">← 返回</a>
 </main>

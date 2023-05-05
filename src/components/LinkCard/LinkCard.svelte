@@ -12,7 +12,7 @@
   </div>
 
   <div class="w-full flex flex-col justify-between gap-2">
-    <a href={link.link} target="_blank" class="text-xl font-semibold hover:text-blue-600">
+    <a href={link.link} target="_blank" class="text-xl font-semibold hover:text-orange-600 hover:underline w-fit">
       {link.name}
     </a>
 

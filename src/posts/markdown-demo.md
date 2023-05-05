@@ -1,6 +1,7 @@
 ---
 title: 'Markdown测试书写示例'
 date: '2023-05-04T15:47:32.068Z'
+update: '2023-05-04T15:47:32.068Z'
 author: 'Cael'
 tags: ['Markdown', 'rehype', 'remark']
 intro: '测试markdown渲染是否成功'
@@ -56,3 +57,7 @@ export default function Button() {
   );
 }
 ```
+
+## 7. 其他
+
+有**强调**的文字，有`引用`的文字，有*斜体*的文字。

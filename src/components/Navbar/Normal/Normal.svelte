@@ -14,6 +14,6 @@
 
 <style lang="postcss">
   .link.active {
-    @apply text-blue-600;
+    @apply text-orange-600;
   }
 </style>

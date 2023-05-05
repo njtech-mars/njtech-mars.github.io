@@ -8,7 +8,7 @@
 </script>
 
 <div class="md:hidden flex items-center justify-center">
-  <button type="button" aria-label="menu button" class="menu-btn" on:click={() => (openMenu = !openMenu)}>
+  <button type="button" title="menu" aria-label="menu button" class="menu-btn" on:click={() => (openMenu = !openMenu)}>
     <div class="menu-icon" class:active={openMenu}><MdClose /></div>
     <div class="menu-icon" class:active={!openMenu}><MdMenu /></div>
   </button>
@@ -41,15 +41,15 @@
   .menu {
     height: 100vh;
     height: 100svh;
-    @apply z-10 duration-300 fixed top-0 left-0 p-24 w-full flex items-center flex-col gap-7 invisible scale-y-90 opacity-0 origin-top-right dark:bg-dark bg-gray-100;
+    @apply z-10 duration-300 fixed top-0 left-0 pt-36 w-full flex items-center flex-col gap-7 invisible scale-y-90 opacity-0 origin-top-right dark:bg-dark bg-gray-100;
   }
   .menu.active {
     @apply scale-y-100 opacity-100 visible;
   }
   .link {
-    @apply text-xl font-semibold;
+    @apply text-xl font-bold;
   }
   .link.active {
-    @apply text-blue-600;
+    @apply text-orange-600;
   }
 </style>

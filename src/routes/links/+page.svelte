@@ -5,7 +5,7 @@
 </script>
 
 <main class="w-full flex-1 frame py-5 md:py-10 flex flex-col gap-5">
-  <h1 class="text-2xl font-semibold">所有资源</h1>
+  <h1 class="text-2xl text-orange-600 font-semibold">所有资源</h1>
 
   <Tags {links} />
 

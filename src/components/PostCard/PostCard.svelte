@@ -9,7 +9,7 @@
 </script>
 
 <li class="space-y-1">
-  <a href={`/blog/${post.slug}`} class="text-lg text-blue-600 hover:underline flex flex-row items-center w-fit">
+  <a href={`/blog/${post.slug}`} class="text-lg text-orange-600 hover:underline flex flex-row items-center w-fit">
     <div class="w-3 h-3"><FaLink /></div>
     <span>{post.title}</span>
   </a>
@@ -18,7 +18,7 @@
     <div class="flex flex-row items-center gap-0.5">
       <div class="w-3 h-3"><FaClock /></div>
       <div>{formatDate(post.date)}</div>
-      <div>({timeAgo(post.date)})</div>
+      <div>(更新于{timeAgo(post.update)})</div>
     </div>
 
     <div class="flex flex-row items-center gap-0.5">

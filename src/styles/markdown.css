@@ -4,7 +4,7 @@
 
 /* blockquote */
 .markdown blockquote {
-  @apply border-l-4 border-l-gray-500 bg-slate-200 dark:bg-light pl-5 py-4;
+  @apply border-l-4 border-l-orange-500 bg-orange-200 text-gray-700 pl-5 py-4;
 }
 
 /* table */
@@ -17,13 +17,17 @@
 }
 
 /* code */
-.markdown code :not(.token) {
-  @apply px-1 bg-slate-200 dark:bg-light rounded-sm text-sm;
+.markdown code:not([class]) {
+  @apply px-1 bg-orange-200 rounded-sm text-sm text-orange-600;
+}
+
+.markdown :is(strong, em) {
+  @apply text-orange-600;
 }
 
 /* img */
 .markdown img {
-  @apply rounded-md;
+  @apply rounded-sm;
 }
 
 /* ul */
@@ -50,5 +54,5 @@
 
 /* a */
 .markdown a[rel='nofollow'] {
-  @apply text-blue-600 underline;
+  @apply text-orange-600 underline;
 }

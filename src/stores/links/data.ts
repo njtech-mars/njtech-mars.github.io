@@ -25,7 +25,7 @@ const data = [
     icon: FaMicrosoft,
     link: 'https://soft.njtech.edu.cn',
     subtitle: '南工正版化平台',
-    tags: ['校内', '软件', '正版化'],
+    tags: ['校内', '软件'],
     heat: 0.8,
     pinned: true
   },
@@ -55,7 +55,7 @@ const data = [
     icon: MdSchool,
     link: 'https://tuna.moe',
     subtitle: '清华大学tuna协会',
-    tags: ['校外', '清华', '镜像站'],
+    tags: ['校外', '镜像站'],
     heat: 0.9,
     pinned: true
   },
@@ -68,16 +68,6 @@ const data = [
     tags: ['校内', '组织'],
     heat: 0.8,
     pinned: true
-  },
-  {
-    color: '#5b21b6',
-    name: '北京大学学生Linux俱乐部',
-    icon: FaLinux,
-    link: 'http://lcpu.club',
-    subtitle: '北京大学学生Linux俱乐部',
-    tags: ['校外', '组织', 'Linux'],
-    heat: 0.8,
-    pinned: false
   },
   {
     color: '#3730a3',
