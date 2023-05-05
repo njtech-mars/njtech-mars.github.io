@@ -9,9 +9,9 @@
 
 <main class="frame flex flex-col gap-10">
   <div class="flex flex-col gap-2">
-    <div class="w-full flex flex-row justify-between items-end text-blue-600">
+    <div class="w-full flex flex-row justify-between items-end">
       <h1 class="text-2xl font-semibold">资源推荐</h1>
-      <a href="/links" title="资源推荐" class="hover:underline">更多..</a>
+      <a href="/links" title="资源推荐" class="text-blue-600 hover:underline">更多..</a>
     </div>
 
     <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 animate-slideFromTop">
@@ -24,9 +24,9 @@
   </div>
 
   <div class="flex flex-col gap-2">
-    <div class="w-full flex flex-row justify-between items-end text-blue-600">
+    <div class="w-full flex flex-row justify-between items-end">
       <h1 class="text-2xl font-semibold">最新文章</h1>
-      <a href="/blog" title="活动文章" class="hover:underline">更多..</a>
+      <a href="/blog" title="活动文章" class="text-blue-600 hover:underline">更多..</a>
     </div>
 
     <ul class="flex flex-col gap-7 animate-slideFromBottom">

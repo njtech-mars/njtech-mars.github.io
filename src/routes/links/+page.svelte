@@ -5,7 +5,7 @@
 </script>
 
 <main class="frame flex flex-col gap-2">
-  <h1 class="text-2xl text-blue-600 font-semibold">所有资源</h1>
+  <h1 class="text-2xl font-semibold">所有资源</h1>
 
   <Tags {links} />
 

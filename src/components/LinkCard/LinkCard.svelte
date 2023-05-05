@@ -48,7 +48,7 @@
     content: "";
     animation: grow 700ms ease;
     width: calc(var(--heat) * 100%);
-    @apply absolute top-0 left-0 h-full rounded-md opacity-90 bg-blue-600;
+    @apply absolute top-0 left-0 h-full rounded-md opacity-60 bg-blue-600;
   }
   @keyframes grow {
     from {

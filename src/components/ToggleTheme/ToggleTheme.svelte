@@ -5,15 +5,11 @@
 
   let darkMode = false;
 
-  if (browser) {
-    const localThemeMode = localStorage.getItem("theme");
-    document.documentElement.classList.toggle("dark", localThemeMode === "dark");
-    darkMode = localThemeMode === "dark";
-  }
+  if (browser) darkMode = localStorage.getItem("theme") === "dark";
 
   function handleClick() {
     darkMode = !darkMode;
-    document.documentElement.classList.toggle("dark", darkMode);
+    document.body.classList.toggle("dark", darkMode);
     localStorage.setItem("theme", darkMode ? "dark" : "light");
   }
 </script>
