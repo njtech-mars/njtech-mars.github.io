@@ -26,7 +26,7 @@
   <div class="flex flex-col gap-2">
     <div class="w-full flex flex-row justify-between items-end">
       <h1 class="text-2xl font-semibold">最新文章</h1>
-      <a href="/blog" title="活动文章" class="text-blue-600 hover:underline">更多..</a>
+      <a href="/blog" title="博客文章" class="text-blue-600 hover:underline">更多..</a>
     </div>
 
     <ul class="flex flex-col gap-7 animate-slideFromBottom">

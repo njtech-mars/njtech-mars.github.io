@@ -7,7 +7,7 @@
 <div class="wrapper">
   <div class="flex flex-row items-center gap-1">
     <h1 class="text-xl font-semibold">标签</h1>
-    <a href="/rss.xml" title="RSS链接" class="w-5 h-5 text-orange-600"><FaRssSquare /></a>
+    <a href="/rss.xml" title="RSS链接" class="w-5 h-5 text-blue-600"><FaRssSquare /></a>
   </div>
   <ul class="flex flex-row flex-wrap gap-2">
     <li>

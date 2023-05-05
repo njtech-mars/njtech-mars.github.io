@@ -1,10 +1,10 @@
 ---
-title: "Markdown测试书写示例"
+title: "Markdown文章测试"
 date: "2023-05-04T15:47:32.068Z"
-update: "2023-05-04T15:47:32.068Z"
+update: "2023-05-05T13:02:03.409Z"
 author: "Cael"
-tags: ["Markdown", "rehype", "remark", "示例"]
-intro: "测试markdown书写blog，其中包含一些常用的简单示例"
+tags: ["Markdown", "测试"]
+intro: "测试markdown书写blog，其中包含一些常用的简单示例以及TOC等功能测试"
 ---
 
 # 一、常用
@@ -15,28 +15,33 @@ intro: "测试markdown书写blog，其中包含一些常用的简单示例"
 
 ## 2. 表格
 
-这是一个表格：
+我们也可以加入表格一个表格：
 
-| Title | Date   |
-| :---- | :----- |
-| Hello | 2023-4 |
-| World | 2023-5 |
-| Good  | 2023-6 |
+| Title           | Date             |
+| :-------------- | :--------------- |
+| 学习 Python     | 2023-04-23 12:30 |
+| 学习 Javascript | 2023-04-26 12:30 |
+| 学习 Typescript | 2023-04-30 12:30 |
 
 ## 3. 图片
 
-这是一张图片：
+同样也可以插入一张图片：
 
 ![avatar](https://raw.githubusercontent.com/MR-Addict/MR-Addict/build/profile-summary-card-output/vue/0-profile-details.svg)
 
 ## 4. 列表
 
-- 苹果
-- 喜欢打球
+使用列表：
+
+- 早上睡懒觉
+- 一起打篮球
+- 出去骑单车
 
 # 二、 进阶
 
 ## 1. 引用
+
+我们可以引用一段文字：
 
 > 注意：
 >
@@ -44,15 +49,18 @@ intro: "测试markdown书写blog，其中包含一些常用的简单示例"
 
 ## 2. 事项
 
-- [x] 做好啦
-- [ ] 再给我三天时间
+添加一些待做事项：
+
+- [x] 添加 Blog
+- [x] Blog 添加 TOC
+- [x] Blog 添加评论
 
 ## 3. 代码
 
-这是 JavaScript：
+我们还可以添加代码，支持代码高亮：
 
 ```javascript
-//test.js
+//javascript
 export default function Button() {
   const handleClick = () => console.log("Button Clicked");
 

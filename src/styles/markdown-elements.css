@@ -4,7 +4,7 @@
 
 /* general */
 .markdown :is(blockquote, table, img, p, pre, ul, h1, h2, h3, h4, h5, h6, hr) {
-  @apply my-4;
+  @apply my-2;
 }
 
 /* blockquote */
@@ -23,7 +23,7 @@
 
 /* code */
 .markdown code:not([class]) {
-  @apply px-1 py-0.5 bg-light rounded-sm text-sm text-white;
+  @apply px-1 py-0.5 bg-gray-300 dark:bg-gray-500 rounded-sm text-sm;
 }
 
 /* ul */

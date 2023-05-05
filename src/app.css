@@ -1,6 +1,6 @@
-@import "./styles/markdown.css";
 @import "./styles/markdown-toc.css";
 @import "./styles/prism-atom-dark.css";
+@import "./styles/markdown-elements.css";
 
 @tailwind base;
 @tailwind components;

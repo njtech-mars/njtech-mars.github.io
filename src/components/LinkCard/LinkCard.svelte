@@ -7,17 +7,12 @@
 </script>
 
 <li class="wraper" style={`--heat:${link.heat}`}>
-  <div class="w-20">
+  <div class="w-20 text-blue-600">
     <svelte:component this={link.icon} />
   </div>
 
   <div class="w-full flex flex-col justify-between gap-2">
-    <a
-      href={link.link}
-      title={link.name}
-      target="_blank"
-      class="text-xl font-semibold text-blue-600 hover:underline w-fit"
-    >
+    <a href={link.link} title={link.name} target="_blank" class="text-xl font-semibold hover:text-blue-600 w-fit">
       {link.name}
     </a>
 
@@ -42,13 +37,13 @@
     @apply text-sm px-1 rounded-sm bg-blue-600/20 text-blue-600;
   }
   .bar {
-    @apply w-full h-2 rounded-md border relative mt-1 border-gray-500;
+    @apply w-full h-2 rounded-md border relative mt-1 border-blue-600;
   }
   .bar::before {
     content: "";
     animation: grow 700ms ease;
     width: calc(var(--heat) * 100%);
-    @apply absolute top-0 left-0 h-full rounded-md bg-gray-700;
+    @apply absolute top-0 left-0 h-full rounded-md opacity-75 bg-blue-600;
   }
   @keyframes grow {
     from {
