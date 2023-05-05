@@ -53,11 +53,11 @@
 }
 
 /* a */
-.markdown a[rel='nofollow'] {
+.markdown a[rel="nofollow"] {
   @apply text-blue-600 underline;
 }
 
 /* hr */
 .markdown hr {
-  @apply border-2 border-blue-500;
+  @apply border-gray-400;
 }

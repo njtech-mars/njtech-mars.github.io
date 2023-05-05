@@ -1,23 +1,29 @@
 <script lang="ts">
-  import { links } from '../config';
-  import { page } from '$app/stores';
-  import MdMenu from 'svelte-icons/md/MdMenu.svelte';
-  import MdClose from 'svelte-icons/md/MdClose.svelte';
+  import { links } from "../config";
+  import { page } from "$app/stores";
+  import MdMenu from "svelte-icons/md/MdMenu.svelte";
+  import MdClose from "svelte-icons/md/MdClose.svelte";
 
   let openMenu = false;
 </script>
 
 <div class="md:hidden flex items-center justify-center">
-  <button type="button" title="menu" aria-label="menu button" class="menu-btn" on:click={() => (openMenu = !openMenu)}>
+  <button type="button" title="菜单" aria-label="menu button" class="menu-btn" on:click={() => (openMenu = !openMenu)}>
     <div class="menu-icon" class:active={openMenu}><MdClose /></div>
     <div class="menu-icon" class:active={!openMenu}><MdMenu /></div>
   </button>
 
   <ul class="menu" class:active={openMenu}>
     {#each links as link (link.name)}
-      {@const pathname = $page.url.pathname.split('/').slice(0, 2).join('/')}
+      {@const pathname = $page.url.pathname.split("/").slice(0, 2).join("/")}
       <li>
-        <a href={link.link} class="link" class:active={pathname === link.link} on:click={() => (openMenu = false)}>
+        <a
+          href={link.link}
+          title={link.name}
+          class="link"
+          class:active={pathname === link.link}
+          on:click={() => (openMenu = false)}
+        >
           {link.name}
         </a>
       </li>
@@ -41,13 +47,13 @@
   .menu {
     height: 100vh;
     height: 100svh;
-    @apply z-10 duration-300 fixed top-0 left-0 pt-36 w-full flex items-center flex-col gap-7 invisible scale-y-90 opacity-0 origin-top-right dark:bg-dark bg-gray-100;
+    @apply z-10 duration-300 fixed top-0 left-0 pt-36 w-full flex items-center flex-col gap-5 invisible scale-y-90 opacity-0 origin-top-right dark:bg-dark bg-gray-100;
   }
   .menu.active {
     @apply scale-y-100 opacity-100 visible;
   }
   .link {
-    @apply text-xl font-bold;
+    @apply text-2xl font-bold;
   }
   .link.active {
     @apply text-blue-600;

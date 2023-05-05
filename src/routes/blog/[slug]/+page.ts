@@ -1,5 +1,5 @@
-import { error } from '@sveltejs/kit';
-import getPosts from '$lib/blog/getPosts';
+import { error } from "@sveltejs/kit";
+import getPosts from "$lib/blog/getPosts";
 
 export async function load({ params }) {
   try {

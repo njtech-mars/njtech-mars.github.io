@@ -1,16 +1,20 @@
 <script lang="ts">
-  import FaLink from 'svelte-icons/fa/FaLink.svelte';
-  import FaClock from 'svelte-icons/fa/FaRegClock.svelte';
-  import FaRegUser from 'svelte-icons/fa/FaRegUser.svelte';
+  import FaLink from "svelte-icons/fa/FaLink.svelte";
+  import FaClock from "svelte-icons/fa/FaRegClock.svelte";
+  import FaRegUser from "svelte-icons/fa/FaRegUser.svelte";
 
-  import { formatDate, timeAgo } from '$lib/utils';
-  import type { PostMetadatType } from '$types/postMetadata';
+  import { formatDate, timeAgo } from "$lib/utils";
+  import type { PostMetadatType } from "$types/postMetadata";
 
   export let post: PostMetadatType;
 </script>
 
 <li>
-  <a href={`/blog/${post.slug}`} class="text-lg text-blue-600 hover:underline flex flex-row items-center w-fit">
+  <a
+    title={post.title}
+    href={`/blog/${post.slug}`}
+    class="text-lg text-blue-600 hover:underline flex flex-row items-center w-fit"
+  >
     <div class="w-3 h-3"><FaLink /></div>
     <span>{post.title}</span>
   </a>

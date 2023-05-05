@@ -1,6 +1,6 @@
-import z from 'zod';
-import type { ComponentType } from 'svelte';
-import type { Readable } from 'svelte/store';
+import z from "zod";
+import type { ComponentType } from "svelte";
+import type { Readable } from "svelte/store";
 
 interface LinksReadableType {
   activeTag: string;

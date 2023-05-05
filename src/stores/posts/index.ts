@@ -1,9 +1,9 @@
-import { getPosts } from '$lib/blog';
-import { writable, derived } from 'svelte/store';
+import { getPosts } from "$lib/blog";
+import { writable, derived } from "svelte/store";
 
 function createStore() {
   const data = getPosts();
-  const activeTag = writable('');
+  const activeTag = writable("");
 
   const sortedTags = data.map((item) => item.tags).flatMap((item) => item);
   const rawTags = sortedTags.map((name) => ({ name, count: sortedTags.filter((v) => v === name).length }));

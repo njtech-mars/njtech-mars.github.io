@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { links } from '$stores/links';
-  import Tags from './components/Tags/Tags.svelte';
-  import LinkCard from '$components/LinkCard/LinkCard.svelte';
+  import { links } from "$stores/links";
+  import Tags from "./components/Tags/Tags.svelte";
+  import LinkCard from "$components/LinkCard/LinkCard.svelte";
 </script>
 
-<main class="w-full flex-1 frame py-5 md:py-10 flex flex-col gap-5">
+<main class="frame flex flex-col gap-2">
   <h1 class="text-2xl text-blue-600 font-semibold">所有资源</h1>
 
   <Tags {links} />

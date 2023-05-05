@@ -1,4 +1,4 @@
-import z from 'zod';
+import z from "zod";
 
 const PostMetadataWithoutSlug = z.object({
   title: z.string(),

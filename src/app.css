@@ -1,5 +1,5 @@
-@import './styles/markdown.css';
-@import './styles/prism-atom-dark.css';
+@import "./styles/markdown.css";
+@import "./styles/prism-atom-dark.css";
 
 @tailwind base;
 @tailwind components;
@@ -14,5 +14,5 @@
 }
 
 .frame {
-  @apply px-4 md:px-48;
+  @apply w-full flex-1 px-4 md:px-48 py-10;
 }

@@ -1,15 +1,15 @@
 <script lang="ts">
-  import FaClock from 'svelte-icons/fa/FaRegClock.svelte';
-  import FaRegUser from 'svelte-icons/fa/FaRegUser.svelte';
+  import FaClock from "svelte-icons/fa/FaRegClock.svelte";
+  import FaRegUser from "svelte-icons/fa/FaRegUser.svelte";
 
-  import type { PageData } from './$types';
-  import { formatDate, timeAgo } from '$lib/utils';
+  import type { PageData } from "./$types";
+  import { formatDate, timeAgo } from "$lib/utils";
 
   export let data: PageData;
 </script>
 
-<main class="w-full flex-1 frame py-5 md:py-10 flex flex-col items-center gap-5 animate-slideFromBottom">
-  <header class="flex flex-col items-center gap-3">
+<main class="w-full flex-1 frame py-10 flex flex-col items-center animate-slideFromBottom">
+  <header class="flex flex-col items-center gap-0.5 md:gap-3">
     <h1 class="text-2xl md:text-3xl font-semibold">{data.title}</h1>
 
     <div class="flex flex-row items-center gap-1 text-gray-500 text-sm">

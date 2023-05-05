@@ -1,11 +1,11 @@
-import z from 'zod';
+import z from "zod";
 
-import rawData from './data';
-import { Link } from '$types/link';
-import { writable, derived } from 'svelte/store';
+import rawData from "./data";
+import { Link } from "$types/link";
+import { writable, derived } from "svelte/store";
 
 function createStore() {
-  const activeTag = writable('');
+  const activeTag = writable("");
   const data = z.array(Link).parse(rawData);
 
   const sortedTags = data.map((item) => item.tags).flatMap((item) => item);

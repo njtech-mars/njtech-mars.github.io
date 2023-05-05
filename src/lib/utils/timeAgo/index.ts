@@ -1,10 +1,10 @@
 const timeagoMap = {
-  year: '年',
-  month: '个月',
-  day: '天',
-  hour: '小时',
-  minute: '分钟',
-  second: '秒'
+  year: "年",
+  month: "个月",
+  day: "天",
+  hour: "小时",
+  minute: "分钟",
+  second: "秒"
 };
 
 export default function timeAgo(date: string) {
@@ -16,7 +16,7 @@ export default function timeAgo(date: string) {
   const oneYear = oneDay * 365;
 
   let isNeedCheck = true;
-  let timeago = { key: 'year', value: 0 };
+  let timeago = { key: "year", value: 0 };
   let leftTime = new Date().getTime() - new Date(date).getTime();
 
   const year = Math.floor(leftTime / oneYear);

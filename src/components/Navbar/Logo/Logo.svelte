@@ -1,8 +1,8 @@
 <script lang="ts">
-  import MdLocationOn from 'svelte-icons/md/MdLocationOn.svelte';
+  import MdLocationOn from "svelte-icons/md/MdLocationOn.svelte";
 </script>
 
-<a href="/" class="animate-slideFromLeft z-20 flex flex-row items-center gap-1.5">
+<a href="/" title="首页" class="animate-slideFromLeft z-20 flex flex-row items-center gap-1.5">
   <div class="icon"><MdLocationOn /></div>
   <div class="title">南工向导</div>
 </a>
@@ -12,12 +12,12 @@
     @apply relative w-7 h-7 p-0.5 isolate text-white;
   }
   .icon::before {
-    content: '';
+    content: "";
     border-radius: 30% 15% 30% 15%;
     @apply -z-10 absolute top-0 right-0 w-full h-full bg-blue-500;
   }
   .icon::after {
-    content: '';
+    content: "";
     border-radius: 30% 15% 30% 15%;
     @apply -z-20 absolute -top-0.5 -right-0.5 w-full h-full bg-blue-300;
   }

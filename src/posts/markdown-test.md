@@ -1,10 +1,10 @@
 ---
-title: 'Markdown测试书写示例'
-date: '2023-05-04T15:47:32.068Z'
-update: '2023-05-04T15:47:32.068Z'
-author: 'Cael'
-tags: ['Test', 'rehype', 'remark', '测试']
-intro: '测试markdown书写blog，其中包含一些常用的简单示例'
+title: "Markdown测试书写示例"
+date: "2023-05-04T15:47:32.068Z"
+update: "2023-05-04T15:47:32.068Z"
+author: "Cael"
+tags: ["Test", "rehype", "remark", "测试"]
+intro: "测试markdown书写blog，其中包含一些常用的简单示例"
 ---
 
 ## 1. 链接
@@ -50,7 +50,7 @@ intro: '测试markdown书写blog，其中包含一些常用的简单示例'
 ```javascript
 //test.js
 export default function Button() {
-  const handleClick = () => console.log('Button Clicked');
+  const handleClick = () => console.log("Button Clicked");
 
   return (
     <div onClick={handleClick} className="py-2 px-3 rounded-md bg-indigo-600 text-white">

@@ -3,11 +3,11 @@
  * Based on Atom's `atom-dark` theme: https://github.com/atom/atom-dark-syntax
  * @author Joe Gibson (@gibsjose)
  */
-code[class*='language-'],
-pre[class*='language-'] {
+code[class*="language-"],
+pre[class*="language-"] {
   color: #c5c8c6;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-  font-family: Inconsolata, Monaco, Consolas, 'Courier New', Courier, monospace;
+  font-family: Inconsolata, Monaco, Consolas, "Courier New", Courier, monospace;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -26,19 +26,19 @@ pre[class*='language-'] {
 }
 
 /* Code blocks */
-pre[class*='language-'] {
+pre[class*="language-"] {
   padding: 0.5em 1em;
   overflow: auto;
   border-radius: 0.3em;
 }
 
-:not(pre) > code[class*='language-'],
-pre[class*='language-'] {
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
   background: #1d1f21;
 }
 
 /* Inline code */
-:not(pre) > code[class*='language-'] {
+:not(pre) > code[class*="language-"] {
   padding: 0.1em;
   border-radius: 0.3em;
 }

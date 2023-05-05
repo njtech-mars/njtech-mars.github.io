@@ -1,8 +1,8 @@
 <script>
-  import { page } from '$app/stores';
+  import { page } from "$app/stores";
 </script>
 
-<main>{$page.status} | {$page.error?.message || 'Error'}</main>
+<main>{$page.status} | {$page.error?.message || "Error"}</main>
 
 <style lang="postcss">
   main {

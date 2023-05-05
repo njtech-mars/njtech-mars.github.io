@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { links } from '$stores/links';
-  import type { LinkType } from '$types/link';
+  import { links } from "$stores/links";
+  import type { LinkType } from "$types/link";
 
   export let link: LinkType;
   export let disabled: boolean = false;
@@ -12,7 +12,12 @@
   </div>
 
   <div class="w-full flex flex-col justify-between gap-2">
-    <a href={link.link} target="_blank" class="text-xl font-semibold hover:text-blue-600 hover:underline w-fit">
+    <a
+      href={link.link}
+      title={link.name}
+      target="_blank"
+      class="text-xl font-semibold hover:text-blue-600 hover:underline w-fit"
+    >
       {link.name}
     </a>
 
@@ -40,7 +45,7 @@
     @apply w-full h-2 rounded-md border relative mt-1 border-blue-600;
   }
   .bar::before {
-    content: '';
+    content: "";
     animation: grow 700ms ease;
     width: calc(var(--heat) * 100%);
     @apply absolute top-0 left-0 h-full rounded-md opacity-90 bg-blue-600;

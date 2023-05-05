@@ -1,17 +1,22 @@
 <script lang="ts">
-  import { posts } from '$stores/posts';
+  import FaRssSquare from "svelte-icons/fa/FaRssSquare.svelte";
+
+  import { posts } from "$stores/posts";
 </script>
 
 <div class="wrapper">
-  <h1 class="text-xl text-blue-600 font-semibold">标签</h1>
+  <div class="flex flex-row items-center gap-1">
+    <h1 class="text-xl text-blue-600 font-semibold">标签</h1>
+    <a href="/rss.xml" title="RSS链接" class="w-5 h-5 text-blue-600"><FaRssSquare /></a>
+  </div>
   <ul class="flex flex-row flex-wrap gap-2">
     <li>
       <button
         type="button"
         title="全部"
         class="tag"
-        class:active={$posts.activeTag === ''}
-        on:click={() => posts.set('')}
+        class:active={$posts.activeTag === ""}
+        on:click={() => posts.set("")}
       >
         &num;全部({$posts.tags.length})
       </button>
