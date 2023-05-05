@@ -1,4 +1,4 @@
-<div class="flex flex-col gap-3 py-20">
+<div class="flex flex-col gap-3 py-10 animate-slideFromRight">
   <h1 class="text-3xl font-bold border-b-4 border-b-blue-600 w-fit">Mars工作室</h1>
 
   <p class="max-w-md text-lg">
