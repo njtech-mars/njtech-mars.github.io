@@ -34,8 +34,7 @@
 
 <style lang="postcss">
   .wrapper {
-    box-shadow: 0 0 10px #8181815f;
-    @apply w-full flex flex-col gap-3 p-5 h-fit rounded-xl;
+    @apply w-full flex flex-col gap-3 p-5 h-fit rounded-xl border border-gray-300 dark:border-gray-500;
   }
   .tag {
     @apply text-sm py-1 px-2 rounded-2xl text-blue-600 border border-blue-600;

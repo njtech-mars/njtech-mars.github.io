@@ -26,7 +26,7 @@
 
 /* code */
 .markdown code:not([class]) {
-  @apply px-1 py-0.5 bg-gray-300 dark:bg-gray-500 rounded-sm text-sm;
+  @apply px-1 py-0.5 mx-0.5 bg-gray-300 dark:bg-gray-500 rounded-sm text-sm;
 }
 
 /* ul */

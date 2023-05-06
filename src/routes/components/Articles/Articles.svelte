@@ -11,7 +11,7 @@
     <a href="/blog" title="技术文章" class="text-blue-600 hover:underline">更多...</a>
   </div>
 
-  <ul class="flex flex-col gap-7 animate-slideFromBottom">
+  <ul class="flex flex-col gap-7">
     {#each posts as post (post.slug)}
       <PostCard {post} />
     {/each}

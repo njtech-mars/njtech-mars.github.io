@@ -20,14 +20,12 @@
   </a>
 
   <div class="flex flex-col gap-1">
-    <div class="flex flex-row items-center gap-1 text-gray-500 text-sm">
+    <div class="flex flex-row items-center flex-wrap gap-1 text-gray-500 text-sm">
       <div class="flex flex-row items-center gap-0.5">
         <div class="w-3 h-3"><FaRegCalendarAlt /></div>
         <div>{formatDate(post.date)}</div>
-        <div>(上次更新{timeAgo(post.update)})</div>
+        <div>(更新于{timeAgo(post.update)})</div>
       </div>
-
-      <p>•</p>
 
       <div class="flex flex-row items-center gap-0.5">
         <div class="w-3 h-3"><FaRegUser /></div>
@@ -37,7 +35,7 @@
 
     <div class="flex flex-row flex-wrap gap-2 text-sm">
       {#each post.tags as tag (tag)}
-        <span class="py-1 px-2 rounded-2xl text-blue-600 bg-blue-600/20">&num;{tag}</span>
+        <span class="py-1 px-2 rounded-2xl text-green-600 bg-green-600/20">&num;{tag}</span>
       {/each}
     </div>
   </div>
@@ -47,7 +45,6 @@
 
 <style lang="postcss">
   li {
-    box-shadow: 0 0 10px #8181815f;
-    @apply w-full space-y-1 p-5 rounded-xl;
+    @apply w-full space-y-1 p-5 rounded-xl border border-gray-300 dark:border-gray-500;
   }
 </style>

@@ -25,7 +25,7 @@
       <div class="flex flex-row items-center gap-0.5">
         <div class="w-3 h-3"><FaRegCalendarAlt /></div>
         <div>{formatDate(data.date)}</div>
-        <div>(上次更新{timeAgo(data.update)})</div>
+        <div>(更新于{timeAgo(data.update)})</div>
       </div>
 
       <p>•</p>
@@ -50,13 +50,13 @@
         </div>
         <div class="flex flex-row flex-wrap gap-2 text-xs">
           {#each data.tags as tag (tag)}
-            <span class="py-1 px-2 rounded-2xl text-blue-600 bg-blue-600/20">&num;{tag}</span>
+            <span class="py-1 px-2 rounded-2xl text-green-600 bg-green-600/20">&num;{tag}</span>
           {/each}
         </div>
       </div>
 
       <div class="toc-container">
-        <div class="flex flex-row items-center">
+        <div class="flex flex-row items-center gap-0.5">
           <div class="w-4 h-4"><FaAlignLeft /></div>
           <div class="text-lg">目录</div>
         </div>

@@ -30,11 +30,10 @@
 
 <style lang="postcss">
   .wraper {
-    box-shadow: 0 0 10px #8181815f;
-    @apply flex flex-row gap-5 rounded-xl p-5 md:p-7 duration-300;
+    @apply flex flex-row gap-5 rounded-xl p-5 md:p-7 duration-300 border border-gray-300 dark:border-gray-500;
   }
   .tag {
-    @apply text-sm px-1 rounded-sm bg-blue-600/20 text-blue-600;
+    @apply text-sm px-1 rounded-sm bg-green-600/20 text-green-600;
   }
   .bar {
     @apply w-full h-2 rounded-md border relative mt-1 border-blue-600;

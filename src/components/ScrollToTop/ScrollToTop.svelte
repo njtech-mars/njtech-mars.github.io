@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import FaAngleUp from "svelte-icons/fa/FaAngleUp.svelte";
+  import MdKeyboardArrowUp from "svelte-icons/md/MdKeyboardArrowUp.svelte";
 
   let visible = false;
 
@@ -18,7 +18,7 @@
   class:active={visible}
   on:click={() => window.scroll({ top: 0, behavior: "smooth" })}
 >
-  <FaAngleUp />
+  <MdKeyboardArrowUp />
 </button>
 
 <style lang="postcss">

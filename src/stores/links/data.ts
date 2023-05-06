@@ -14,7 +14,7 @@ const data = [
     icon: MdOndemandVideo,
     link: "https://online.njtech.edu.cn",
     subtitle: "南工在线视频播放平台",
-    tags: ["校内", "视频", "学习"],
+    tags: ["校内", "视频"],
     heat: 0.9,
     pinned: true
   },
