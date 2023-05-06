@@ -1,3 +1,4 @@
+import MdGames from "svelte-icons/md/MdGames.svelte";
 import FaLinux from "svelte-icons/fa/FaLinux.svelte";
 import FaAward from "svelte-icons/fa/FaAward.svelte";
 import MdSchool from "svelte-icons/md/MdSchool.svelte";
@@ -19,7 +20,25 @@ const data = [
     pinned: true
   },
   {
-    name: "正版化平台",
+    name: "南工在线评测系统",
+    icon: FaLaptopCode,
+    link: "https://acm.online.njtech.edu.cn",
+    subtitle: "南工在线评测系统",
+    tags: ["校内", "学习"],
+    heat: 0.9,
+    pinned: true
+  },
+  {
+    name: "远景实验室",
+    icon: FaAward,
+    link: "https://www.vistalab.top/",
+    subtitle: "南工远景实验室",
+    tags: ["校内", "组织"],
+    heat: 0.9,
+    pinned: true
+  },
+  {
+    name: "南工正版化平台",
     icon: FaMicrosoft,
     link: "https://soft.njtech.edu.cn",
     subtitle: "南工正版化平台",
@@ -33,16 +52,16 @@ const data = [
     link: "https://mirrors.njtech.edu.cn",
     subtitle: "南工镜像站",
     tags: ["校内", "镜像站"],
-    heat: 0.75,
+    heat: 0.8,
     pinned: true
   },
   {
-    name: "南工在线评测系统",
-    icon: FaLaptopCode,
-    link: "https://acm.online.njtech.edu.cn",
-    subtitle: "南工在线评测系统",
-    tags: ["校内", "学习"],
-    heat: 0.9,
+    name: "南工MC",
+    icon: MdGames,
+    link: "https://wiki.mualliance.ltd/南京工业大学服务器",
+    subtitle: "南工MC",
+    tags: ["校内", "组织"],
+    heat: 0.8,
     pinned: true
   },
   {
@@ -52,16 +71,7 @@ const data = [
     subtitle: "清华大学tuna协会",
     tags: ["校外", "镜像站"],
     heat: 0.9,
-    pinned: true
-  },
-  {
-    name: "远景实验室",
-    icon: FaAward,
-    link: "https://www.vistalab.top/",
-    subtitle: "南工远景实验室",
-    tags: ["校内", "组织"],
-    heat: 0.8,
-    pinned: true
+    pinned: false
   },
   {
     name: "中国科学技术大学Linux用户协会",
