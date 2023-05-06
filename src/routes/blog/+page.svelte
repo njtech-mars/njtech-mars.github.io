@@ -12,7 +12,7 @@
       <Tags />
     </div>
 
-    <ul class="w-full flex flex-col gap-7 animate-slideFromBottom md:animate-slideFromLeft">
+    <ul class="w-full flex flex-col gap-5 md:gap-7 animate-slideFromBottom md:animate-slideFromLeft">
       {#each $posts.posts as post (post.slug)}
         <PostCard {post} />
       {/each}
