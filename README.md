@@ -4,4 +4,5 @@ MarsStudio 是南京工业大学信息中心学生开发团队，成立于 2001 
 
 可访问的链接：
 
-- [https://marsstudio.vercel.app](https://marsstudio.vercel.app)
+- [https://marsstudio.vercel.app(公网访问)](https://marsstudio.vercel.app)
+- [https://studio.online.njtech.edu.cn(内网访问)](https://studio.online.njtech.edu.cn)
