@@ -5,7 +5,7 @@
 
 <footer>
   <div class="flex flex-row items-center gap-1">
-    <a href="https://github.com/MR-Addict/navigation" class="link">
+    <a href="https://github.com/MR-Addict/studio" class="link">
       <div class="icon"><FaGithub /></div>
       <div class="text">本站仓库</div>
     </a>

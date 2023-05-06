@@ -6,14 +6,15 @@ export async function GET() {
   const posts = getPosts();
 
   const title = "Mars工作室";
-  const url = "https://navigation.mraddict.vercel.app";
+  const description = "Mars工作室主页";
+  const url = "https://marsstudio.vercel.app";
   const headers = { "Content-Type": "application/xml" };
 
   const xml = `
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>${title}</title>
-    <description>${title}</description>
+    <description>${description}</description>
     <link>${url}</link>
     <atom:link href="${url}/rss.xml" rel="self" type="application/rss+xml"/>
         ${posts

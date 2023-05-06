@@ -1,9 +1,10 @@
 import path from "path";
+import adapter from "@sveltejs/adapter-auto";
+import { vitePreprocess } from "@sveltejs/kit/vite";
+
 import { mdsvex } from "mdsvex";
 import rehypeSlug from "rehype-slug";
 import toc from "@jsdevtools/rehype-toc";
-import adapter from "@sveltejs/adapter-auto";
-import { vitePreprocess } from "@sveltejs/kit/vite";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 /** @type {import('mdsvex').MdsvexOptions} */

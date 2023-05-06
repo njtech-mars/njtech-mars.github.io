@@ -1,3 +1,2 @@
 User-agent: *
 Disallow: /api/
-Sitemap: https://mraddict.one/sitemap.xml
