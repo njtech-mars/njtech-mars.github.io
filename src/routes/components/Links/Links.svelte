@@ -10,7 +10,7 @@
   </div>
 
   <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 animate-slideFromBottom">
-    {#each $links.pinned as link (link.name)}
+    {#each $links.pinned.slice(0, 6) as link (link.name)}
       {#key link}
         <LinkCard {link} disabled={true} />
       {/key}

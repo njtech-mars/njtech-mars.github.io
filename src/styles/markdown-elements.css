@@ -3,11 +3,8 @@
 }
 
 /* general */
-.markdown :is(h1, h2, h3, h4, h5, h6, ) {
+.markdown :is(h1, h2, h3, h4, h5, h6, blockquote, table, img, p, pre, ul, hr) {
   @apply my-4;
-}
-.markdown :is(blockquote, table, img, p, pre, ul, hr) {
-  @apply my-2;
 }
 
 /* blockquote */
@@ -53,7 +50,7 @@
 
 /* a */
 .markdown a[rel="nofollow"] {
-  @apply text-blue-600 underline;
+  @apply text-blue-600 underline mx-0.5;
 }
 
 /* hr */
