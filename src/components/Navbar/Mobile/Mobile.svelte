@@ -53,7 +53,7 @@
     @apply scale-y-100 opacity-100 visible;
   }
   .link {
-    @apply text-2xl font-bold;
+    @apply text-2xl;
   }
   .link.active {
     @apply text-blue-600;

@@ -1,4 +1,4 @@
-const timeagoMap = {
+const intervalMap = {
   year: "年",
   month: "个月",
   day: "天",
@@ -7,64 +7,66 @@ const timeagoMap = {
   second: "秒"
 };
 
-export default function timeAgo(date: string) {
+export default function timeInterval(date: string) {
   const oneSecond = 1000;
   const oneMinute = oneSecond * 60;
   const oneHour = oneMinute * 60;
   const oneDay = oneHour * 24;
   const oneMonth = oneDay * 30;
   const oneYear = oneDay * 365;
+  const ago = new Date().getTime() >= new Date(date).getTime();
 
   let isNeedCheck = true;
-  let timeago = { key: "year", value: 0 };
+  let interval = { key: "year", value: 0 };
   let leftTime = new Date().getTime() - new Date(date).getTime();
+  if (!ago) leftTime = new Date(date).getTime() - new Date().getTime();
 
   const year = Math.floor(leftTime / oneYear);
   leftTime = leftTime % oneYear;
   if (year !== 0 && isNeedCheck) {
-    timeago.key = timeagoMap.year;
-    timeago.value = year;
+    interval.key = intervalMap.year;
+    interval.value = year;
     isNeedCheck = false;
   }
 
   const month = Math.floor(leftTime / oneMonth);
   leftTime = leftTime % oneMonth;
   if (month !== 0 && isNeedCheck) {
-    timeago.key = timeagoMap.month;
-    timeago.value = month;
+    interval.key = intervalMap.month;
+    interval.value = month;
     isNeedCheck = false;
   }
 
   const day = Math.floor(leftTime / oneDay);
   leftTime = leftTime % oneDay;
   if (day !== 0 && isNeedCheck) {
-    timeago.key = timeagoMap.day;
-    timeago.value = day;
+    interval.key = intervalMap.day;
+    interval.value = day;
     isNeedCheck = false;
   }
 
   const hour = Math.floor(leftTime / oneHour);
   leftTime = leftTime % oneHour;
   if (hour !== 0 && isNeedCheck) {
-    timeago.key = timeagoMap.hour;
-    timeago.value = hour;
+    interval.key = intervalMap.hour;
+    interval.value = hour;
     isNeedCheck = false;
   }
 
   const minute = Math.floor(leftTime / oneMinute);
   leftTime = leftTime % oneMinute;
   if (minute !== 0 && isNeedCheck) {
-    timeago.key = timeagoMap.minute;
-    timeago.value = minute;
+    interval.key = intervalMap.minute;
+    interval.value = minute;
     isNeedCheck = false;
   }
 
   const second = Math.floor(leftTime / oneSecond);
   if (second !== 0 && isNeedCheck) {
-    timeago.key = timeagoMap.second;
-    timeago.value = second;
+    interval.key = intervalMap.second;
+    interval.value = second;
     isNeedCheck = false;
   }
 
-  return `${timeago.value}${timeago.key}前`;
+  return `${interval.value}${interval.key}${ago ? "前" : "后"}`;
 }

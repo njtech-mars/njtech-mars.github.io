@@ -3,7 +3,7 @@
   import { page } from "$app/stores";
 </script>
 
-<ul class="hidden md:flex flex-row gap-2 font-semibold text-lg">
+<ul class="hidden md:flex flex-row gap-4 text-lg">
   {#each links as link (link.name)}
     {@const pathname = $page.url.pathname.split("/").slice(0, 2).join("/")}
     <li>

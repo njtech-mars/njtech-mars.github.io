@@ -3,7 +3,7 @@
   import FaRegUser from "svelte-icons/fa/FaRegUser.svelte";
   import FaRegCalendarAlt from "svelte-icons/fa/FaRegCalendarAlt.svelte";
 
-  import { formatDate, timeAgo } from "$lib/utils";
+  import { formatDate, timeInterval } from "$lib/utils";
   import type { PostMetadatType } from "$types/postMetadata";
 
   export let post: PostMetadatType;
@@ -23,8 +23,8 @@
     <div class="flex flex-row items-center flex-wrap gap-1 text-gray-500 text-sm">
       <div class="flex flex-row items-center gap-0.5">
         <div class="w-3 h-3"><FaRegCalendarAlt /></div>
-        <div>{formatDate(post.date)}</div>
-        <div>(更新于{timeAgo(post.update)})</div>
+        <div>{formatDate(post.date, true)}</div>
+        <div>(更新于{timeInterval(post.update)})</div>
       </div>
 
       <div class="flex flex-row items-center gap-0.5">

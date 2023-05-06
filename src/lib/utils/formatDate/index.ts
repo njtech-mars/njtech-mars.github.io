@@ -1,6 +1,7 @@
-export default function formatDate(date: string | Date, offset: number = 8) {
+export default function formatDate(date: string | Date, short: boolean = false, offset: number = 8) {
   const newDate = date instanceof Date ? date : new Date(date);
-  const localDate = newDate.getTime() + offset * 60 * 60 * 1000;
+  const localDate = new Date(newDate.getTime() + offset * 60 * 60 * 1000).toISOString();
 
-  return new Date(localDate).toISOString().split("T")[0];
+  if (short) return localDate.slice(0, localDate.indexOf("T"));
+  else return localDate.replace("T", " ").slice(0, localDate.indexOf("."));
 }

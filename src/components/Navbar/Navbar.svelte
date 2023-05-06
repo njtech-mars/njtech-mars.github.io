@@ -8,7 +8,7 @@
 <nav class="px-4 md:px-48 pt-5 w-full flex flex-row items-center justify-between">
   <Logo />
 
-  <div class="flex flex-row items-center gap-3">
+  <div class="flex flex-row items-center gap-3 md:gap-5">
     <Normal />
     <ToggleTheme />
     <Mobile />
