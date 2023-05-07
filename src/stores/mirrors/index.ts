@@ -47,18 +47,18 @@ function sortMirrors(mirrors: MirrorType[], sortRule: SortRuleType) {
 
 function createStore() {
   const mirrors = writable<MirrorType[]>([]);
-  const searchKeywrds = writable("");
+  const searchKeywords = writable("");
   const sortRule = writable<SortRuleType>({ key: "status", asc: false });
-  const derivedStore = derived([mirrors, searchKeywrds, sortRule], ([$mirrors, $searchKeywrds, $sortRule]) => ({
+  const derivedStore = derived([mirrors, searchKeywords, sortRule], ([$mirrors, $searchKeywords, $sortRule]) => ({
     sortRule: $sortRule,
-    searchKeywrds: $searchKeywrds,
-    mirrors: sortMirrors(searchMirrors($mirrors, $searchKeywrds), $sortRule)
+    searchKeywords: $searchKeywords,
+    mirrors: sortMirrors(searchMirrors($mirrors, $searchKeywords), $sortRule)
   }));
 
   return {
-    setSortRule: sortRule.set,
-    setSearchKeywrds: searchKeywrds.set,
     setMirrors: mirrors.set,
+    setSortRule: sortRule.set,
+    setSearchKeywords: searchKeywords.set,
     subscribe: derivedStore.subscribe
   };
 }

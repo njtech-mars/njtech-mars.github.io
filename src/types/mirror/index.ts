@@ -1,11 +1,6 @@
 import z from "zod";
 import type { Readable } from "svelte/store";
 
-interface SortRuleType {
-  asc: boolean;
-  key: "name" | "size" | "update" | "status";
-}
-
 const Mirror = z.object({
   name: z.string(),
   is_master: z.boolean(),
@@ -24,15 +19,20 @@ const Mirror = z.object({
 
 type MirrorType = z.TypeOf<typeof Mirror>;
 
+interface SortRuleType {
+  asc: boolean;
+  key: "name" | "size" | "update" | "status";
+}
+
 interface MirrorsReadableType {
   sortRule: SortRuleType;
-  searchKeywrds: string;
+  searchKeywords: string;
   mirrors: MirrorType[];
 }
 
 interface MirrorsStoreType extends Readable<MirrorsReadableType> {
   setSortRule: (value: SortRuleType) => void;
-  setSearchKeywrds: (value: string) => void;
+  setSearchKeywords: (value: string) => void;
   setMirrors: (value: MirrorType[]) => void;
 }
 

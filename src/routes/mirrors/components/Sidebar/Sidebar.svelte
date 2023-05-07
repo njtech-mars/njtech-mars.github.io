@@ -3,10 +3,11 @@
   import { mirrors } from "$stores/mirrors";
 
   let timeoutId: number;
+
   function debounceInput(event: Event) {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
-      mirrors.setSearchKeywrds((event.target as HTMLInputElement).value.trim().toLowerCase());
+      mirrors.setSearchKeywords((event.target as HTMLInputElement).value.toLowerCase().trim());
     }, 700);
   }
 
@@ -24,7 +25,7 @@
 </script>
 
 <div class="w-full flex flex-col gap-5">
-  <input type="text" title="筛选" placeholder="Search..." on:input={debounceInput} />
+  <input title="筛选" placeholder="Search..." on:input={debounceInput} bind:value={$mirrors.searchKeywords} />
 
   <div class="hidden md:flex flex-col gap-1">
     <h1 class="pl-1">数据统计</h1>
@@ -39,7 +40,7 @@
 
 <style lang="postcss">
   input {
-    @apply w-full bg-gray-100 dark:bg-dark outline-none py-1 px-3;
+    @apply w-full bg-gray-100 dark:bg-dark outline-none py-1.5 px-3;
     @apply border border-gray-300 dark:border-gray-500 rounded-sm focus:border-blue-600;
   }
 </style>

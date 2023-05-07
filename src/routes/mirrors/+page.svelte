@@ -1,19 +1,18 @@
 <script lang="ts">
   import { onMount } from "svelte";
   import { mirrors } from "$stores/mirrors";
-  import type { Writable } from "svelte/store";
 
   import Table from "./components/Table/Table.svelte";
   import Sidebar from "./components/Sidebar/Sidebar.svelte";
   import Message from "./components/Message/Message.svelte";
   import { fetchMirros } from "./lib/fetchMirrors";
 
-  let promise: Writable<Promise<boolean>>;
+  let promise: Promise<boolean>;
   onMount(() => (promise = fetchMirros()));
 </script>
 
 <main class="frame flex flex-col gap-2">
-  {#await $promise}
+  {#await promise}
     <Message title="镜像数据拉取中..." />
   {:then success}
     {#if !success}
