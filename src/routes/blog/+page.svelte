@@ -7,10 +7,8 @@
 <main class="frame flex flex-col gap-2">
   <h1 class="text-2xl font-semibold">所有文章</h1>
 
-  <div class="w-full flex flex-col md:flex-row gap-7">
-    <div class="block md:hidden w-full animate-slideFromTop">
-      <Tags />
-    </div>
+  <div class="w-full flex flex-col md:flex-row gap-5 md:gap-7">
+    <div class="block md:hidden w-full animate-slideFromTop"><Tags /></div>
 
     <ul class="w-full flex flex-col gap-5 md:gap-7 animate-slideFromBottom md:animate-slideFromLeft">
       {#each $posts.posts as post (post.slug)}
@@ -18,8 +16,6 @@
       {/each}
     </ul>
 
-    <div class="hidden md:block animate-slideFromRight sticky top-5 w-[20rem]">
-      <Tags />
-    </div>
+    <div class="hidden md:block animate-slideFromRight sticky top-5 w-[20rem]"><Tags /></div>
   </div>
 </main>

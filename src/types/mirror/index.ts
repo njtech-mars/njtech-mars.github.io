@@ -1,4 +1,10 @@
 import z from "zod";
+import type { Readable } from "svelte/store";
+
+interface SortRuleType {
+  asc: boolean;
+  key: "name" | "size" | "update" | "status";
+}
 
 const Mirror = z.object({
   name: z.string(),
@@ -18,5 +24,17 @@ const Mirror = z.object({
 
 type MirrorType = z.TypeOf<typeof Mirror>;
 
+interface MirrorsReadableType {
+  sortRule: SortRuleType;
+  searchKeywrds: string;
+  mirrors: MirrorType[];
+}
+
+interface MirrorsStoreType extends Readable<MirrorsReadableType> {
+  setSortRule: (value: SortRuleType) => void;
+  setSearchKeywrds: (value: string) => void;
+  setMirrors: (value: MirrorType[]) => void;
+}
+
 export { Mirror };
-export type { MirrorType };
+export type { MirrorType, SortRuleType, MirrorsStoreType };

@@ -1,14 +1,18 @@
 import { writable, derived } from "svelte/store";
 
-import type { MirrorType } from "$types/mirror";
+import { formatDate } from "$lib/utils";
+import type { MirrorType, SortRuleType } from "$types/mirror";
 
-interface SortRuleType {
-  asc: boolean;
-  key: "name" | "size" | "update" | "status";
-}
+function searchMirrors(mirrors: MirrorType[], searchKeywords: string) {
+  type KeyType = "name" | "size" | "last_update" | "status";
+  const keys: KeyType[] = ["name", "size", "last_update", "status"];
 
-function searchMirrors(mirrors: MirrorType[], searchKeywrds: string) {
-  return mirrors.filter((mirror) => mirror.name.toLocaleLowerCase().includes(searchKeywrds));
+  return mirrors.filter((mirror) =>
+    keys.some((key) => {
+      if (key === "last_update") return formatDate(mirror[key]).includes(searchKeywords);
+      else return mirror[key]?.toLowerCase().includes(searchKeywords);
+    })
+  );
 }
 
 function sortMirrors(mirrors: MirrorType[], sortRule: SortRuleType) {
