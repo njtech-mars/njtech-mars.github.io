@@ -1,5 +1,4 @@
 import z from "zod";
-import { writable } from "svelte/store";
 
 import { Mirror } from "$types/mirror";
 import { mirrors } from "$stores/mirrors";
