@@ -15,22 +15,30 @@ function searchMirrors(mirrors: MirrorType[], searchKeywords: string) {
   );
 }
 
+function getSize(size: string) {
+  const MB = 1024;
+  const GB = MB * 1024;
+  const TB = GB * 1024;
+
+  const int = parseInt(size);
+  if (!int) return 0;
+  if (size.includes("M")) return int * MB;
+  else if (size.includes("G")) return int * GB;
+  else if (size.includes("T")) return int * TB;
+  else return int;
+}
+
 function sortMirrors(mirrors: MirrorType[], sortRule: SortRuleType) {
   let newMirrors = [...mirrors];
   if (sortRule.key === "name") newMirrors = mirrors.sort((a, b) => a.name.localeCompare(b.name));
-  else if (sortRule.key === "status") newMirrors = mirrors.sort((a, b) => a.status.localeCompare(b.status));
+  else if (sortRule.key === "size") newMirrors = mirrors.sort((a, b) => getSize(a.size) - getSize(b.size));
   else if (sortRule.key === "update") {
     newMirrors = mirrors.sort((a, b) => new Date(b.last_update).getTime() - new Date(a.last_update).getTime());
-  } else if (sortRule.key === "size") {
-    const M = 1024;
-    const G = M * 1024;
-    const T = G * 1024;
-    function getSize(size: string) {
-      const int = parseInt(size);
-      if (!int) return 0;
-      return int * (size.includes("M") ? M : size.includes("G") ? G : size.includes("T") ? T : 1);
-    }
-    newMirrors = mirrors.sort((a, b) => getSize(a.size) - getSize(b.size));
+  } else if (sortRule.key === "status") {
+    const failedMirrors = mirrors.filter((mirror) => mirror.status === "failed");
+    const syncingMirrors = mirrors.filter((mirror) => mirror.status === "syncing");
+    const successMirrors = mirrors.filter((mirror) => mirror.status === "success");
+    newMirrors = [...failedMirrors, ...syncingMirrors, ...successMirrors];
   }
 
   if (sortRule.asc) newMirrors = newMirrors.reverse();
@@ -40,7 +48,7 @@ function sortMirrors(mirrors: MirrorType[], sortRule: SortRuleType) {
 function createStore() {
   const mirrors = writable<MirrorType[]>([]);
   const searchKeywrds = writable("");
-  const sortRule = writable<SortRuleType>({ key: "name", asc: false });
+  const sortRule = writable<SortRuleType>({ key: "status", asc: false });
   const derivedStore = derived([mirrors, searchKeywrds, sortRule], ([$mirrors, $searchKeywrds, $sortRule]) => ({
     sortRule: $sortRule,
     searchKeywrds: $searchKeywrds,
