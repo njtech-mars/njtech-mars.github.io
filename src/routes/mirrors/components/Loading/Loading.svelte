@@ -12,11 +12,11 @@
     <tbody>
       {#each new Array(20).fill(0) as item}
         <tr class="border border-gray-300 dark:border-gray-500 p-5 rounded-xl h-10">
-          <td data-cell="镜像"><div class="placeholder" /></td>
-          <td data-cell="时间"><div class="placeholder" /></td>
-          <td data-cell="大小"><div class="placeholder" /></td>
-          <td data-cell="状态"><div class="placeholder" /></td>
-          <td data-cell="资源"><div class="placeholder" /></td>
+          <td data-cell="镜像"><div class="skeleton" /></td>
+          <td data-cell="时间"><div class="skeleton" /></td>
+          <td data-cell="大小"><div class="skeleton" /></td>
+          <td data-cell="状态"><div class="skeleton" /></td>
+          <td data-cell="资源"><div class="skeleton" /></td>
         </tr>
       {/each}
     </tbody>
@@ -33,17 +33,14 @@
   table :is(th, td) {
     @apply p-2 whitespace-nowrap;
   }
-  table tbody tr:nth-of-type(even) {
-    background-size: 200% 100%;
-    background-position-x: 180%;
-    animation: 2s pulse ease-in-out infinite;
-    @apply dark:from-light dark:via-dark/50 dark:to-light;
-    @apply bg-gradient-to-r from-gray-200 from-40% via-gray-300/60 via-50% to-gray-200 to-60%;
-  }
 
-  @keyframes pulse {
-    to {
-      background-position-x: -20%;
+  @media (min-width: 769px) {
+    table tbody tr:nth-of-type(even) {
+      background-size: 200% 100%;
+      background-position-x: 180%;
+      animation: 2s pulse ease-in-out infinite;
+      @apply dark:from-light dark:via-dark/50 dark:to-light;
+      @apply bg-gradient-to-r from-gray-200 from-40% via-gray-300/60 via-50% to-gray-200 to-60%;
     }
   }
 
@@ -59,16 +56,18 @@
     table td::before {
       content: attr(data-cell);
     }
-    table tbody tr:nth-of-type(even) {
-      animation: none;
-      background: none;
-    }
-    .placeholder {
+    .skeleton {
       background-size: 200% 100%;
       background-position-x: 180%;
       animation: 2s pulse ease-in-out infinite;
-      @apply dark:bg-dark dark:from-light dark:via-dark/50 dark:to-light;
-      @apply bg-gradient-to-r from-gray-200 from-40% via-gray-300/70 via-50% to-gray-200 to-60%;
+      @apply dark:from-light dark:via-dark/50 dark:to-light;
+      @apply bg-gradient-to-r from-gray-200 from-40% via-gray-300/60 via-50% to-gray-200 to-60%;
+    }
+  }
+
+  @keyframes pulse {
+    to {
+      background-position-x: -20%;
     }
   }
 </style>

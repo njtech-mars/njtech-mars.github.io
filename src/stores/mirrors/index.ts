@@ -48,7 +48,7 @@ function sortMirrors(mirrors: MirrorType[], sortRule: SortRuleType) {
 function createStore() {
   const mirrors = writable<MirrorType[]>([]);
   const searchKeywords = writable("");
-  const sortRule = writable<SortRuleType>({ key: "status", asc: false });
+  const sortRule = writable<SortRuleType>({ key: "name", asc: false });
   const derivedStore = derived([mirrors, searchKeywords, sortRule], ([$mirrors, $searchKeywords, $sortRule]) => ({
     sortRule: $sortRule,
     searchKeywords: $searchKeywords,

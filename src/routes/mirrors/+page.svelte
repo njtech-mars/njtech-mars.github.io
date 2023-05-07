@@ -2,10 +2,10 @@
   import { onMount } from "svelte";
   import { mirrors } from "$stores/mirrors";
 
+  import { fetchMirros } from "./lib/fetchMirrors";
   import Table from "./components/Table/Table.svelte";
   import Message from "./components/Message/Message.svelte";
   import Loading from "./components/Loading/Loading.svelte";
-  import { fetchMirros } from "./lib/fetchMirrors";
 
   let promise: Promise<boolean>;
   onMount(() => (promise = fetchMirros()));
