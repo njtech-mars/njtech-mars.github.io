@@ -69,7 +69,7 @@
     @apply bg-purple-600/20 text-purple-600;
   }
   @media (max-width: 768px) {
-    table th {
+    table thead {
       @apply hidden;
     }
     table td {

@@ -12,9 +12,11 @@
     <tbody>
       {#each new Array(20).fill(0) as item}
         <tr class="border border-gray-300 dark:border-gray-500 p-5 rounded-xl h-10">
-          {#each new Array(5).fill(0) as item}
-            <td />
-          {/each}
+          <td data-cell="镜像"><div class="placeholder" /></td>
+          <td data-cell="时间"><div class="placeholder" /></td>
+          <td data-cell="大小"><div class="placeholder" /></td>
+          <td data-cell="状态"><div class="placeholder" /></td>
+          <td data-cell="资源"><div class="placeholder" /></td>
         </tr>
       {/each}
     </tbody>
@@ -32,16 +34,41 @@
     @apply p-2 whitespace-nowrap;
   }
   table tbody tr:nth-of-type(even) {
-    @apply bg-gray-200 dark:bg-light;
-    background: linear-gradient(100deg, #d1d5db80 40%, #d1d5db 50%, #d1d5db80 60%);
     background-size: 200% 100%;
     background-position-x: 180%;
     animation: 2s pulse ease-in-out infinite;
+    @apply dark:from-light dark:via-dark/50 dark:to-light;
+    @apply bg-gradient-to-r from-gray-200 from-40% via-gray-300/60 via-50% to-gray-200 to-60%;
   }
 
   @keyframes pulse {
     to {
       background-position-x: -20%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    table thead {
+      @apply hidden;
+    }
+    table td {
+      padding: 0.25rem;
+      display: grid;
+      grid-template-columns: 5ch auto;
+    }
+    table td::before {
+      content: attr(data-cell);
+    }
+    table tbody tr:nth-of-type(even) {
+      animation: none;
+      background: none;
+    }
+    .placeholder {
+      background-size: 200% 100%;
+      background-position-x: 180%;
+      animation: 2s pulse ease-in-out infinite;
+      @apply dark:bg-dark dark:from-light dark:via-dark/50 dark:to-light;
+      @apply bg-gradient-to-r from-gray-200 from-40% via-gray-300/70 via-50% to-gray-200 to-60%;
     }
   }
 </style>
