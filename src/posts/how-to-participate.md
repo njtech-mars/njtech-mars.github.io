@@ -1,7 +1,7 @@
 ---
 title: "如何修改本站内容"
 date: "2023-05-06T06:12:14.636Z"
-update: "2023-05-06T07:18:42.758Z"
+update: "2023-05-07T16:50:21.414Z"
 author: "Cael"
 tags: ["教程", "规范"]
 intro: "如何修改本站内容，包括如何添加资源链接和书写文档文章"
@@ -24,11 +24,11 @@ intro: "如何修改本站内容，包括如何添加资源链接和书写文档
   name: "南工在线",
   icon: MdOndemandVideo,
   link: "https://online.njtech.edu.cn",
-  subtitle: "南工在线视频播放平台",
+  subtitle: "视频播放平台，软件下载",
   tags: ["校内", "视频"],
   heat: 0.9,
   pinned: true
-},
+}
 ```
 
 - **icon** 可以到这个网址[https://svelte-icons.vercel.app](https://svelte-icons.vercel.app)查找，将复制的内容贴到文件的最上方就可以了。
@@ -51,12 +51,12 @@ intro: "如何修改本站内容，包括如何添加资源链接和书写文档
 
 ```yaml
 ---
-title: "如何参与并添加本站内容"
+title: "如何修改本站内容"
 date: "2023-05-06T06:12:14.636Z"
-update: "2023-05-06T06:12:14.636Z"
+update: "2023-05-07T16:50:21.414Z"
 author: "Cael"
 tags: ["教程", "规范"]
-intro: "如何参与并添加本站内容，包括如何添加资源链接和书写文档文章"
+intro: "如何修改本站内容，包括如何添加资源链接和书写文档文章"
 ---
 ```
 
