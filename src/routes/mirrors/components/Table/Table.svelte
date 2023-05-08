@@ -35,7 +35,7 @@
               title={mirror.name}
               aria-label={mirror.name}
               class="flex items-center justify-center w-fit"
-              href={`https://mirrors.njtech.edu.cn/${mirror.name}`}
+              href={`https://mirrors.njtech.edu.cn/${mirror.name}/`}
             >
               <div class="w-5 h-5 hover:text-blue-600"><MdFolderOpen /></div>
             </a>

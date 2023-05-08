@@ -5,15 +5,16 @@
   import FaAlignLeft from "svelte-icons/fa/FaAlignLeft.svelte";
   import FaRegCalendarAlt from "svelte-icons/fa/FaRegCalendarAlt.svelte";
 
-  import type { PageData } from "./$types";
   import { formatDate, timeInterval } from "$lib/utils";
 
-  export let data: PageData;
+  export let data;
 
   onMount(() => {
     const toc = document.querySelector(".toc");
     const container = document.querySelector(".toc-container");
-    if (toc && container) container.insertAdjacentElement("beforeend", toc);
+    if (!toc || !container) return;
+    container.insertAdjacentElement("beforeend", toc);
+    container.classList.toggle("hidden");
   });
 </script>
 
@@ -53,7 +54,7 @@
         </div>
       </div>
 
-      <div class="toc-container">
+      <div class="toc-container hidden">
         <div class="flex flex-row items-center gap-0.5">
           <div class="w-4 h-4"><FaAlignLeft /></div>
           <div class="text-lg">目录</div>

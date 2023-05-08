@@ -1,4 +1,4 @@
-<main class="w-full animate-slideFromLeft">
+<main class="w-full animate-slideFromBottom md:animate-slideFromLeft">
   <table>
     <thead>
       <tr class="h-10">

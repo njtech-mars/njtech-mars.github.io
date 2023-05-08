@@ -1,10 +1,13 @@
 <script lang="ts">
-  import { links } from "../config";
   import { page } from "$app/stores";
+  import { browser } from "$app/environment";
   import MdMenu from "svelte-icons/md/MdMenu.svelte";
   import MdClose from "svelte-icons/md/MdClose.svelte";
 
+  import { links } from "../config";
+
   let openMenu = false;
+  $: browser && (document.body.style.overflow = openMenu ? "hidden" : "auto");
 </script>
 
 <div class="md:hidden flex items-center justify-center">
@@ -53,7 +56,7 @@
     @apply scale-y-100 opacity-100 visible;
   }
   .link {
-    @apply text-2xl;
+    @apply text-xl;
   }
   .link.active {
     @apply text-blue-600;
