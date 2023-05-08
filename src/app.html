@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width" />
     <link rel="alternate" type="application/atom+xml" href="/rss.xml" />
     <meta name="description" content="Mars工作室主页" />
-    <script type="module">
-      document.body.classList.toggle("dark", localStorage.getItem("theme") === "dark");
-    </script>
     %sveltekit.head%
   </head>
-  <body data-sveltekit-preload-data="tap">
+  <body data-sveltekit-preload-data="tap" data-theme="%theme%">
     <div id="app">%sveltekit.body%</div>
   </body>
 </html>

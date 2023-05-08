@@ -10,7 +10,11 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 /** @type {import('mdsvex').MdsvexOptions} */
 const mdsvexOptions = {
   extensions: [".md"],
-  rehypePlugins: [rehypeSlug, [rehypeAutolinkHeadings, { behavior: "wrap" }], [toc, { cssClasses: { toc: "toc hidden" } }]]
+  rehypePlugins: [
+    rehypeSlug,
+    [rehypeAutolinkHeadings, { behavior: "wrap" }],
+    [toc, { cssClasses: { toc: "toc hidden" } }]
+  ]
 };
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -22,6 +26,7 @@ const config = {
     adapter: adapter(),
     alias: {
       $lib: path.resolve("./src/lib"),
+      $hooks: path.resolve("./src/hooks"),
       $types: path.resolve("./src/types"),
       $stores: path.resolve("./src/stores"),
       $components: path.resolve("./src/components")

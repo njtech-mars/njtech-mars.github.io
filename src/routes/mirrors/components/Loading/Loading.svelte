@@ -10,7 +10,7 @@
       </tr>
     </thead>
     <tbody>
-      {#each new Array(20).fill(0) as item}
+      {#each { length: 20 } as item}
         <tr class="border border-gray-300 dark:border-gray-500 p-5 rounded-xl h-10">
           <td data-cell="镜像"><div class="skeleton" /></td>
           <td data-cell="时间"><div class="skeleton" /></td>
