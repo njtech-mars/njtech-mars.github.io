@@ -11,7 +11,7 @@
     <a href="/blog" title="文档文章" class="text-blue-600 hover:underline">更多...</a>
   </div>
 
-  <ul class="flex flex-col gap-5 md:gap-7">
+  <ul class="flex flex-col gap-5">
     {#each posts as post (post.slug)}
       <PostCard {post} />
     {/each}

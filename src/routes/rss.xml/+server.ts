@@ -13,7 +13,7 @@ export async function GET() {
 
   const xml = `
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/css" href="/rss.css" ?>
+<?xml-stylesheet type="text/css" href="/assets/css/rss.css" ?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
   <channel>
     <title>${title}</title>

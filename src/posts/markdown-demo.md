@@ -1,11 +1,13 @@
 ---
-title: "Markdown测试文章"
+title: "本站Blog Markdown语法示例"
 date: "2023-05-04T15:47:32.068Z"
-update: "2023-05-05T13:02:03.409Z"
+update: "2023-05-08T05:15:54.226Z"
 author: "Cael"
-tags: ["Markdown", "测试"]
-intro: "Markdown测试文章，其中包含一些常用的简单示例以及TOC等功能测试"
+tags: ["Markdown", "教程"]
+intro: "这是一篇Markdown示例文章，后人想要写新文章的时候可以拿来参考"
 ---
+
+下面是本站目前支持度比较好的 markdown 语法示例，日常使用的话应该是足够的，后人想要继续丰富本站内容，写新的文章的时候可以参考这个文章。
 
 # 一、常用
 

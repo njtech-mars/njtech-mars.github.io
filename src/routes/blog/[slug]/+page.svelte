@@ -15,6 +15,7 @@
     if (!toc || !container) return;
     container.insertAdjacentElement("beforeend", toc);
     container.classList.toggle("hidden");
+    toc.classList.toggle("hidden");
   });
 </script>
 

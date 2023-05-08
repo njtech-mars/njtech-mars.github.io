@@ -9,7 +9,7 @@
 
 /* blockquote */
 .markdown blockquote {
-  @apply border-l-4 border-l-blue-500 bg-gray-200 dark:bg-light pl-5 py-4;
+  @apply border-l-4 border-l-blue-500 bg-gray-200 dark:bg-light pl-5 pr-2 py-4;
 }
 
 /* table */
@@ -50,7 +50,7 @@
 
 /* a */
 .markdown a[rel="nofollow"] {
-  @apply text-blue-600 underline mx-0.5;
+  @apply text-blue-600 underline mx-0.5 break-words;
 }
 
 /* hr */

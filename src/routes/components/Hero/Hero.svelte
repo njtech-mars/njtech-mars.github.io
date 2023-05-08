@@ -6,7 +6,7 @@
   </p>
 
   <div class="flex flex-row gap-5">
-    <a href="/blog" title="关于我们" class="link about">关于我们</a>
+    <a href="/blog/about-us" title="关于我们" class="link about">关于我们</a>
     <a href="/mirrors" title="下载镜像" class="link">下载镜像</a>
   </div>
 </div>
