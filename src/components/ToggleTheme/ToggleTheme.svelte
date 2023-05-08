@@ -9,9 +9,8 @@
 
   function handleClick() {
     darkMode = !darkMode;
-    const theme = darkMode ? "dark" : "light";
-    document.body.setAttribute("data-theme", theme);
-    document.cookie = `theme=${theme}; samesite=lax; max-age=2592000; path=/`;
+    document.body.classList.toggle("dark", darkMode);
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
   }
 </script>
 
