@@ -17,7 +17,7 @@
     @apply py-2 px-4 border-2 border-blue-600 w-fit text-lg duration-300;
   }
   .link:hover {
-    box-shadow: 0 0 10px #989898;
+    box-shadow: 0 0 15px #98989880;
   }
   .about {
     @apply bg-blue-600 text-white;
