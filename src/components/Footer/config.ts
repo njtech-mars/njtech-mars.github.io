@@ -29,10 +29,6 @@ export const data = [
     name: "工作室项目",
     items: [
       {
-        name: "南工OJ",
-        link: "https://acm.online.njtech.edu.cn"
-      },
-      {
         name: "南工在线",
         link: "https://online.njtech.edu.cn"
       },
