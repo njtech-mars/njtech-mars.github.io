@@ -1,5 +1,6 @@
 import FaLinux from "svelte-icons/fa/FaLinux.svelte";
 import FaAward from "svelte-icons/fa/FaAward.svelte";
+import FaFlask from "svelte-icons/fa/FaFlask.svelte";
 import MdSchool from "svelte-icons/md/MdSchool.svelte";
 import FaServer from "svelte-icons/fa/FaServer.svelte";
 import FaDatabase from "svelte-icons/fa/FaDatabase.svelte";
@@ -21,7 +22,7 @@ const data = [
     pinned: true
   },
   {
-    name: "南工在线评测系统",
+    name: "南工OJ",
     icon: FaLaptopCode,
     link: "https://acm.online.njtech.edu.cn",
     subtitle: "在线评测，算法题库",
@@ -31,7 +32,7 @@ const data = [
   },
   {
     name: "远景实验室",
-    icon: FaAward,
+    icon: FaFlask,
     link: "https://www.vistalab.top/",
     subtitle: "计院学生组织，机器人学习",
     tags: ["校内", "组织"],
@@ -44,7 +45,7 @@ const data = [
     link: "https://soft.njtech.edu.cn",
     subtitle: "微软，Abode，Autodesk，NoteExpress正版化",
     tags: ["校内", "软件"],
-    heat: 0.8,
+    heat: 0.85,
     pinned: true
   },
   {
@@ -53,7 +54,16 @@ const data = [
     link: "https://mirrors.njtech.edu.cn",
     subtitle: "南工自己的镜像站",
     tags: ["校内", "镜像站"],
-    heat: 0.8,
+    heat: 0.85,
+    pinned: true
+  },
+  {
+    name: "校科协",
+    icon: FaAward,
+    link: "https://njtustas.github.io/",
+    subtitle: "南工校科协技术部，涵盖电子，航模，编程，静模",
+    tags: ["校内", "组织"],
+    heat: 0.9,
     pinned: true
   },
   {
@@ -63,7 +73,7 @@ const data = [
     subtitle: "选课，退课，课表，成绩查询",
     tags: ["校内", "学习"],
     heat: 0.8,
-    pinned: true
+    pinned: false
   },
   {
     name: "南工MC",
@@ -71,7 +81,7 @@ const data = [
     link: "https://wiki.mualliance.ltd/南京工业大学服务器",
     subtitle: "南工民间MC组织，校内MC服务器",
     tags: ["校内", "组织"],
-    heat: 0.8,
+    heat: 0.85,
     pinned: false
   },
   {
@@ -80,7 +90,7 @@ const data = [
     link: "https://tuna.moe",
     subtitle: "清华大学tuna协会",
     tags: ["校外", "镜像站"],
-    heat: 0.9,
+    heat: 0.8,
     pinned: false
   },
   {
