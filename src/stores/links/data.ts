@@ -58,10 +58,10 @@ const data = [
     pinned: true
   },
   {
-    name: "校科协",
+    name: "南工校科协",
     icon: FaAward,
     link: "https://njtustas.github.io/",
-    subtitle: "南工校科协技术部，涵盖电子，航模，编程，静模",
+    subtitle: "南工校科协，涵盖电子，航模，编程，静模",
     tags: ["校内", "组织"],
     heat: 0.9,
     pinned: true
