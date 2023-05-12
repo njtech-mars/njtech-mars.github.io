@@ -4,7 +4,7 @@
   import { data } from "./config";
 </script>
 
-<footer class="frame flex flex-col gap-5 bg-light text-gray-200">
+<footer class="frame flex flex-col gap-5 bg-gray-800 text-gray-200">
   <ul class="w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
     {#each data as category (category.name)}
       <li class="flex flex-col gap-2">

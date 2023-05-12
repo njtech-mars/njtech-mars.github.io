@@ -4,7 +4,7 @@
   import Articles from "./components/Articles/Articles.svelte";
 </script>
 
-<main class="frame flex flex-col gap-16">
+<main class="frame flex-1 flex flex-col gap-16">
   <Hero />
   <Links />
   <Articles />
