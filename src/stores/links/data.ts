@@ -110,6 +110,15 @@ const data = [
     tags: ["校外", "组织", "计算机"],
     heat: 0.8,
     pinned: false
+  },
+  {
+    name: "CS自学指南",
+    icon: DiScriptcs,
+    link: "csdiy.wiki",
+    subtitle: "一本计算机使用指南",
+    tags: ["校外","计算机","学习"],
+    heat: 0.8,
+    pinned: false
   }
 ];
 
