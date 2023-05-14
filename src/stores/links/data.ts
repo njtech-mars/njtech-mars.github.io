@@ -9,6 +9,7 @@ import FaMicrosoft from "svelte-icons/fa/FaMicrosoft.svelte";
 import FaLaptopCode from "svelte-icons/fa/FaLaptopCode.svelte";
 import FaUserGraduate from "svelte-icons/fa/FaUserGraduate.svelte";
 import MdOndemandVideo from "svelte-icons/md/MdOndemandVideo.svelte";
+import DiScriptcs from "svelte-icons/di/DiScriptcs.svelte";
 
 // 图标前往这个网址查找：https://svelte-icons.vercel.app/
 const data = [
@@ -116,7 +117,7 @@ const data = [
     icon: DiScriptcs,
     link: "csdiy.wiki",
     subtitle: "一本计算机使用指南",
-    tags: ["校外","计算机","学习"],
+    tags: ["校外", "计算机", "学习"],
     heat: 0.8,
     pinned: false
   }
