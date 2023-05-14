@@ -3,13 +3,13 @@ import FaAward from "svelte-icons/fa/FaAward.svelte";
 import FaFlask from "svelte-icons/fa/FaFlask.svelte";
 import MdSchool from "svelte-icons/md/MdSchool.svelte";
 import FaServer from "svelte-icons/fa/FaServer.svelte";
+import DiScriptcs from "svelte-icons/di/DiScriptcs.svelte";
 import FaDatabase from "svelte-icons/fa/FaDatabase.svelte";
 import MdComputer from "svelte-icons/md/MdComputer.svelte";
 import FaMicrosoft from "svelte-icons/fa/FaMicrosoft.svelte";
 import FaLaptopCode from "svelte-icons/fa/FaLaptopCode.svelte";
 import FaUserGraduate from "svelte-icons/fa/FaUserGraduate.svelte";
 import MdOndemandVideo from "svelte-icons/md/MdOndemandVideo.svelte";
-import DiScriptcs from "svelte-icons/di/DiScriptcs.svelte";
 
 // 图标前往这个网址查找：https://svelte-icons.vercel.app/
 const data = [
@@ -115,7 +115,7 @@ const data = [
   {
     name: "CS自学指南",
     icon: DiScriptcs,
-    link: "csdiy.wiki",
+    link: "https://csdiy.wiki",
     subtitle: "一本计算机使用指南",
     tags: ["校外", "计算机", "学习"],
     heat: 0.8,
