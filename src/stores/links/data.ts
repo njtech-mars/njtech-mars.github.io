@@ -10,6 +10,7 @@ import FaMicrosoft from "svelte-icons/fa/FaMicrosoft.svelte";
 import FaLaptopCode from "svelte-icons/fa/FaLaptopCode.svelte";
 import FaUserGraduate from "svelte-icons/fa/FaUserGraduate.svelte";
 import MdOndemandVideo from "svelte-icons/md/MdOndemandVideo.svelte";
+import FaInfoCircle from "svelte-icons/fa/FaInfoCircle.svelte";
 
 // 图标前往这个网址查找：https://svelte-icons.vercel.app/
 const data = [
@@ -116,7 +117,16 @@ const data = [
     name: "CS自学指南",
     icon: DiScriptcs,
     link: "https://csdiy.wiki",
-    subtitle: "一本计算机使用指南",
+    subtitle: "一本计算机的自学指南",
+    tags: ["校外", "计算机", "学习"],
+    heat: 0.8,
+    pinned: false
+  },
+  {
+    name: "OI WIKI",
+    icon: FaInfoCircle,
+    link: "https://oi.wiki",
+    subtitle: "一个优秀的编程竞赛知识整合站",
     tags: ["校外", "计算机", "学习"],
     heat: 0.8,
     pinned: false
