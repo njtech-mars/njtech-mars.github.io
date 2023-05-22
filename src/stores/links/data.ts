@@ -3,8 +3,9 @@ import FaAward from "svelte-icons/fa/FaAward.svelte";
 import FaFlask from "svelte-icons/fa/FaFlask.svelte";
 import MdSchool from "svelte-icons/md/MdSchool.svelte";
 import FaServer from "svelte-icons/fa/FaServer.svelte";
+import FaUbuntu from "svelte-icons/fa/FaUbuntu.svelte";
 import DiScriptcs from "svelte-icons/di/DiScriptcs.svelte";
-import FaDatabase from "svelte-icons/fa/FaDatabase.svelte";
+import FaBandcamp from "svelte-icons/fa/FaBandcamp.svelte";
 import MdComputer from "svelte-icons/md/MdComputer.svelte";
 import FaMicrosoft from "svelte-icons/fa/FaMicrosoft.svelte";
 import FaLaptopCode from "svelte-icons/fa/FaLaptopCode.svelte";
@@ -24,6 +25,15 @@ const data = [
     pinned: true
   },
   {
+    name: "南工快传",
+    icon: FaServer,
+    link: "https://www.vistalab.top/",
+    subtitle: "校内短期存储的网盘服务",
+    tags: ["校内", "存储"],
+    heat: 0.9,
+    pinned: true
+  },
+  {
     name: "南工OJ",
     icon: FaLaptopCode,
     link: "https://acm.online.njtech.edu.cn",
@@ -33,29 +43,29 @@ const data = [
     pinned: true
   },
   {
-    name: "远景实验室",
-    icon: FaFlask,
-    link: "https://www.vistalab.top/",
-    subtitle: "计院学生组织，机器人学习",
-    tags: ["校内", "组织"],
-    heat: 0.9,
-    pinned: true
-  },
-  {
     name: "南工正版化平台",
     icon: FaMicrosoft,
     link: "https://soft.njtech.edu.cn",
-    subtitle: "微软，Abode，Autodesk，NoteExpress正版化",
+    subtitle: "微软，Abode，Autodesk等正版化",
     tags: ["校内", "软件"],
     heat: 0.85,
     pinned: true
   },
   {
     name: "南工镜像站",
-    icon: FaDatabase,
+    icon: FaUbuntu,
     link: "https://mirrors.njtech.edu.cn",
     subtitle: "南工自己的镜像站",
     tags: ["校内", "镜像站"],
+    heat: 0.85,
+    pinned: true
+  },
+  {
+    name: "远景实验室",
+    icon: FaFlask,
+    link: "https://www.vistalab.top/",
+    subtitle: "计院学生组织，机器人学习",
+    tags: ["校内", "组织"],
     heat: 0.85,
     pinned: true
   },
@@ -65,8 +75,8 @@ const data = [
     link: "https://njtustas.github.io/",
     subtitle: "南工校科协，涵盖电子，航模，编程，静模",
     tags: ["校内", "组织"],
-    heat: 0.9,
-    pinned: true
+    heat: 0.85,
+    pinned: false
   },
   {
     name: "教务系统",
@@ -79,7 +89,7 @@ const data = [
   },
   {
     name: "南工MC",
-    icon: FaServer,
+    icon: FaBandcamp,
     link: "https://wiki.mualliance.ltd/南京工业大学服务器",
     subtitle: "南工民间MC组织，校内MC服务器",
     tags: ["校内", "组织"],
