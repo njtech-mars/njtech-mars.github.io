@@ -8,10 +8,10 @@ import DiScriptcs from "svelte-icons/di/DiScriptcs.svelte";
 import FaBandcamp from "svelte-icons/fa/FaBandcamp.svelte";
 import MdComputer from "svelte-icons/md/MdComputer.svelte";
 import FaMicrosoft from "svelte-icons/fa/FaMicrosoft.svelte";
+import FaInfoCircle from "svelte-icons/fa/FaInfoCircle.svelte";
 import FaLaptopCode from "svelte-icons/fa/FaLaptopCode.svelte";
 import FaUserGraduate from "svelte-icons/fa/FaUserGraduate.svelte";
 import MdOndemandVideo from "svelte-icons/md/MdOndemandVideo.svelte";
-import FaInfoCircle from "svelte-icons/fa/FaInfoCircle.svelte";
 
 // 图标前往这个网址查找：https://svelte-icons.vercel.app/
 const data = [
@@ -28,7 +28,7 @@ const data = [
     name: "南工快传",
     icon: FaServer,
     link: "https://www.vistalab.top/",
-    subtitle: "校内短期存储的网盘服务",
+    subtitle: "校内短期存储网盘服务",
     tags: ["校内", "存储"],
     heat: 0.9,
     pinned: true
