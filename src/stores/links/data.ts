@@ -27,7 +27,7 @@ const data = [
   {
     name: "南工快传",
     icon: FaServer,
-    link: "https://www.vistalab.top/",
+    link: "https://send.online.njtech.edu.cn",
     subtitle: "校内短期存储网盘服务",
     tags: ["校内", "存储"],
     heat: 0.9,
@@ -63,7 +63,7 @@ const data = [
   {
     name: "远景实验室",
     icon: FaFlask,
-    link: "https://www.vistalab.top/",
+    link: "https://www.vistalab.top",
     subtitle: "计院学生组织，机器人学习",
     tags: ["校内", "组织"],
     heat: 0.85,
@@ -72,7 +72,7 @@ const data = [
   {
     name: "校科协",
     icon: FaAward,
-    link: "https://njtustas.github.io/",
+    link: "https://njtustas.github.io",
     subtitle: "南工校科协，涵盖电子，航模，编程，静模",
     tags: ["校内", "组织"],
     heat: 0.85,

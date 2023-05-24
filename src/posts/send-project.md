@@ -20,7 +20,7 @@ intro: "提供校内快速上传和下载文件的短期存储网盘服务"
 - 文件最长存储时间为 7 天
 - 每位用户最大存储空间为 4GB
 - 支持多个文件同时上传，但不能上传文件夹，文件夹请压缩后再上传
-- 文件支持设立独立的文件密码，不设密码的文件视为公开文件，可以被所有人访问
+- 公开文件支持设置独立的文件密码，不设密码的公开文件可以被所有人访问和下载
 - 单个文件可设置方便记忆短链接 id，短链接示例https://send.online.njtech.edu.cn/s/custom_id
 
 # 三、技术栈
@@ -35,7 +35,7 @@ intro: "提供校内快速上传和下载文件的短期存储网盘服务"
 ## 后端
 
 - [Rust](https://www.rust-lang.org)(后端项目语言)
-- [Actix](https://actix.rs)(后端框架)
+- [Actix](https://actix.rs)(后端项目框架)
 - [Sea ORM](https://www.sea-ql.org/SeaORM)(ORM 框架)
 - [Redis](https://redis.com)(状态缓存)
 - [Utoipa](https://crates.io/crates/utoipa-swagger-ui)(Swagger 文档)
