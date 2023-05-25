@@ -5,59 +5,71 @@
 }
 
 :root {
-  --gray: #888888;
-  --light: #d8d8d8;
+  --theme: #0369a1;
+  --light: #f1f5f9;
+  --dark: #9ca3af;
+  --darker: #4b5563;
+
+  --bigger: 18px;
+  --big: 16px;
+  --normal: 14px;
   --small: 12px;
+  --smaller: 5px;
 }
 
 rss {
   display: block;
   font-family: sans-serif;
-  background-color: #f2f2f2;
-  color: #222222;
-  font-size: 13px;
-  padding-inline: 10px;
+  font-size: var(--normal);
+  padding-inline: var(--small);
+  background-color: var(--light);
 }
 
 channel {
   max-width: 769px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 channel > title {
-  font-size: 18px;
   font-weight: bold;
-  margin-block: 5px;
+  color: var(--theme);
+  font-size: var(--bigger);
+  margin-block: var(--smaller);
+}
+
+channel > item:first-of-type {
+  margin-top: var(--small);
 }
 
 channel > item {
+  padding: var(--small);
   background-color: white;
-  border: 1px solid var(--light);
-  padding: 10px;
-  margin-block: 14px;
-  border-radius: 5px;
+  margin-bottom: var(--bigger);
+  border-radius: var(--smaller);
+  border: 1px solid var(--theme);
+  box-shadow: 0 0 var(--smaller) var(--dark);
 }
 
 item > title {
-  color: #00579b;
-  font-size: 16px;
+  font-weight: bold;
+  color: var(--theme);
+  font-size: var(--big);
+  margin-bottom: var(--smaller);
 }
 
-item > description {
-  margin-block: 5px;
+:is(item > description, channel > description) {
+  color: var(--darker);
+  margin-block: var(--smaller);
 }
 
-:is(item > author, channel > lastBuildDate) {
-  color: var(--gray);
+:is(item > author, item > link, item > pubDate, channel > lastBuildDate) {
+  color: var(--dark);
   font-size: var(--small);
 }
 
 :is(item > link, item > pubDate) {
-  color: var(--gray);
-  font-size: var(--small);
   padding-bottom: 1px;
-  border-bottom: 1px solid var(--light);
+  border-bottom: 1px solid var(--dark);
 }
 
 item > link {
@@ -73,18 +85,13 @@ item > pubDate {
 }
 
 item > category {
-  background-color: #efefef;
-  border: 1px solid #dadada;
-  border-radius: 3px;
-  padding: 2px 4px;
+  color: white;
+  padding: 3px 5px;
   display: inline-block;
-  color: var(--gray);
-  transition: color 0.3s linear;
-  margin-top: 5px;
-}
-
-item > category:hover {
-  color: #222222;
+  font-size: var(--small);
+  margin-top: var(--smaller);
+  border-radius: var(--smaller);
+  background-color: var(--theme);
 }
 
 :is(language, guid, channel > link) {

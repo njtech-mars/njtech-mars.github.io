@@ -9,7 +9,7 @@ export async function GET() {
   const url = "https://marsstudio.vercel.app";
   const headers = { "Content-Type": "application/xml" };
   const description =
-    "MarsStudio 是南京工业大学信息中心学生开发团队，成立于 2001 年 4 月。我们的目标是维持校园互联网团队的运作和传承。";
+    "MarsStudio 是南京工业大学信息中心学生开发团队，成立于2001年4月。我们的目标是维持校园互联网团队的运作和传承。";
 
   const xml = `
 <?xml version="1.0" encoding="utf-8"?>
