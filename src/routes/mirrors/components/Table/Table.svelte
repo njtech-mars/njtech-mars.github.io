@@ -1,9 +1,10 @@
 <script lang="ts">
+  import SortButton from "../SortButton/SortButton.svelte";
   import MdFolderOpen from "svelte-icons/md/MdFolderOpen.svelte";
 
   import type { MirrorsStoreType } from "$types/mirror";
-  import { formatDate, timeInterval } from "$lib/utils";
-  import SortButton from "../SortButton/SortButton.svelte";
+  import formatDate from "$lib/utils/formatDate";
+  import timeInterval from "$lib/utils/timeInterval";
 
   export let mirrors: MirrorsStoreType;
 </script>

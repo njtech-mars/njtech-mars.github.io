@@ -1,5 +1,6 @@
 <script lang="ts">
   import { browser } from "$app/environment";
+
   import MdBrightness2 from "svelte-icons/md/MdBrightness2.svelte";
   import MdBrightness4 from "svelte-icons/md/MdBrightness4.svelte";
 

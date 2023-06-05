@@ -14,7 +14,6 @@
 <button
   type="button"
   title="滑到顶部"
-  aria-label="滑倒顶部"
   class:active={visible}
   on:click={() => window.scroll({ top: 0, behavior: "smooth" })}
 >

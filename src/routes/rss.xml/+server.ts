@@ -1,4 +1,4 @@
-import { getPosts } from "$lib/blog";
+import getPosts from "$lib/blog/getPosts";
 
 export const prerender = true;
 

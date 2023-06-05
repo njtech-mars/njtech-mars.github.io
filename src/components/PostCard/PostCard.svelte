@@ -3,7 +3,8 @@
   import FaRegUser from "svelte-icons/fa/FaRegUser.svelte";
   import FaRegCalendarAlt from "svelte-icons/fa/FaRegCalendarAlt.svelte";
 
-  import { formatDate, timeInterval } from "$lib/utils";
+  import formatDate from "$lib/utils/formatDate";
+  import timeInterval from "$lib/utils/timeInterval";
   import type { PostMetadatType } from "$types/postMetadata";
 
   export let post: PostMetadatType;

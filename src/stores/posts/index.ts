@@ -1,4 +1,4 @@
-import { getPosts } from "$lib/blog";
+import getPosts from "$lib/blog/getPosts";
 import { writable, derived } from "svelte/store";
 
 function createStore() {

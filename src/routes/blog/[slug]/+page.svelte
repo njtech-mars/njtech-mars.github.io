@@ -5,7 +5,8 @@
   import FaAlignLeft from "svelte-icons/fa/FaAlignLeft.svelte";
   import FaRegCalendarAlt from "svelte-icons/fa/FaRegCalendarAlt.svelte";
 
-  import { formatDate, timeInterval } from "$lib/utils";
+  import formatDate from "$lib/utils/formatDate";
+  import timeInterval from "$lib/utils/timeInterval";
 
   export let data;
 

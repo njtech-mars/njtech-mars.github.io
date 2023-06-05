@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { getPosts } from "$lib/blog";
+  import getPosts from "$lib/blog/getPosts";
   import PostCard from "$components/PostCard/PostCard.svelte";
 
   const posts = getPosts().slice(0, 5);

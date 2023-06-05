@@ -1,6 +1,6 @@
 import { writable, derived } from "svelte/store";
 
-import { formatDate } from "$lib/utils";
+import formatDate from "$lib/utils/formatDate";
 import type { MirrorType, SortRuleType } from "$types/mirror";
 
 function searchMirrors(mirrors: MirrorType[], searchKeywords: string) {
