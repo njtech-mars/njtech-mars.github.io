@@ -15,7 +15,7 @@
             <li class="flex flex-row items-center gap-1 hover:text-blue-600 w-fit">
               {#if external}
                 <a href={link.link} target="_blank">{link.name}</a>
-                <div class="w-3 h-3">
+                <div class="w-2.5 h-2.5">
                   <FaShare />
                 </div>
               {:else}
