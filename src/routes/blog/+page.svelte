@@ -10,12 +10,16 @@
   <div class="w-full flex flex-col md:flex-row gap-5 md:gap-7">
     <div class="block md:hidden w-full animate-slideFromTop"><Tags /></div>
 
-    <ul class="w-full flex flex-col gap-5 animate-slideFromBottom md:animate-slideFromLeft">
-      {#each $posts.posts as post (post.slug)}
-        <PostCard {post} />
+    <ul class="w-full flex flex-col gap-5">
+      {#each $posts.posts as post, index (post.slug)}
+        {#key post}
+          <li class="opacity-0 animate-slideFromBottom" style="animation-delay: {150 * index}ms;">
+            <PostCard {post} />
+          </li>
+        {/key}
       {/each}
     </ul>
 
-    <div class="hidden md:block animate-slideFromRight sticky top-5 w-[20rem]"><Tags /></div>
+    <div class="hidden md:block animate-slideFromRight sticky top-5 w-80 h-fit"><Tags /></div>
   </div>
 </main>

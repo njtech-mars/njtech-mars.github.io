@@ -1,6 +1,7 @@
 <script lang="ts">
   import { links } from "$stores/links";
-  import Tags from "./components/Tags/Tags.svelte";
+
+  import Tags from "./Tags.svelte";
   import LinkCard from "$components/LinkCard/LinkCard.svelte";
 </script>
 
@@ -13,7 +14,7 @@
     <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-7 animate-slideFromBottom">
       {#each $links.links as link (link.name)}
         {#key link}
-          <LinkCard {link} />
+          <li><LinkCard {link} /></li>
         {/key}
       {/each}
     </ul>

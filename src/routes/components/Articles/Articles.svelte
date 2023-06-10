@@ -13,7 +13,7 @@
 
   <ul class="flex flex-col gap-5">
     {#each posts as post (post.slug)}
-      <PostCard {post} />
+      <li><PostCard {post} /></li>
     {/each}
   </ul>
 </div>

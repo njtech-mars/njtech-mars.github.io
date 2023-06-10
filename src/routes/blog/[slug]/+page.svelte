@@ -79,7 +79,6 @@
     @apply overflow-x-auto;
   }
   .sidebar {
-    width: 20rem;
-    @apply hidden md:flex flex-col gap-5 h-fit sticky top-5;
+    @apply hidden md:flex flex-col gap-5 h-fit sticky top-5 w-80;
   }
 </style>

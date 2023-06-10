@@ -36,13 +36,13 @@ export default {
       }
     },
     animation: {
-      scaleUp: "scaleUp ease 700ms",
-      scaleDown: "scaleDown ease 700ms",
-      slideFromLeft: "slideFromLeft ease 700ms",
-      slideFromRight: "slideFromRight ease 700ms",
-      slideFromTop: "slideFromTop ease 700ms",
-      slideFromBottom: "slideFromBottom ease 700ms"
+      scaleUp: "scaleUp ease 700ms forwards",
+      scaleDown: "scaleDown ease 700ms forwards",
+      slideFromLeft: "slideFromLeft ease 700ms forwards",
+      slideFromRight: "slideFromRight ease 700ms forwards",
+      slideFromTop: "slideFromTop ease 700ms forwards",
+      slideFromBottom: "slideFromBottom ease 700ms forwards"
     }
   },
-  plugins: []
+  plugins: [require("./plugins/animationDelay"), require("./plugins/animationFillMode")]
 };

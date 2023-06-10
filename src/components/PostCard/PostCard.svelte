@@ -10,7 +10,7 @@
   export let post: PostMetadatType;
 </script>
 
-<li>
+<div class="w-full space-y-1 p-5 rounded-xl border border-gray-300 dark:border-gray-500">
   <a
     title={post.title}
     href={`/blog/${post.slug}`}
@@ -42,10 +42,4 @@
   </div>
 
   <p>{post.intro}</p>
-</li>
-
-<style lang="postcss">
-  li {
-    @apply w-full space-y-1 p-5 rounded-xl border border-gray-300 dark:border-gray-500;
-  }
-</style>
+</div>

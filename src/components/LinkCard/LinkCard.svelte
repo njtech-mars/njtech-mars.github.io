@@ -6,7 +6,7 @@
   export let disabled: boolean = false;
 </script>
 
-<li class="wraper" style={`--heat:${link.heat}`}>
+<div class="wraper" style={`--heat:${link.heat}`}>
   <div class="w-20 text-blue-500">
     <svelte:component this={link.icon} />
   </div>
@@ -26,7 +26,7 @@
 
     <div class="bar" />
   </div>
-</li>
+</div>
 
 <style lang="postcss">
   .wraper {
