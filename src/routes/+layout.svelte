@@ -6,10 +6,6 @@
   import ScrollToTop from "$components/ScrollToTop/ScrollToTop.svelte";
 </script>
 
-<svelte:head>
-  <title>Mars工作室</title>
-</svelte:head>
-
 <Navbar />
 <slot />
 <Footer />

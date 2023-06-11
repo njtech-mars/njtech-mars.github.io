@@ -4,6 +4,10 @@
   import Articles from "./components/Articles/Articles.svelte";
 </script>
 
+<svelte:head>
+  <title>Mars工作室</title>
+</svelte:head>
+
 <main class="frame flex-1 flex flex-col gap-16">
   <Hero />
   <Links />
