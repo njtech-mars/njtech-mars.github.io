@@ -1,9 +1,7 @@
 <script lang="ts">
-  import { links } from "$stores/links";
   import type { LinkType } from "$types/link";
 
   export let link: LinkType;
-  export let disabled: boolean = false;
 </script>
 
 <div class="wraper" style={`--heat:${link.heat}`}>
@@ -16,11 +14,11 @@
       {link.name}
     </a>
 
-    <p>{link.subtitle}</p>
+    <p class="text-gray-500">{link.subtitle}</p>
 
     <div class="flex flex-row flex-wrap gap-1.5">
       {#each link.tags as tag (tag)}
-        <button {disabled} type="button" title={tag} class="tag" on:click={() => links.set(tag)}>{tag}</button>
+        <span class="tag">{tag}</span>
       {/each}
     </div>
 

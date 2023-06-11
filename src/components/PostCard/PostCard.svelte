@@ -24,13 +24,13 @@
     <div class="flex flex-row items-center flex-wrap gap-1 text-gray-500 text-sm">
       <div class="flex flex-row items-center gap-0.5">
         <div class="w-3 h-3"><FaRegCalendarAlt /></div>
-        <div>{formatDate(post.date, true)}</div>
-        <div>(更新于{timeInterval(post.update)})</div>
+        <div title={formatDate(post.create)}>{"发布于" + timeInterval(post.create)}</div>
+        <div title={formatDate(post.update)}>({"更新于" + timeInterval(post.update)})</div>
       </div>
 
       <div class="flex flex-row items-center gap-0.5">
         <div class="w-3 h-3"><FaRegUser /></div>
-        <div>{post.author}撰写</div>
+        <div>{post.author + "撰写"}</div>
       </div>
     </div>
 

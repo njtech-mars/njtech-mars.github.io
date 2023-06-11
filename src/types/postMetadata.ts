@@ -2,7 +2,7 @@ import z from "zod";
 
 const PostMetadataWithoutSlug = z.object({
   title: z.string(),
-  date: z.string(),
+  create: z.string(),
   update: z.string(),
   author: z.string(),
   tags: z.array(z.string()),

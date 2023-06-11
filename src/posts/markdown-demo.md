@@ -1,9 +1,9 @@
 ---
 title: "本站Blog Markdown语法示例"
-date: "2023-05-04T15:47:32.068Z"
+create: "2023-05-04T15:47:32.068Z"
 update: "2023-05-08T05:15:54.226Z"
 author: "蔡建文"
-tags: ["教程", "Markdown"]
+tags: ["规范", "文档"]
 intro: "这是一篇Markdown示例文章，后人想要写新文章的时候可以拿来参考"
 ---
 

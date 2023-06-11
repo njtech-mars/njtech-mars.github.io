@@ -16,5 +16,5 @@ export default function getPosts() {
     }
   }
 
-  return posts.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return posts.sort((a, b) => new Date(b.create).getTime() - new Date(a.create).getTime());
 }
