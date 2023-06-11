@@ -1,23 +1,23 @@
 <script lang="ts">
-  import { browser } from "$app/environment";
+  import { onMount } from "svelte";
+  import { theme } from "$stores/theme";
 
   import MdBrightness2 from "svelte-icons/md/MdBrightness2.svelte";
   import MdBrightness4 from "svelte-icons/md/MdBrightness4.svelte";
 
-  let darkMode = false;
-
-  if (browser) darkMode = localStorage.getItem("theme") === "dark";
+  onMount(() => theme.set(localStorage.getItem("theme") === "dark"));
 
   function handleClick() {
-    darkMode = !darkMode;
-    document.body.classList.toggle("dark", darkMode);
-    localStorage.setItem("theme", darkMode ? "dark" : "light");
+    theme.update((prev) => !prev);
+    document.body.classList.toggle("dark", $theme);
+    document.body.style.colorScheme = $theme ? "dark" : "light";
+    localStorage.setItem("theme", $theme ? "dark" : "light");
   }
 </script>
 
 <button title="主题" type="button" class="z-20 relative w-6 h-6" on:click={handleClick}>
-  <div class="theme-icon" class:active={!darkMode}><MdBrightness4 /></div>
-  <div class="theme-icon" class:active={darkMode}><MdBrightness2 /></div>
+  <div class="theme-icon" class:active={!$theme}><MdBrightness4 /></div>
+  <div class="theme-icon" class:active={$theme}><MdBrightness2 /></div>
 </button>
 
 <style lang="postcss">

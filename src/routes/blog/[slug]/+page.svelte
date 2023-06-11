@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte";
+
   import FaTag from "svelte-icons/fa/FaTag.svelte";
   import FaRegUser from "svelte-icons/fa/FaRegUser.svelte";
   import FaAlignLeft from "svelte-icons/fa/FaAlignLeft.svelte";
@@ -8,18 +9,26 @@
   import formatDate from "$lib/utils/formatDate";
   import timeInterval from "$lib/utils/timeInterval";
 
+  import Giscus from "./Giscus.svelte";
+
   export let data;
   const post = data.post;
 
   onMount(() => {
     const toc = document.querySelector(".toc");
     const container = document.querySelector(".toc-container");
-    if (!toc || !container) return;
-    container.insertAdjacentElement("beforeend", toc);
-    container.classList.toggle("hidden");
-    toc.classList.toggle("hidden");
+    if (toc && container) {
+      container.insertAdjacentElement("beforeend", toc);
+      container.classList.toggle("hidden");
+      toc.classList.toggle("hidden");
+    }
   });
 </script>
+
+<svelte:head>
+  <title>Mars工作室 • 文章动态</title>
+  <meta property="og:title" content={post.title} />
+</svelte:head>
 
 <main class="w-full flex-1 frame py-10 flex flex-col gap-5 animate-slideFromBottom">
   <header class="flex flex-col gap-0.5 md:gap-2 pl-2">
@@ -65,6 +74,8 @@
       </div>
     </div>
   </article>
+
+  <Giscus />
 </main>
 
 <style lang="postcss">
