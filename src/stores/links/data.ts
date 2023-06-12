@@ -70,10 +70,10 @@ const data = [
     pinned: true
   },
   {
-    name: "校科协",
+    name: "校大学生科协",
     icon: FaAward,
     link: "https://njtustas.github.io",
-    subtitle: "南工校科协，涵盖电子，航模，编程，静模",
+    subtitle: "涵盖电子，航模，编程，静模",
     tags: ["校内", "组织"],
     heat: 0.85,
     pinned: false
@@ -91,7 +91,7 @@ const data = [
     name: "南工MC",
     icon: FaBandcamp,
     link: "https://wiki.mualliance.ltd/南京工业大学服务器",
-    subtitle: "南工民间MC组织，校内MC服务器",
+    subtitle: "南工MC组织，校内MC服务器",
     tags: ["校内", "组织"],
     heat: 0.85,
     pinned: false

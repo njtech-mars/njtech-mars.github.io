@@ -16,12 +16,12 @@ export const data = [
     name: "友链",
     items: [
       {
-        name: "校科协",
-        link: "https://njtustas.github.io"
-      },
-      {
         name: "远景实验室",
         link: "https://www.vistalab.top"
+      },
+      {
+        name: "校大学生科协",
+        link: "https://njtustas.github.io"
       }
     ]
   },
