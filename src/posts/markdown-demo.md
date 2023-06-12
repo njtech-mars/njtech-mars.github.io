@@ -1,5 +1,5 @@
 ---
-title: "本站Blog Markdown语法示例"
+title: "本站文章Markdown语法示例"
 create: "2023-05-04T15:47:32.068Z"
 update: "2023-05-08T05:15:54.226Z"
 author: "蔡建文"
