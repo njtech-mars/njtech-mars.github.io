@@ -49,15 +49,12 @@
 
 <style lang="postcss">
   .markdown {
-    @apply w-full relative flex flex-row justify-between gap-10;
+    @apply w-full relative flex flex-row justify-between gap-5;
   }
   .content {
     @apply border border-gray-300 dark:border-gray-500 rounded-xl p-5;
   }
   .footer-link {
     @apply w-full flex flex-col px-5 py-5 rounded-lg border border-gray-300 dark:border-gray-500 duration-300;
-  }
-  .footer-link:hover {
-    @apply border-green-600;
   }
 </style>

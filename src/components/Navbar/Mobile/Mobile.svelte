@@ -43,7 +43,6 @@
   .menu-icon {
     @apply w-full h-full absolute top-0 right-0 invisible duration-300 opacity-0 -translate-y-2;
   }
-
   .menu-icon.active {
     @apply visible opacity-100 translate-y-0;
   }

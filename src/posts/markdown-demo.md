@@ -55,7 +55,7 @@ intro: "这是一篇Markdown示例文章，后人想要写新文章的时候可�
 - [x] Blog 添加 TOC
 - [x] Blog 添加评论
 - [x] Blog 添加页脚导航
-- [x] Blog 支持添加自定义组件
+- [ ] Blog 添加自定义组件
 
 ## 3. 代码
 

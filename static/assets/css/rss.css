@@ -46,8 +46,7 @@ channel > item {
   background-color: white;
   margin-bottom: var(--bigger);
   border-radius: var(--smaller);
-  border: 1px solid var(--theme);
-  box-shadow: 0 0 var(--smaller) var(--dark);
+  border: 1px solid var(--dark);
 }
 
 item > title {
