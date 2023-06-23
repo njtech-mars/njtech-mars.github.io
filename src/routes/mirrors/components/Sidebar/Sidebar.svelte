@@ -40,7 +40,7 @@
 
 <style lang="postcss">
   input {
-    @apply w-full bg-gray-100 dark:bg-dark outline-none py-1.5 px-3;
+    @apply w-full bg-white dark:bg-dark outline-none py-1.5 px-3;
     @apply border border-gray-300 dark:border-gray-500 rounded-sm focus:border-blue-600;
   }
 </style>

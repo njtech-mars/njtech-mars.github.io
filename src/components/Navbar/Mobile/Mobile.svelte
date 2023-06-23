@@ -50,7 +50,8 @@
   .menu {
     height: 100vh;
     height: 100svh;
-    @apply z-10 duration-300 fixed top-0 left-0 pt-36 w-full flex items-center flex-col gap-5 invisible scale-y-90 opacity-0 origin-top-right dark:bg-dark bg-gray-100;
+    @apply bg-white fixed top-0 left-0 pt-36 w-full flex items-center flex-col gap-5;
+    @apply z-10 duration-300 invisible scale-y-90 opacity-0 origin-top-right dark:bg-dark;
   }
   .menu.active {
     @apply scale-y-100 opacity-100 visible;

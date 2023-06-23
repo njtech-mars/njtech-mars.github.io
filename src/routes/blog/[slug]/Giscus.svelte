@@ -23,9 +23,9 @@
     reactionsenabled="0"
     emitmetadata="0"
     inputposition="top"
-    theme={$theme ? "dark" : "light"}
+    theme={$theme}
     lang="zh-CN"
-    loading="lazy"
+    loading="eager"
     crossorigin="anonymous"
   />
 {/if}

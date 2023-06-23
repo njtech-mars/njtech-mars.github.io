@@ -28,7 +28,7 @@
 
 <style lang="postcss">
   .wraper {
-    @apply flex flex-row gap-5 rounded-xl p-5 md:p-7 duration-300 border border-gray-300 dark:border-gray-500;
+    @apply h-full flex flex-row gap-5 rounded-xl p-5 md:p-7 duration-300 border border-gray-300 dark:border-gray-500;
   }
   .tag {
     @apply text-sm px-1 rounded-sm bg-green-600/20 text-green-600;

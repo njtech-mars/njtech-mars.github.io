@@ -12,7 +12,7 @@
   import Giscus from "./Giscus.svelte";
 
   export let data;
-  const post = data.post;
+  const { post, prev, next } = data;
 
   onMount(() => {
     const toc = document.querySelector(".toc");
@@ -49,8 +49,33 @@
   </header>
 
   <article class="markdown">
-    <div class="w-full content">
-      <svelte:component this={post.content} />
+    <div class="w-full flex flex-col gap-5">
+      <div class="content">
+        <svelte:component this={post.content} />
+      </div>
+      <div class="w-full flex flex-row justify-between gap-5">
+        {#if prev}
+          <a
+            data-sveltekit-reload
+            href={`/blog/${prev.slug}`}
+            class="w-full flex flex-col px-5 py-5 rounded-lg border border-gray-300 hover:border-green-600 duration-300"
+          >
+            <span>上一篇</span>
+            <span class="text-green-600">{"« " + prev.title}</span>
+          </a>
+        {/if}
+
+        {#if next}
+          <a
+            data-sveltekit-reload
+            href={`/blog/${next.slug}`}
+            class="w-full text-end flex flex-col items-end px-5 py-5 rounded-lg border border-gray-300 hover:border-green-600 duration-300"
+          >
+            <span>下一篇</span>
+            <span class="text-green-600">{next.title + " »"}</span>
+          </a>
+        {/if}
+      </div>
     </div>
 
     <div class="sidebar">
@@ -79,6 +104,9 @@
 </main>
 
 <style lang="postcss">
+  .markdown {
+    @apply w-full relative flex flex-row justify-between gap-10;
+  }
   .tags {
     @apply flex flex-col gap-1;
   }

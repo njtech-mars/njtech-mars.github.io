@@ -29,7 +29,7 @@ intro: "这是一篇Markdown示例文章，后人想要写新文章的时候可�
 
 同样也可以插入一张图片：
 
-![avatar](https://raw.githubusercontent.com/MR-Addict/MR-Addict/build/profile-summary-card-output/vue/0-profile-details.svg)
+![friends](https://d1qxviojg2h5lt.cloudfront.net/images/01E4CFF623M99BXP6HHSVF10D7/friends570.webp)
 
 ## 4. 列表
 
