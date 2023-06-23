@@ -12,38 +12,40 @@
   import Giscus from "./Giscus.svelte";
 
   export let data;
-  const { post, prev, next } = data;
 
   onMount(() => {
     const toc = document.querySelector(".toc");
     const container = document.querySelector(".toc-container");
+
+    console.log(toc, container);
+
     if (toc && container) {
       container.insertAdjacentElement("beforeend", toc);
-      container.classList.toggle("hidden");
-      toc.classList.toggle("hidden");
+      container.classList.remove("hidden");
+      toc.classList.remove("hidden");
     }
   });
 </script>
 
 <svelte:head>
   <title>Mars工作室 • 文章动态</title>
-  <meta property="og:title" content={post.title} />
+  <meta property="og:title" content={data.post.title} />
 </svelte:head>
 
 <main class="w-full flex-1 frame py-10 flex flex-col gap-5 animate-slideFromBottom">
   <header class="flex flex-col gap-0.5 md:gap-2 pl-2">
-    <h1 class="text-2xl md:text-3xl font-semibold">{post.title}</h1>
+    <h1 class="text-2xl md:text-3xl font-semibold">{data.post.title}</h1>
 
     <div class="flex flex-row items-center flex-wrap gap-1 text-gray-500 text-sm">
       <div class="flex flex-row items-center gap-0.5">
         <div class="w-3 h-3"><FaRegCalendarAlt /></div>
-        <div title={formatDate(post.create)}>{"发布于" + timeInterval(post.create)}</div>
-        <div title={formatDate(post.update)}>({"更新于" + timeInterval(post.update)})</div>
+        <div title={formatDate(data.post.create)}>{"发布于" + timeInterval(data.post.create)}</div>
+        <div title={formatDate(data.post.update)}>({"更新于" + timeInterval(data.post.update)})</div>
       </div>
 
       <div class="flex flex-row items-center gap-0.5">
         <div class="w-3 h-3"><FaRegUser /></div>
-        <div>{post.author + "撰写"}</div>
+        <div>{data.post.author + "撰写"}</div>
       </div>
     </div>
   </header>
@@ -51,28 +53,20 @@
   <article class="markdown">
     <div class="w-full flex flex-col gap-5">
       <div class="content">
-        <svelte:component this={post.content} />
+        <svelte:component this={data.post.content} />
       </div>
-      <div class="w-full flex flex-row justify-between gap-5">
-        {#if prev}
-          <a
-            data-sveltekit-reload
-            href={`/blog/${prev.slug}`}
-            class="w-full flex flex-col px-5 py-5 rounded-lg border border-gray-300 hover:border-green-600 duration-300"
-          >
+      <div class="w-full flex flex-col md:flex-row justify-between gap-5">
+        {#if data.prev}
+          <a href={`/blog/${data.prev.slug}`} class="nav">
             <span>上一篇</span>
-            <span class="text-green-600">{"« " + prev.title}</span>
+            <span class="text-green-600">{"« " + data.prev.title}</span>
           </a>
         {/if}
 
-        {#if next}
-          <a
-            data-sveltekit-reload
-            href={`/blog/${next.slug}`}
-            class="w-full text-end flex flex-col items-end px-5 py-5 rounded-lg border border-gray-300 hover:border-green-600 duration-300"
-          >
+        {#if data.next}
+          <a href={`/blog/${data.next.slug}`} class="nav items-end text-end">
             <span>下一篇</span>
-            <span class="text-green-600">{next.title + " »"}</span>
+            <span class="text-green-600">{data.next.title + " »"}</span>
           </a>
         {/if}
       </div>
@@ -85,7 +79,7 @@
           <div class="text-lg">标签</div>
         </div>
         <div class="flex flex-row flex-wrap gap-2 text-sm">
-          {#each post.tags as tag (tag)}
+          {#each data.post.tags as tag (tag)}
             <span class="py-1 px-2 rounded-2xl text-green-600 bg-green-600/20">&num;{tag}</span>
           {/each}
         </div>
@@ -120,5 +114,8 @@
   }
   .sidebar {
     @apply hidden md:flex flex-col gap-5 h-fit sticky top-5 w-80;
+  }
+  .nav {
+    @apply w-full flex flex-col px-5 py-5 rounded-lg border border-gray-300 hover:border-green-600 duration-300;
   }
 </style>
