@@ -1,30 +1,9 @@
 <script lang="ts">
-  import { onMount } from "svelte";
-
-  import FaTag from "svelte-icons/fa/FaTag.svelte";
-  import FaRegUser from "svelte-icons/fa/FaRegUser.svelte";
-  import FaAlignLeft from "svelte-icons/fa/FaAlignLeft.svelte";
-  import FaRegCalendarAlt from "svelte-icons/fa/FaRegCalendarAlt.svelte";
-
-  import formatDate from "$lib/utils/formatDate";
-  import timeInterval from "$lib/utils/timeInterval";
-
-  import Giscus from "./Giscus.svelte";
+  import Giscus from "./components/Giscus/Giscus.svelte";
+  import Sidebar from "./components/Sidebar/Sidebar.svelte";
+  import Header from "./components/Header/Header.svelte";
 
   export let data;
-
-  onMount(() => {
-    const toc = document.querySelector(".toc");
-    const container = document.querySelector(".toc-container");
-
-    console.log(toc, container);
-
-    if (toc && container) {
-      container.insertAdjacentElement("beforeend", toc);
-      container.classList.remove("hidden");
-      toc.classList.remove("hidden");
-    }
-  });
 </script>
 
 <svelte:head>
@@ -33,38 +12,24 @@
 </svelte:head>
 
 <main class="w-full flex-1 frame py-10 flex flex-col gap-5 animate-slideFromBottom">
-  <header class="flex flex-col gap-0.5 md:gap-2 pl-2">
-    <h1 class="text-2xl md:text-3xl font-semibold">{data.post.title}</h1>
-
-    <div class="flex flex-row items-center flex-wrap gap-1 text-gray-500 text-sm">
-      <div class="flex flex-row items-center gap-0.5">
-        <div class="w-3 h-3"><FaRegCalendarAlt /></div>
-        <div title={formatDate(data.post.create)}>{"发布于" + timeInterval(data.post.create)}</div>
-        <div title={formatDate(data.post.update)}>({"更新于" + timeInterval(data.post.update)})</div>
-      </div>
-
-      <div class="flex flex-row items-center gap-0.5">
-        <div class="w-3 h-3"><FaRegUser /></div>
-        <div>{data.post.author + "撰写"}</div>
-      </div>
-    </div>
-  </header>
+  <Header post={data.post} />
 
   <article class="markdown">
     <div class="w-full flex flex-col gap-5">
       <div class="content">
         <svelte:component this={data.post.content} />
       </div>
+
       <div class="w-full flex flex-col md:flex-row justify-between gap-5">
         {#if data.prev}
-          <a href={`/blog/${data.prev.slug}`} class="nav">
+          <a href={`/blog/${data.prev.slug}`} class="footer-link">
             <span>上一篇</span>
             <span class="text-green-600">{"« " + data.prev.title}</span>
           </a>
         {/if}
 
         {#if data.next}
-          <a href={`/blog/${data.next.slug}`} class="nav items-end text-end">
+          <a href={`/blog/${data.next.slug}`} class="footer-link items-end text-end">
             <span>下一篇</span>
             <span class="text-green-600">{data.next.title + " »"}</span>
           </a>
@@ -72,50 +37,27 @@
       </div>
     </div>
 
-    <div class="sidebar">
-      <div class="tags">
-        <div class="flex flex-row items-center gap-1">
-          <div class="w-4 h-4"><FaTag /></div>
-          <div class="text-lg">标签</div>
-        </div>
-        <div class="flex flex-row flex-wrap gap-2 text-sm">
-          {#each data.post.tags as tag (tag)}
-            <span class="py-1 px-2 rounded-2xl text-green-600 bg-green-600/20">&num;{tag}</span>
-          {/each}
-        </div>
-      </div>
-
-      <div class="toc-container hidden">
-        <div class="flex flex-row items-center gap-0.5">
-          <div class="w-4 h-4"><FaAlignLeft /></div>
-          <div class="text-lg">目录</div>
-        </div>
-      </div>
-    </div>
+    {#key data.post}
+      <Sidebar post={data.post} />
+    {/key}
   </article>
 
-  <Giscus />
+  {#key data.post}
+    <Giscus />
+  {/key}
 </main>
 
 <style lang="postcss">
   .markdown {
     @apply w-full relative flex flex-row justify-between gap-10;
   }
-  .tags {
-    @apply flex flex-col gap-1;
-  }
-  .content,
-  .tags,
-  .toc-container {
+  .content {
     @apply border border-gray-300 dark:border-gray-500 rounded-xl p-5;
   }
-  .toc-container {
-    @apply overflow-x-auto;
+  .footer-link {
+    @apply w-full flex flex-col px-5 py-5 rounded-lg border border-gray-300 dark:border-gray-500 duration-300;
   }
-  .sidebar {
-    @apply hidden md:flex flex-col gap-5 h-fit sticky top-5 w-80;
-  }
-  .nav {
-    @apply w-full flex flex-col px-5 py-5 rounded-lg border border-gray-300 hover:border-green-600 duration-300;
+  .footer-link:hover {
+    @apply border-green-600;
   }
 </style>

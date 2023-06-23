@@ -27,13 +27,11 @@ intro: "这是一篇Markdown示例文章，后人想要写新文章的时候可�
 
 ## 3. 图片
 
-同样也可以插入一张图片：
+同样你也可以插入一张图片：
 
 ![friends](https://d1qxviojg2h5lt.cloudfront.net/images/01E4CFF623M99BXP6HHSVF10D7/friends570.webp)
 
 ## 4. 列表
-
-使用列表：
 
 - 早上睡懒觉
 - 一起打篮球
@@ -55,7 +53,9 @@ intro: "这是一篇Markdown示例文章，后人想要写新文章的时候可�
 
 - [x] Blog 支持 Markdown
 - [x] Blog 添加 TOC
-- [ ] Blog 添加评论
+- [x] Blog 添加评论
+- [x] Blog 添加页脚导航
+- [x] Blog 支持添加自定义组件
 
 ## 3. 代码
 
@@ -77,8 +77,6 @@ export default function Button() {
 # 三、其他
 
 ## 1. 分割线
-
-这是分割线：
 
 ---
 

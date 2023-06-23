@@ -21,7 +21,7 @@
   </a>
 
   <div class="flex flex-col gap-1">
-    <div class="flex flex-row items-center flex-wrap gap-1 text-gray-500 text-sm">
+    <div class="flex flex-row items-center flex-wrap gap-1 text-gray-500 dark:text-gray-300 text-sm">
       <div class="flex flex-row items-center gap-0.5">
         <div class="w-3 h-3"><FaRegCalendarAlt /></div>
         <div title={formatDate(post.create)}>{"发布于" + timeInterval(post.create)}</div>

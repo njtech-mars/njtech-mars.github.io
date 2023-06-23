@@ -1,6 +1,7 @@
 <script lang="ts">
   import { posts } from "$stores/posts";
-  import Tags from "./components/Tags/Tags.svelte";
+
+  import Tags from "./Tags.svelte";
   import PostCard from "$components/PostCard/PostCard.svelte";
 </script>
 

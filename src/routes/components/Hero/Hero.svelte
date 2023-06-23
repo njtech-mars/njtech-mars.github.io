@@ -9,7 +9,7 @@
     Mars工作室
   </h1>
 
-  <p class="max-w-md text-lg opacity-0 animate-slideFromBottom animation-delay-200 text-gray-500">
+  <p class="max-w-md text-lg opacity-0 animate-slideFromBottom animation-delay-200 text-gray-500 dark:text-gray-300">
     Mars Studio 是南京工业大学信息中心学生开发团队，成立于2001年4月。我们的目标是维持校园互联网团队的运作和传承。
   </p>
 

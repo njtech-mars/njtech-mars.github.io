@@ -14,7 +14,7 @@
       {link.name}
     </a>
 
-    <p class="text-gray-500">{link.subtitle}</p>
+    <p class="text-gray-500 dark:text-gray-300">{link.subtitle}</p>
 
     <div class="flex flex-row flex-wrap gap-1.5">
       {#each link.tags as tag (tag)}
