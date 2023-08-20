@@ -11,12 +11,7 @@
   });
 </script>
 
-<button
-  type="button"
-  title="滑到顶部"
-  class:active={visible}
-  on:click={() => window.scroll({ top: 0, behavior: "smooth" })}
->
+<button type="button" class:active={visible} on:click={() => window.scroll({ top: 0, behavior: "smooth" })}>
   <MdKeyboardArrowUp />
 </button>
 

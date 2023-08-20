@@ -14,8 +14,8 @@
   </p>
 
   <div class="flex flex-row gap-7 opacity-0 animate-slideFromBottom animation-delay-400">
-    <a href="/blog/about-us" title="关于我们" class="link about">关于我们</a>
-    <a href="/mirrors" title="下载镜像" class="link">下载镜像</a>
+    <a href="/blog/about-us" class="link about">关于我们</a>
+    <a href="/mirrors" class="link">下载镜像</a>
   </div>
 
   <SvgBackground />

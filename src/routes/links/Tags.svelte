@@ -5,17 +5,9 @@
 </script>
 
 <div class="w-full flex flex-row gap-2 animate-slideFromTop overflow-x-auto p-1">
-  <button type="button" title="全部" class="tag" class:active={!$links.activeTag} on:click={() => links.set("")}>
-    全部
-  </button>
+  <button type="button" class="tag" class:active={!$links.activeTag} on:click={() => links.set("")}> 全部 </button>
   {#each $links.tags as tag (tag.name)}
-    <button
-      title={tag.name}
-      class="tag"
-      type="button"
-      on:click={() => links.set(tag.name)}
-      class:active={$links.activeTag === tag.name}
-    >
+    <button class="tag" type="button" on:click={() => links.set(tag.name)} class:active={$links.activeTag === tag.name}>
       {tag.name}
     </button>
   {/each}

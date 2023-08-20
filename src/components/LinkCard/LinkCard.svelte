@@ -10,7 +10,7 @@
   </div>
 
   <div class="w-full flex flex-col justify-between gap-2">
-    <a href={link.link} title={link.name} target="_blank" class="text-xl hover:text-blue-600 w-fit">
+    <a href={link.link} target="_blank" class="text-xl hover:text-blue-600 w-fit">
       {link.name}
     </a>
 

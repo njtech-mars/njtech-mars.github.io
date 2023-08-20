@@ -29,20 +29,20 @@ function getSize(size: string) {
 }
 
 function sortMirrors(mirrors: MirrorType[], sortRule: SortRuleType) {
-  let newMirrors = [...mirrors];
-  if (sortRule.key === "name") newMirrors = mirrors.sort((a, b) => a.name.localeCompare(b.name));
-  else if (sortRule.key === "size") newMirrors = mirrors.sort((a, b) => getSize(a.size) - getSize(b.size));
+  let copiedMirrors = Array.from(mirrors);
+  if (sortRule.key === "name") copiedMirrors = mirrors.sort((a, b) => a.name.localeCompare(b.name));
+  else if (sortRule.key === "size") copiedMirrors = mirrors.sort((a, b) => getSize(a.size) - getSize(b.size));
   else if (sortRule.key === "update") {
-    newMirrors = mirrors.sort((a, b) => new Date(b.last_update).getTime() - new Date(a.last_update).getTime());
+    copiedMirrors = mirrors.sort((a, b) => new Date(b.last_update).getTime() - new Date(a.last_update).getTime());
   } else if (sortRule.key === "status") {
     const failedMirrors = mirrors.filter((mirror) => mirror.status === "failed");
     const syncingMirrors = mirrors.filter((mirror) => mirror.status === "syncing");
     const successMirrors = mirrors.filter((mirror) => mirror.status === "success");
-    newMirrors = [...failedMirrors, ...syncingMirrors, ...successMirrors];
+    copiedMirrors = [...failedMirrors, ...syncingMirrors, ...successMirrors];
   }
 
-  if (sortRule.asc) newMirrors = newMirrors.reverse();
-  return newMirrors;
+  if (sortRule.asc) copiedMirrors = copiedMirrors.reverse();
+  return copiedMirrors;
 }
 
 function createStore() {

@@ -1,4 +1,4 @@
-<a href="/" title="首页" class="z-20 flex flex-row items-center gap-1.5">
+<a href="/" class="z-20 flex flex-row items-center gap-1.5">
   <div class="title">Mars工作室</div>
 </a>
 

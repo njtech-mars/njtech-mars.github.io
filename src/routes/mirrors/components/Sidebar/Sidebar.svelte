@@ -2,13 +2,11 @@
   import Card from "./Card.svelte";
   import { mirrors } from "$stores/mirrors";
 
-  let timeoutId: number;
+  let timeoutId: NodeJS.Timeout | null = null;
 
   function debounceInput(event: Event) {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => {
-      mirrors.setSearchKeywords((event.target as HTMLInputElement).value.toLowerCase().trim());
-    }, 700);
+    if (timeoutId) clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => mirrors.setSearchKeywords((event.target as HTMLInputElement).value), 700);
   }
 
   let totalCount = 0;
@@ -25,7 +23,7 @@
 </script>
 
 <div class="w-full flex flex-col gap-5">
-  <input title="筛选" placeholder="Search..." on:input={debounceInput} bind:value={$mirrors.searchKeywords} />
+  <input placeholder="Search..." on:input={debounceInput} bind:value={$mirrors.searchKeywords} />
 
   <div class="hidden md:flex flex-col gap-1">
     <h1 class="pl-1">数据统计</h1>

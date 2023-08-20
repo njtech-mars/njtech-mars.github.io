@@ -20,13 +20,7 @@
     {#each links as link (link.name)}
       {@const pathname = $page.url.pathname.split("/").slice(0, 2).join("/")}
       <li>
-        <a
-          href={link.link}
-          title={link.name}
-          class="link"
-          class:active={pathname === link.link}
-          on:click={() => (openMenu = false)}
-        >
+        <a href={link.link} class="link" class:active={pathname === link.link} on:click={() => (openMenu = false)}>
           {link.name}
         </a>
       </li>

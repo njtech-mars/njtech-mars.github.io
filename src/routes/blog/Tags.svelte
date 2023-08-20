@@ -6,13 +6,7 @@
   <h1 class="text-xl font-semibold">标签</h1>
   <ul class="flex flex-row flex-wrap gap-2">
     <li>
-      <button
-        type="button"
-        title="全部"
-        class="tag"
-        class:active={$posts.activeTag === ""}
-        on:click={() => posts.set("")}
-      >
+      <button type="button" class="tag" class:active={$posts.activeTag === ""} on:click={() => posts.set("")}>
         &num;全部({$posts.tags.length})
       </button>
     </li>
@@ -20,7 +14,6 @@
       <li>
         <button
           type="button"
-          title={tag.name}
           on:click={() => posts.set(tag.name)}
           class="tag"
           class:active={$posts.activeTag === tag.name}

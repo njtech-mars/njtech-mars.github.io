@@ -11,11 +11,7 @@
 </script>
 
 <div class="w-full space-y-1 p-5 rounded-xl border border-gray-300 dark:border-gray-500">
-  <a
-    title={post.title}
-    href={`/blog/${post.slug}`}
-    class="text-lg text-blue-600 hover:underline flex flex-row items-center gap-0.5 w-fit"
-  >
+  <a href={`/blog/${post.slug}`} class="text-lg text-blue-600 hover:underline flex flex-row items-center gap-0.5 w-fit">
     <div class="w-3 h-3"><FaLink /></div>
     <span>{post.title}</span>
   </a>

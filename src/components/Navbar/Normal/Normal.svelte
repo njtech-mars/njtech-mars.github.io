@@ -7,7 +7,7 @@
   {#each links as link (link.name)}
     {@const pathname = $page.url.pathname.split("/").slice(0, 2).join("/")}
     <li>
-      <a href={link.link} title={link.name} class="link" class:active={pathname === link.link}>{link.name}</a>
+      <a href={link.link} class="link" class:active={pathname === link.link}>{link.name}</a>
     </li>
   {/each}
 </ul>
