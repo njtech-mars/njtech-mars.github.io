@@ -2,11 +2,11 @@
   import SortButton from "../SortButton/SortButton.svelte";
   import MdFolderOpen from "svelte-icons/md/MdFolderOpen.svelte";
 
-  import type { MirrorsStoreType } from "$types/mirror";
+  import type { MirrorType } from "$types/mirror";
   import formatDate from "$lib/utils/formatDate";
   import timeInterval from "$lib/utils/timeInterval";
 
-  export let mirrors: MirrorsStoreType;
+  export let mirrors: MirrorType[];
 </script>
 
 <div class="w-full overflow-x-auto animate-slideFromBottom md:animate-slideFromLeft">
@@ -21,7 +21,7 @@
       </tr>
     </thead>
     <tbody>
-      {#each $mirrors.mirrors as mirror (mirror.name)}
+      {#each mirrors as mirror (mirror.name)}
         <tr class="border border-gray-300 dark:border-gray-500 p-5 rounded-xl">
           <td data-cell="镜像">{mirror.name}</td>
           <td data-cell="时间">{formatDate(mirror.last_update)} ({timeInterval(mirror.last_update)})</td>

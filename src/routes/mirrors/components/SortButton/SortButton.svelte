@@ -1,22 +1,18 @@
 <script lang="ts">
-  import { mirrors } from "$stores/mirrors";
+  import { sortRule } from "$stores/mirrors";
 
   export let title: string;
   export let name: "name" | "size" | "update" | "status";
+
+  function handleClick() {
+    sortRule.set({ key: name, asc: $sortRule.key === name ? !$sortRule.asc : $sortRule.asc });
+  }
 </script>
 
-<button
-  type="button"
-  {title}
-  on:click={() =>
-    mirrors.setSortRule({
-      key: name,
-      asc: $mirrors.sortRule.key === name ? !$mirrors.sortRule.asc : $mirrors.sortRule.asc
-    })}
->
+<button type="button" on:click={handleClick}>
   <span>{title}</span>
-  {#if $mirrors.sortRule.key === name}
-    {#if $mirrors.sortRule.asc}
+  {#if $sortRule.key === name}
+    {#if $sortRule.asc}
       <span class="text-blue-600">&#8593</span>
     {:else}
       <span class="text-blue-600">&#8595</span>

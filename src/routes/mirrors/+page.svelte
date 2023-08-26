@@ -1,24 +1,24 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import { mirrors } from "$stores/mirrors";
+  import { mirrors, searchKeywords, sortRule } from "$stores/mirrors";
 
-  import { fetchMirros } from "./lib/fetchMirrors";
+  import sortMirrors from "./lib/sortMirrors";
+  import fetchMirros from "./lib/fetchMirrors";
+  import searchMirrors from "./lib/searchMirrors";
+
   import Table from "./components/Table/Table.svelte";
-  import Message from "./components/Message/Message.svelte";
   import Loading from "./components/Loading/Loading.svelte";
 
-  let promise: Promise<boolean>;
-  onMount(() => (promise = fetchMirros()));
+  onMount(fetchMirros);
 </script>
 
-{#await promise}
+{#if !$mirrors}
   <Loading />
-{:then success}
-  {#if !success}
-    <Message title="镜像数据拉取失败" />
-  {:else if $mirrors.mirrors.length === 0}
-    <Message title="没有符合条件的结果" />
+{:else}
+  {@const result = sortMirrors(searchMirrors($mirrors, $searchKeywords), $sortRule)}
+  {#if result.length === 0}
+    <p class="w-full text-center mt-24">没有符合条件的结果</p>
   {:else}
-    <Table {mirrors} />
+    <Table mirrors={result} />
   {/if}
-{/await}
+{/if}
