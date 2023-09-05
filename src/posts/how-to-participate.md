@@ -18,6 +18,7 @@ intro: "如何修改本站内容，包括如何添加资源链接和文章动态
 ## 2. 链接
 
 - [https://marsstudio.vercel.app(公网访问)](https://marsstudio.vercel.app)
+- [https://njtech-mars.github.io(Github Pages)](https://njtech-mars.github.io)
 - [https://studio.online.njtech.edu.cn(内网访问)](https://studio.online.njtech.edu.cn)
 
 目前本站可以修改的内容包括 **资源链接** 和 **文章动态**，下面简单介绍一下如何修改这些内容。
