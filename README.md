@@ -4,6 +4,5 @@ Mars 工作室是南京工业大学信息中心学生开发团队，成立于 20
 
 可访问的链接：
 
-- [https://marsstudio.vercel.app(公网访问)](https://marsstudio.vercel.app)
-- [https://njtech-mars.github.io(Github Pages)](https://njtech-mars.github.io)
-- [https://studio.online.njtech.edu.cn(内网访问)](https://studio.online.njtech.edu.cn)
+- [https://njtech-mars.github.io(需要梯子)](https://njtech-mars.github.io)
+- [https://studio.online.njtech.edu.cn(校内访问)](https://studio.online.njtech.edu.cn)

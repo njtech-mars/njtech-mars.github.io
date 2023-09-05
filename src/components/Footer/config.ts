@@ -8,7 +8,7 @@ export const data = [
       },
       {
         name: "本站仓库",
-        link: "https://github.com/MR-Addict/studio"
+        link: "https://github.com/njtech-mars/njtech-mars.github.io"
       }
     ]
   },

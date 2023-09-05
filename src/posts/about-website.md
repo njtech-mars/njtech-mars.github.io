@@ -13,13 +13,12 @@ intro: "如何修改本站内容，包括如何添加资源链接和文章动态
 
 本站使用的前端 UI 框架是 [Svelte](https://svelte.dev)，项目框架是 [Sveltekit](https://kit.svelte.dev)，使用 [mdsvex](https://mdsvex.pngwn.io) 作为 markdown 渲染引擎。使用 Docker 部署在校内的网站是静态网页，校外是部署在 [Vercel](https://vercel.com)。
 
-如果你是后面的新人，并且有心想要继续接手和丰富本站内容，你可以前往我的[个人仓库](https://github.com/MR-Addict/studio)找到这个项目的源码，你也可以在 GitHub 上找到我的联系方式。目前 Mars 工作室还没有 GitHub 组织。
+如果你是后面的新人，并且有心想要继续接手和丰富本站内容，你可以前往 Mars工作室 [Github组织](https://njtech-mars.github.io)查看本站源码。
 
 ## 2. 链接
 
-- [https://marsstudio.vercel.app(公网访问)](https://marsstudio.vercel.app)
-- [https://njtech-mars.github.io(Github Pages)](https://njtech-mars.github.io)
-- [https://studio.online.njtech.edu.cn(内网访问)](https://studio.online.njtech.edu.cn)
+- [https://njtech-mars.github.io(需要梯子)](https://njtech-mars.github.io)
+- [https://studio.online.njtech.edu.cn(校内访问)](https://studio.online.njtech.edu.cn)
 
 目前本站可以修改的内容包括 **资源链接** 和 **文章动态**，下面简单介绍一下如何修改这些内容。
 
