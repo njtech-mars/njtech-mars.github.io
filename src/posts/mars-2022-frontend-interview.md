@@ -22,7 +22,7 @@ Mars 工作室 2022 前端面试题，由朱文昊出题，由我整理编辑。
 ### 3. 参考代码
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -93,7 +93,7 @@ Mars 工作室 2022 前端面试题，由朱文昊出题，由我整理编辑。
 **index.html**
 
 ```html
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
