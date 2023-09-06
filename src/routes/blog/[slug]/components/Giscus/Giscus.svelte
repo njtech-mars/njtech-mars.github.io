@@ -14,7 +14,7 @@
 {#if mounted}
   <giscus-widget
     host="https://giscus.app"
-    repo="MR-Addict/studio"
+    repo="njtech-mars/njtech-mars.github.io"
     repoid="R_kgDOJebbfg"
     category="General"
     categoryid="DIC_kwDOJebbfs4CXHzs"
