@@ -90,7 +90,7 @@ const data = [
   {
     name: "南工MC",
     icon: FaBandcamp,
-    link: "https://wiki.mualliance.ltd/南京工业大学服务器",
+    link: "https://www.mualliance.cn/archives/428",
     subtitle: "南工MC组织，校内MC服务器",
     tags: ["校内", "组织"],
     heat: 0.85,
