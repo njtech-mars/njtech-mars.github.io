@@ -17,6 +17,7 @@ intro: "如何修改本站内容，包括如何添加资源链接和文章动态
 
 ## 2. 链接
 
+- [https://njtechmars.online(国内访问)](https://njtechmars.online)
 - [https://njtech-mars.github.io(需要梯子)](https://njtech-mars.github.io)
 - [https://studio.online.njtech.edu.cn(校内访问)](https://studio.online.njtech.edu.cn)
 

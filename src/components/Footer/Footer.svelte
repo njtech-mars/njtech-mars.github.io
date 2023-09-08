@@ -4,7 +4,7 @@
   import { data } from "./config";
 </script>
 
-<footer class="frame flex flex-col gap-5 bg-slate-800 dark:bg-light text-gray-200">
+<footer class="frame">
   <ul class="w-full grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
     {#each data as category (category.name)}
       <li class="flex flex-col gap-2">
@@ -12,12 +12,14 @@
         <ul class="flex flex-col gap-1">
           {#each category.items as link (link.name)}
             {@const external = !link.link.startsWith("/")}
-            <li class="flex flex-row items-center gap-1 hover:text-blue-600 w-fit">
+            <li>
               {#if external}
-                <a href={link.link} target="_blank">{link.name}</a>
-                <div class="w-2.5 h-2.5">
-                  <FaShare />
-                </div>
+                <a href={link.link} target="_blank">
+                  <div>{link.name}</div>
+                  <div class="w-3">
+                    <FaShare />
+                  </div>
+                </a>
               {:else}
                 <a href={link.link}>{link.name}</a>
               {/if}
@@ -28,7 +30,20 @@
     {/each}
   </ul>
 
-  <p class="text-sm">
-    Copyright &copy; {new Date().getFullYear()} Mars工作室
+  <p class="copyright">
+    <span>Copyright &copy; {new Date().getFullYear()} Mars工作室.</span>
+    <a href="https://beian.miit.gov.cn" target="_blank">苏ICP备2022032826号</a>
   </p>
 </footer>
+
+<style lang="postcss">
+  footer {
+    @apply flex flex-col gap-5 bg-slate-800 dark:bg-light text-gray-200;
+  }
+  a {
+    @apply flex flex-row items-center gap-0.5 w-fit duration-300 hover:text-blue-600;
+  }
+  .copyright {
+    @apply flex flex-col md:flex-row md:gap-2;
+  }
+</style>
