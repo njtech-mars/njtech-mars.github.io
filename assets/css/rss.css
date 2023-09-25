@@ -1,0 +1,108 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  display: block;
+}
+
+:root {
+  --theme: #0369a1;
+  --light: #f1f5f9;
+  --dark: #9ca3af;
+  --darker: #4b5563;
+
+  --bigger: 18px;
+  --big: 16px;
+  --normal: 14px;
+  --small: 12px;
+  --smaller: 5px;
+}
+
+rss {
+  display: block;
+  font-family: sans-serif;
+  font-size: var(--normal);
+  padding-inline: var(--small);
+  background-color: var(--light);
+}
+
+channel {
+  max-width: 769px;
+  margin-inline: auto;
+}
+
+channel > title {
+  font-weight: bold;
+  color: var(--theme);
+  font-size: var(--bigger);
+  margin-block: var(--smaller);
+}
+
+channel > item:first-of-type {
+  margin-top: var(--small);
+}
+
+channel > item {
+  padding: var(--small);
+  background-color: white;
+  margin-bottom: var(--bigger);
+  border-radius: var(--smaller);
+  border: 1px solid var(--dark);
+}
+
+item > title {
+  font-weight: bold;
+  color: var(--theme);
+  font-size: var(--big);
+  margin-bottom: var(--smaller);
+}
+
+:is(item > description, channel > description) {
+  color: var(--darker);
+  margin-block: var(--smaller);
+}
+
+:is(item > author, item > link, item > pubDate, channel > lastBuildDate) {
+  color: var(--dark);
+  font-size: var(--small);
+}
+
+:is(item > link, item > pubDate) {
+  padding-bottom: 1px;
+  border-bottom: 1px solid var(--dark);
+}
+
+item > link {
+  float: right;
+  text-align: right;
+  width: 66.66%;
+}
+
+item > pubDate {
+  float: left;
+  text-align: left;
+  width: 33.33%;
+}
+
+item > category {
+  color: white;
+  padding: 3px 5px;
+  display: inline-block;
+  font-size: var(--small);
+  margin-top: var(--smaller);
+  border-radius: var(--smaller);
+  background-color: var(--theme);
+}
+
+:is(language, guid, channel > link) {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  item > link {
+    display: none;
+  }
+  item > pubDate {
+    width: 100%;
+    float: left;
+  }
+}
