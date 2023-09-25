@@ -43,7 +43,7 @@
 
 <style lang="postcss">
   .sidebar {
-    @apply hidden md:flex flex-col gap-5 h-fit sticky top-5 w-80;
+    @apply hidden md:flex flex-col gap-5 h-fit sticky top-5;
   }
   .tags {
     @apply flex flex-col gap-1;

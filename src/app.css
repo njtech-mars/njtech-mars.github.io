@@ -15,5 +15,5 @@
 }
 
 .frame {
-  @apply w-full px-4 md:px-48 py-10;
+  @apply w-full px-4 md:px-28 py-10;
 }

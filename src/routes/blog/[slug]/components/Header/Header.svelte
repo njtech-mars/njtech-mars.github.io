@@ -12,7 +12,7 @@
 <header class="flex flex-col gap-0.5 md:gap-2 pl-2">
   <h1 class="text-2xl md:text-3xl font-semibold">{post.title}</h1>
 
-  <div class="flex flex-row items-center flex-wrap gap-1 text-gray-500 dark:text-gray-300 text-sm">
+  <div class="flex flex-row items-center flex-wrap gap-2 text-gray-500 dark:text-gray-300 text-sm">
     <div class="flex flex-row items-center gap-0.5">
       <div class="w-3 h-3"><FaRegCalendarAlt /></div>
       <div title={formatDate(post.create)}>{"发布于" + timeInterval(post.create)}</div>

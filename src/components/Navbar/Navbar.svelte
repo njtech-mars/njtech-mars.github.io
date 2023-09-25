@@ -5,7 +5,7 @@
   import ToggleTheme from "./ToggleTheme/ToggleTheme.svelte";
 </script>
 
-<nav class="px-4 md:px-48 pt-5 w-full flex flex-row items-center justify-between">
+<nav class="px-4 md:px-28 pt-5 w-full flex flex-row items-center justify-between">
   <Logo />
 
   <div class="flex flex-row items-center gap-3 md:gap-5">
