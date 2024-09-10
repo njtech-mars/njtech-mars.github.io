@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="/assets/css/rss.css" ?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <title>Mars工作室</title>
+    <description>MarsStudio 是南京工业大学信息中心学生开发团队，成立于2001年4月。我们的目标是维持校园互联网团队的运作和传承。</description>
+    <link>https://marsstudio.vercel.app</link>
+    <atom:link href="https://marsstudio.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
+    <lastBuildDate>Tue, 10 Sep 2024 13:34:17 GMT</lastBuildDate>
+        <item>
+        <title>【长期有效】欢迎加入Mars工作室</title>
+        <author>李志嘉</author>
+        <description></description>
+        <link>https://marsstudio.vercel.app/blog/join-mars</link>
+        <guid isPermaLink="true">https://marsstudio.vercel.app/blog/join-mars</guid>
+        <pubDate>Wed, 14 Aug 2024 00:38:27 GMT</pubDate>
+        
+      </item>
+      <item>
+        <title>Mars工作室2023后端面试题</title>
+        <author>李志嘉</author>
+        <description>Mars工作室2023后端面试题</description>
+        <link>https://marsstudio.vercel.app/blog/mars-2023-backend-interview</link>
+        <guid isPermaLink="true">https://marsstudio.vercel.app/blog/mars-2023-backend-interview</guid>
+        <pubDate>Mon, 25 Sep 2023 10:40:22 GMT</pubDate>
+        <category>面试题</category>
+        <category>后端</category>
+      </item>
+      <item>
+        <title>Mars工作室2023前端面试题</title>
+        <author>蔡建文</author>
+        <description>Mars工作室2023前端面试题</description>
+        <link>https://marsstudio.vercel.app/blog/mars-2023-frontend-interview</link>
+        <guid isPermaLink="true">https://marsstudio.vercel.app/blog/mars-2023-frontend-interview</guid>
+        <pubDate>Mon, 25 Sep 2023 02:31:20 GMT</pubDate>
+        <category>面试题</category>
+        <category>前端</category>
+      </item>
+      <item>
+        <title>南工快传——工作室新项目</title>
+        <author>蔡建文</author>
+        <description>提供校内文件快速上传和下载的短期存储网盘服务</description>
+        <link>https://marsstudio.vercel.app/blog/send-project</link>
+        <guid isPermaLink="true">https://marsstudio.vercel.app/blog/send-project</guid>
+        <pubDate>Mon, 22 May 2023 06:16:44 GMT</pubDate>
+        <category>南工快传</category>
+        <category>项目</category>
+      </item>
+      <item>
+        <title>关于本站以及如何修改本站内容</title>
+        <author>蔡建文</author>
+        <description>如何修改本站内容，包括如何添加资源链接和文章动态</description>
+        <link>https://marsstudio.vercel.app/blog/about-website</link>
+        <guid isPermaLink="true">https://marsstudio.vercel.app/blog/about-website</guid>
+        <pubDate>Sat, 06 May 2023 06:12:14 GMT</pubDate>
+        <category>规范</category>
+        <category>文档</category>
+      </item>
+      <item>
+        <title>本站文章Markdown语法示例</title>
+        <author>蔡建文</author>
+        <description>这是一篇Markdown示例文章，后人想要写新文章的时候可以拿来参考</description>
+        <link>https://marsstudio.vercel.app/blog/markdown-demo</link>
+        <guid isPermaLink="true">https://marsstudio.vercel.app/blog/markdown-demo</guid>
+        <pubDate>Thu, 04 May 2023 15:47:32 GMT</pubDate>
+        <category>规范</category>
+        <category>文档</category>
+      </item>
+      <item>
+        <title>Mars工作室2022前端面试题</title>
+        <author>蔡建文</author>
+        <description>Mars工作室2022前端面试题</description>
+        <link>https://marsstudio.vercel.app/blog/mars-2022-frontend-interview</link>
+        <guid isPermaLink="true">https://marsstudio.vercel.app/blog/mars-2022-frontend-interview</guid>
+        <pubDate>Mon, 26 Sep 2022 15:47:32 GMT</pubDate>
+        <category>面试题</category>
+        <category>前端</category>
+      </item>
+      <item>
+        <title>南工在线网站历史</title>
+        <author>陈宇明</author>
+        <description>陈宇明学长介绍南工在线的发展历史</description>
+        <link>https://marsstudio.vercel.app/blog/online-history</link>
+        <guid isPermaLink="true">https://marsstudio.vercel.app/blog/online-history</guid>
+        <pubDate>Tue, 20 Oct 2020 15:55:39 GMT</pubDate>
+        <category>南工在线</category>
+        <category>历史</category>
+      </item>
+      <item>
+        <title>关于我们</title>
+        <author>陈宇明</author>
+        <description>关于Mars工作室的历史和介绍，陈宇明学长写于2020年10月</description>
+        <link>https://marsstudio.vercel.app/blog/about-us</link>
+        <guid isPermaLink="true">https://marsstudio.vercel.app/blog/about-us</guid>
+        <pubDate>Tue, 20 Oct 2020 15:55:38 GMT</pubDate>
+        <category>关于我们</category>
+        <category>历史</category>
+        <category>成员</category>
+      </item>
+  </channel>
+</rss>
